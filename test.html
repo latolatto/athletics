@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* Basic Style */
+
+html, body {
+    background-color: #ffccdd;
+    margin: 10px;
+}
+
+.wrapper{
+	/* width: 100%; */
+
+}
+
+h1{
+	font-family: "Trebuchet MS", Helvetica, sans-serif;
+	font-size: 38px;
+	text-align: center;
+	
+}
+
+.img-container > div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2em;
+    color: #ffeead;
+}
+
+.img-container > div > img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+		border: 1px solid black
+}
+
+/* Grid */
+.img-container {
+    display: grid;
+    grid-gap: 5px;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    grid-auto-rows: 125px;
+		grid-auto-flow: dense; /* Fill all spaces with fitted images */
+}
+
+.horizontal {
+	grid-column: span 2;
+}
+
+.vertical {
+	grid-row: span 2;
+}
+
+.big {
+	grid-column: span 2;
+	grid-row: span 2;
+}
+
+/* Media Queries */
+
+@media screen and (min-width: 1024px){
+	.wrapper{
+		width: 960px;
+		margin: 0 auto;
+	}
+}
+.wrapper {
+    text-align: center;
+}
+
+
+.image-item {
+    position: relative;
+    overflow: hidden;
+}
+
+.image-item img {
+    width: 100%;
+    display: block;
+    transition: transform 0.3s ease;
+}
+
+.image-item:hover img {
+    transform: scale(1.1);
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5); 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: opacity 0.5s ease, transform 0.5s ease;
+    transform: translateY(20px);
+}
+
+.image-item:hover .overlay {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.overlay p {
+    color: #fff;
+    font-size: 18px;
+    margin: 0;
+    text-align: center;
+}
+
+    </style>
+</head>
+<body>
+    <div class="wrapper">
+        <h1>Image Grid</h1>
+        <div class="container">
+            <div class="horizontal image-item">
+                <img src="./images/main-grid/horizontal.png" alt="">
+                <div class="overlay">
+                    <p>Deo Shoe Sanitizier</p>
+                </div>
+            </div>
+            <div class="vertical image-item">
+                <img src="./images/main-grid/vertical.png" alt="">
+                <div class="overlay">
+                    <p>Leather Shoe Clean</p>
+                </div>
+            </div>
+            <div class="image-item">
+                <img src="./images/main-grid/square1.png" alt="">
+                <div class="overlay">
+                    <p>Deo Stick</p>
+                </div>
+            </div>
+            <div class="big image-item">
+                <img src="./images/main-grid/big.jpeg" alt="">
+                <div class="overlay">
+                    <p>Basic Pack</p>
+                </div>
+            </div>
+            <div class="image-item">
+                <img src="./images/main-grid/square21.png" alt="">
+                <div class="overlay">
+                    <p>Waterstop Solution</p>
+                </div>
+            </div>
+            <div class="image-item">
+                <img src="./images/main-grid/square3.jpeg" alt="">
+                <div class="overlay">
+                    <p>Leather Clean</p>
+                </div>
+            </div>
+            <div class="image-item">
+                <img src="./images/main-grid/square4.png" alt="">
+                <div class="overlay">
+                    <p>Athletics Collection</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+</body>
+</html>

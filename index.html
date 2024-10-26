@@ -1,0 +1,428 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>A T H L E T I C S</title>
+    <link rel="icon" type="image/x-icon" href="./images/icons/small-logo2.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link href="./styles.css" rel="stylesheet">
+</head>
+<body>
+        <div class="top-bar">
+            <div class="sliding-text">
+                <!-- Free shipping for standard orders over $100 -->
+                All products on sale until December 10th—shop now and save!            
+            </div>
+        </div>
+        <div class="grid1 container">
+            <nav class="">
+                <a href="index.html" class="logo">
+                    <img src="./images/icons/mainlogo.png" alt="IMG-LOGO">
+                </a>
+                <div class="">
+                    <ul class="main-menu">
+                        
+
+                        <li>
+                            <a href="index.html">Home</a>
+                        </li>
+                        <li>
+                            <a href="shop.html">Shop</a>
+                        </li>
+                        <li>
+                            <a href="about.html">About</a>
+                        </li>
+
+                        <li>
+                            <a href="contact.html">Contact</a>
+                        </li>
+                    </ul>
+                </div>	
+                <div class="cart">
+                    <a href="#" id="cartIcon"  role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-cart3" viewBox="0 0 16 16">
+                            <path d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .49.598l-1 5a.5.5 0 0 1-.465.401l-9.397.472L4.415 11H13a.5.5 0 0 1 0 1H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5M3.102 4l.84 4.479 9.144-.459L13.89 4zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4m7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4m-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2m7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2"/>
+                          </svg>
+                        <span class="badge position-absolute top-0 start-100 translate-middle badge rounded-pill " id="cartItemCount" >0</span>
+                      </a>
+                    <!-- <a href="#" id="cartIcon" class="dropdown-toggle" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-cart2" viewBox="0 0 16 16">
+                            <path d="M0 2.5A.5.5 0 0 1 .5 2H2a.5.5 0 0 1 .485.379L2.89 4H14.5a.5.5 0 0 1 .485.621l-1.5 6A.5.5 0 0 1 13 11H4a.5.5 0 0 1-.485-.379L1.61 3H.5a.5.5 0 0 1-.5-.5M3.14 5l1.25 5h8.22l1.25-5zM5 13a1 1 0 1 0 0 2 1 1 0 0 0 0-2m-2 1a2 2 0 1 1 4 0 2 2 0 0 1-4 0m9-1a1 1 0 1 0 0 2 1 1 0 0 0 0-2m-2 1a2 2 0 1 1 4 0 2 2 0 0 1-4 0"/>
+                        </svg>
+                        <span class="badge position-absolute top-0 start-100 translate-middle badge rounded-pill bg-warning" id="cartItemCount" >0</span>
+                      </a>
+                      <div class="dropdown-menu" aria-labelledby="cartIcon">
+                        <div  id="cartDropdownMenu"></div>
+                        <hr id="dropdown-divider" class="dropdown-divider">
+                         <a id='viewCartLink'class="dropdown-item" href="cart.html">View Cart</a>
+                         <a id='checkoutLink'class="dropdown-item" href="checkout.html">Proceed to Checkout</a>
+                      </div> -->
+                </div>
+            </nav>
+        </div>
+    <section class="slider">
+        <div class=" karuseli sticky-top" >
+            <div id="carouselExampleSlidesOnly " class="carousel slide carousel-fade" data-bs-ride="carousel">
+              <div class="carousel-inner">
+                <div class="carousel-item active" data-bs-interval="4000" style="background-image: url(./images/waterstopslide.webp); "loading="lazy" >
+                    <div class="container slides-caption">
+						<div class="">
+							<div class="text11 " >
+								<span class="txt1">
+									Waterproof with Ease
+								</span>
+							</div>
+								
+							<div class="text12 ">
+								<h2 class="txt2">
+									WATER STOP
+								</h2>
+							</div>
+								
+								<a href="shop.html" class="btn0 btn1 shopbtn"role="button">
+									Shop Now
+								</a>
+						</div>
+					</div>
+                </div>
+                <div class="carousel-item" data-bs-interval="4000" style="background-image: url(./images/basicpackslide.webp);"loading="lazy" >  
+                  <!-- <img src="./images/basicpackslide.svg" class="d-block  carousel-img" alt="..."> -->
+                  <div class="container slides-caption">
+                    <div class="">
+                        <div class="text21 " >
+                            <span class="txt1">
+                                All-in-One Shoe Care
+                            </span>
+                        </div>
+                            
+                        <div class="text22 " >
+                            <h2 class="txt2">
+                                BASIC PACK
+                            </h2>
+                        </div>
+                            
+                            <a href="shop.html" class="btn0 shopbtn btn2" role="button">
+                                Shop Now
+                            </a>
+                    </div>
+                </div>
+                </div>
+                <div class="carousel-item" data-bs-interval="4000" style="background-image: url(./images//leathercleanslide.webp);"loading="lazy" >
+                  <!-- <img src="./images/leathercleanslide.svg" class="d-block  carousel-img" alt="..."> -->
+                  <div class="container slides-caption">
+                        <div class="text31 ">
+                            <span class="txt1">
+                                Pristine Footwear, Always
+                            </span>
+                        </div>
+                            
+                        <div class="text32 " >
+                            <h2 class="txt2">
+                                LEATHER CLEAN
+                            </h2>
+                        </div>
+                            
+                            <a href="./shop.html" class="btn0 btn3 shopbtn" role="button">
+                                Shop Now
+                            </a>
+                </div>
+                </div>
+              </div>
+             </div>
+           </div> 
+    </section>
+    <div class="content container">
+        <section class="features-area section_gap shadow">
+            <div class="container">
+                <div class="row features-inner">
+                    <!-- single features -->
+                    <div class="col-lg-3 col-md-6 col-sm-6">
+                        <div class="single-features" style="border-left:0;">
+                            <div class="f-icon">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-truck" viewBox="0 0 16 16">
+                                    <path d="M0 3.5A1.5 1.5 0 0 1 1.5 2h9A1.5 1.5 0 0 1 12 3.5V5h1.02a1.5 1.5 0 0 1 1.17.563l1.481 1.85a1.5 1.5 0 0 1 .329.938V10.5a1.5 1.5 0 0 1-1.5 1.5H14a2 2 0 1 1-4 0H5a2 2 0 1 1-3.998-.085A1.5 1.5 0 0 1 0 10.5zm1.294 7.456A2 2 0 0 1 4.732 11h5.536a2 2 0 0 1 .732-.732V3.5a.5.5 0 0 0-.5-.5h-9a.5.5 0 0 0-.5.5v7a.5.5 0 0 0 .294.456M12 10a2 2 0 0 1 1.732 1h.768a.5.5 0 0 0 .5-.5V8.35a.5.5 0 0 0-.11-.312l-1.48-1.85A.5.5 0 0 0 13.02 6H12zm-9 1a1 1 0 1 0 0 2 1 1 0 0 0 0-2m9 0a1 1 0 1 0 0 2 1 1 0 0 0 0-2"/>
+                                  </svg>
+                            </div>
+                            <h6>Fast Delivery</h6>
+                            <p>Quick doorstep delivery.</p>
+                        </div>
+                    </div>
+                    <!-- <div class="vr"></div> -->
+                    <!-- single features -->
+                    <div class="col-lg-3 col-md-6 col-sm-6">
+                        <div class="single-features">
+                            <div class="f-icon">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-bag-check" viewBox="0 0 16 16">
+                                    <path fill-rule="evenodd" d="M10.854 8.146a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708 0l-1.5-1.5a.5.5 0 0 1 .708-.708L7.5 10.793l2.646-2.647a.5.5 0 0 1 .708 0"/>
+                                    <path d="M8 1a2.5 2.5 0 0 1 2.5 2.5V4h-5v-.5A2.5 2.5 0 0 1 8 1m3.5 3v-.5a3.5 3.5 0 1 0-7 0V4H1v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V4zM2 5h12v9a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1z"/>
+                                  </svg>
+                            </div>
+                            <h6>Easy to Shop</h6>
+                            <p>Simple, hassle-free shopping.</p>
+                        </div>
+                    </div>
+                    <!-- <div class="vr"></div> -->
+                    <!-- single features -->
+                    <div class="col-lg-3 col-md-6 col-sm-6">
+                        <div class="single-features">
+                            <div class="f-icon">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-headset" viewBox="0 0 16 16">
+                                    <path d="M8 1a5 5 0 0 0-5 5v1h1a1 1 0 0 1 1 1v3a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V6a6 6 0 1 1 12 0v6a2.5 2.5 0 0 1-2.5 2.5H9.366a1 1 0 0 1-.866.5h-1a1 1 0 1 1 0-2h1a1 1 0 0 1 .866.5H11.5A1.5 1.5 0 0 0 13 12h-1a1 1 0 0 1-1-1V8a1 1 0 0 1 1-1h1V6a5 5 0 0 0-5-5"/>
+                                  </svg>
+                            </div>
+                            <h6>24/7 Support</h6>
+                            <p>Help is always available.</p>
+                        </div>
+                    </div>
+                    <!-- <div class="vr"></div> -->
+                    <!-- single features -->
+                    <div class="col-lg-3 col-md-6 col-sm-6">
+                        <div class="single-features">
+                            <div class="f-icon">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-database" viewBox="0 0 16 16">
+                                    <path d="M4.318 2.687C5.234 2.271 6.536 2 8 2s2.766.27 3.682.687C12.644 3.125 13 3.627 13 4c0 .374-.356.875-1.318 1.313C10.766 5.729 9.464 6 8 6s-2.766-.27-3.682-.687C3.356 4.875 3 4.373 3 4c0-.374.356-.875 1.318-1.313M13 5.698V7c0 .374-.356.875-1.318 1.313C10.766 8.729 9.464 9 8 9s-2.766-.27-3.682-.687C3.356 7.875 3 7.373 3 7V5.698c.271.202.58.378.904.525C4.978 6.711 6.427 7 8 7s3.022-.289 4.096-.777A5 5 0 0 0 13 5.698M14 4c0-1.007-.875-1.755-1.904-2.223C11.022 1.289 9.573 1 8 1s-3.022.289-4.096.777C2.875 2.245 2 2.993 2 4v9c0 1.007.875 1.755 1.904 2.223C4.978 15.71 6.427 16 8 16s3.022-.289 4.096-.777C13.125 14.755 14 14.007 14 13zm-1 4.698V10c0 .374-.356.875-1.318 1.313C10.766 11.729 9.464 12 8 12s-2.766-.27-3.682-.687C3.356 10.875 3 10.373 3 10V8.698c.271.202.58.378.904.525C4.978 9.71 6.427 10 8 10s3.022-.289 4.096-.777A5 5 0 0 0 13 8.698m0 3V13c0 .374-.356.875-1.318 1.313C10.766 14.729 9.464 15 8 15s-2.766-.27-3.682-.687C3.356 13.875 3 13.373 3 13v-1.302c.271.202.58.378.904.525C4.978 12.71 6.427 13 8 13s3.022-.289 4.096-.777c.324-.147.633-.323.904-.525"/>
+                                  </svg>
+                            </div>
+                            <h6>Secure Payment</h6>
+                            <p>Safe and secure transactions.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <div class="wrapper">
+            <!-- <h1>Image Grid</h1> -->
+            <div class="img-container">
+                <div class="horizontal image-item">
+                    <img src="./images/main-grid/horizontal.png" alt="">
+                    <div class="overlay">
+                        <p>Deo Shoe Sanitizier</p>
+                    </div>
+                </div>
+                <div class="vertical image-item">
+                    <img src="./images/main-grid/vertical.png" alt="">
+                    <div class="overlay">
+                        <p>Leather Shoe Clean</p>
+                    </div>
+                </div>
+                <div class="image-item">
+                    <img src="./images/main-grid/square1.png" alt="">
+                    <div class="overlay">
+                        <p>Deo Stick</p>
+                    </div>
+                </div>
+                <div class="big image-item">
+                    <img src="./images/main-grid/big.jpeg" alt="">
+                    <div class="overlay">
+                        <p>Basic Pack</p>
+                    </div>
+                </div>
+                <div class="image-item">
+                    <img src="./images/main-grid/square21.png" alt="">
+                    <div class="overlay">
+                        <p>Waterstop Solution</p>
+                    </div>
+                </div>
+                <div class="image-item">
+                    <img src="./images/main-grid/square3.jpeg" alt="">
+                    <div class="overlay">
+                        <p>Leather Clean</p>
+                    </div>
+                </div>
+                <div class="image-item">
+                    <img src="./images/main-grid/square4.png" alt="">
+                    <div class="overlay">
+                        <p>Athletics Collection</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="prods">
+            <div class="prods-left">
+                <h3>
+                    Expert Care for Your Favorite Pair
+                </h3>
+                <p> 
+                    Experience premium care with Athletics Clean. Our advanced solutions, from cleaners to protectants, keep your shoes shielded and shining. Keep your sneakers fresh, leather pristine, and step out with confidence. Brighten your stride with every step. 
+                    </p>
+
+                    <button type="button" class="btn  explore-btn" onclick="window.location.href='./shop.html'"> Explore </button>
+                </div>
+        
+        <div class="browse-catg" >
+            <div class="data">
+               <h3 class="">Featured Products</h3>
+            </div>
+            <div class="body">
+                <div id="root"></div>
+            </div>
+            <button type="button" onclick="window.location.href='./shop.html'" class="btn  btn-outline-secondary seemore-btn"> See More </button>
+
+        </div>
+        </div>
+         <!-- <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-lg">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel"><span id="itemName"></span></h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body row">
+                        <div class="col-md-6 img-container">
+                            <img src="" class="imagepreview "  >
+                            <div class="magnifier" id="magnifier"></div>
+                        </div>
+                        <div class="col-md-6 right-column">
+                            <h6>Product Description:</h6>
+                            <p id="prod-description"></p>
+                            <div class="cart-div">
+                              <input type="number" id="quantityInput" min="1" value="1" class="form-control mr-2">
+                              <button class="btn btn-warning order-request-btn" >Add to Cart</button>
+                            </div>
+                            <div id="added-to-cart" style="font-size:0.8rem;font-weight: 700;color:#FF9843;"></div>
+                            <span class="prod-disclaimer">*This website does not include online payment (yet)! <br>Instead, it sends us an order request that you made including your contact details, which we will use to reach out to you.</span>
+                        </div>
+                    </div>
+                </div>
+            </div> -->
+    </div>
+    <footer class="">
+        <div class="container footer-flex">
+            <img class="footer-logo" src="./images/icons/white-logo.png">
+            <div class=" footer-flex-row">
+                <!-- <img class="footer-logo" src="./images/icons/white-logo.png"> -->
+
+              <div class="flex-row-cells footer-about">
+
+                    <p class="">
+                        Keep your shoes looking their best with our premium cleaning solutions. From sanitizers to waterproofing, we’ve got everything you need for spotless, long-lasting footwear.
+                    <div class="social-icons">
+                        <a href="https://www.facebook.com/AthleticsClean" class="" target="_blank">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-facebook" viewBox="0 0 16 16">
+                                <path d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951"/>
+                              </svg>
+                        </a>
+                        
+                        <a href="https://www.instagram.com/athletics.clean/" class="" target="_blank">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-instagram" viewBox="0 0 16 16">
+                                <path d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.9 3.9 0 0 0-1.417.923A3.9 3.9 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.9 3.9 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.9 3.9 0 0 0-.923-1.417A3.9 3.9 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599s.453.546.598.92c.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.5 2.5 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.5 2.5 0 0 1-.92-.598 2.5 2.5 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233s.008-2.388.046-3.231c.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92s.546-.453.92-.598c.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92m-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217m0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334"/>
+                            </svg>
+                        </a>
+
+                        <!-- <a href="#" class="fs-18 cl7 hov-cl1 trans-04 m-r-16">
+                            <i class="fa fa-pinterest-p"></i>
+                        </a> -->
+                    </div>
+                </div>
+
+                <div class="flex-row-cells footer-column">
+                    <!-- <h4 class="">
+                        INFORMATION
+                    </h4> -->
+
+                    <ul>
+                        <li class="">
+                            <a href="./about.html" class="">
+                                About Us
+                            </a>
+                        </li>
+
+                        <li class="">
+                            <a href="./shop.html" class="">
+                                Store
+                            </a>
+                        </li>
+
+                        <li class="">
+                            <a href="./cart.html" class="">
+                                My Cart
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="flex-row-cells footer-column">
+                    <!-- <h4 class="">
+                        HELP
+                    </h4> -->
+
+                    <ul>
+                        <li class="">
+                            <a href="./faqs.html" class="">
+                                FAQs
+                            </a>
+                        </li>
+
+
+                        <li class="">
+                            <a href="./index.html" class="">
+                                Homepage
+                            </a>
+                        </li>
+
+                        <li class="">
+                            <a href="./contact.html" class="">
+                                Contact Us
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="cards-footer">
+                <div class="">
+                        <img class="" src="images/icons/icon-pay-01.png" alt="ICON-PAY">
+                        <!-- <img class="" src="./images/waterstop/waterstop1.png" alt="ICON-PAY"> -->
+
+
+                        <img class="" src="images/icons/icon-pay-02.png" alt="ICON-PAY">
+
+                        <img class="" src="images/icons/icon-pay-03.png" alt="ICON-PAY">
+
+                    <!-- <a href="#" class="m-all-1">
+                        <img src="images/icons/icon-pay-04.png" alt="ICON-PAY">
+                    </a>
+
+                    <a href="#" class="m-all-1">
+                        <img src="images/icons/icon-pay-05.png" alt="ICON-PAY">
+                    </a> -->
+                </div>
+
+                <p class="stext-107 cl6 txt-center">
+                    <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+                    © <span id="year"> </span> | All rights reserved
+                    <!-- <a href="./index.html"><img class="copyright-logo" src="./images/icons/mainlogo.png"> </a> -->
+                    <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+
+                </p>
+            </div>
+        </div>
+        <button id="backToTopBtn">
+          <span class="arrow">
+             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#fff" class="bi bi-chevron-up" viewBox="0 0 16 16">
+                 <path fill-rule="evenodd" d="M7.646 4.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1-.708.708L8 5.707l-5.646 5.647a.5.5 0 0 1-.708-.708z"/>
+             </svg>
+           </span>
+       </button>
+
+           <!-- Back to top -->
+    <div class="btn-back-to-top" id="myBtn">
+        <span class="symbol-btn-back-to-top">
+            <i class="zmdi zmdi-chevron-up"></i>
+        </span>
+    </div>
+    </footer>
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <script src="./script.js"></script>
+</body>
+</html>
