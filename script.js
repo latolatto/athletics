@@ -72,7 +72,7 @@ const displayItem = (items) => {
     root.innerHTML = ''; // Clear existing content
     items.forEach((item) => {
         const card = document.createElement('div');
-        card.classList.add('col-6-sm', 'ballina-col');
+        card.classList.add('col-6-sm', 'ballina-col', 'hidden');
         card.innerHTML = `
                 <a class="catg-item card-text pop" href="#" type="" data-bs-toggle="modal" data-bs-target="#myModal${item.id}" data-item-id="${item.id}">
                     <img class="album-img" src="${item.image}" alt="pieces">

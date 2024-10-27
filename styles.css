@@ -506,7 +506,7 @@ h1{
 .prods-left{
     display:flex;
     flex-direction: column;
-    gap:1.3rem;
+    gap:1.5rem;
     justify-content: center;
     align-items: flex-start;
     text-align: left;
@@ -584,15 +584,44 @@ border-radius:20px;
   .seemore-btn{
     border-radius:30px;
     width:max-content;
-    padding:1.5% 2%;
-    margin-top:2%;
+    padding:1.5% 1.9%;
+    margin-top:5%;
     /* padding-bottom:5%; */
 
 }
+.last-section{
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items:center;
+    padding:2%;
+    padding-top:3%;
+    margin-top:5%;
 
+}
 
-  
+  .retail-stores{
+    width:100%;
+    margin-left:0 !important;
+    margin-right:0 !important;
+    display:flex;
+    flex-direction: row;
+    gap:2rem;
+    justify-content: space-around;
+    padding:1%;
+    /* margin-top:5%; */
+    /* margin-bottom:5%; */
+  }
 
+  .retail-stores img{
+/* height:7rem;   */
+width:15%;
+}
+
+.muted{
+    font-size:0.7rem;
+    opacity: 0.4;
+}
 footer{
     background-color: black;
     color:rgb(189, 189, 189);
@@ -728,3 +757,13 @@ a{
     background-color: #717fe0; /* Change color on hover */
   }
   
+  .hidden {
+    /* opacity: 0; */
+    transform: translateY(20px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+  }
+  
+  .fade-in {
+    opacity: 1;
+    transform: translateY(0);
+  }
