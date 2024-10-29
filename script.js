@@ -2,6 +2,12 @@ document.getElementById("year").innerHTML = new Date().getFullYear();
 
 const backToTopBtn = document.getElementById("backToTopBtn");
 
+
+window.onload = function() {
+  window.scrollTo(0, 0);
+};
+
+
 window.onscroll = function() {
   if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
     backToTopBtn.style.display = "flex"; /* Shows the button */
@@ -21,21 +27,21 @@ backToTopBtn.addEventListener("click", function() {
 const product = [
     {
         id: 0 ,
-        image: './images/waterstop/waterstop1.png',
+        image: './images/waterstop/waterstop1-removebg-preview.png',
         title: ' Waterproof Solution',
         price: '$5',
         description:'Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. ',
     },
     {
         id: 1,
-        image: './images/basicpack/basicpack1.png',
+        image: './images/basicpack/basicpack1-removebg-preview.png',
         title: 'All-in-One Basic Pack',
         price: '$5',
         description:'Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. ',
     },
     {
         id: 2,
-        image: './images/leatherclean/leatherclean1.png',
+        image: './images/leatherclean/leatherclean1-removebg-preview.png',
         title: 'Leather Clean Solution',
         price: '$5',
         description:'Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. ',
@@ -43,7 +49,7 @@ const product = [
 
     // {
     //     id: 3,
-    //     image: './images/deosanitizier/deosanitizier1.png',
+    //     image: './images/deosanitizier/deosanitizier1-removebg-preview.png',
     //     title: 'Deo Sanitizier',
     //     price: '$5',
     //     description:'Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. ',
@@ -51,7 +57,7 @@ const product = [
 
     // {
     //     id: 4,
-    //     image: './images/deostick/deostick1.png',
+    //     image: './images/deostick/deostick1-removebg-preview.png',
     //     title: 'Deo Stick',
     //     price: '$5',
     //     description:'Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. ',
@@ -72,7 +78,7 @@ const displayItem = (items) => {
     root.innerHTML = ''; // Clear existing content
     items.forEach((item) => {
         const card = document.createElement('div');
-        card.classList.add('col-6-sm', 'ballina-col', 'hidden');
+        card.classList.add('col-6-sm', 'ballina-col', 'hidden' , 'section');
         card.innerHTML = `
                 <a class="catg-item card-text pop" href="#" type="" data-bs-toggle="modal" data-bs-target="#myModal${item.id}" data-item-id="${item.id}">
                     <img class="album-img" src="${item.image}" alt="pieces">
@@ -101,4 +107,21 @@ const displayItem = (items) => {
 
 // Initial display of all products
 displayItem(product);
+
+document.addEventListener('DOMContentLoaded', function () {
+  const navbar = document.querySelector('.grid1');
+
+  window.addEventListener('scroll', function () {
+    if (window.scrollY > 0) {
+      navbar.classList.add('fixed');
+      navbar.classList.remove('container');
+    } else {
+      navbar.classList.remove('fixed');
+      navbar.classList.add('container');
+
+    }
+  });
+});
+
+
 
