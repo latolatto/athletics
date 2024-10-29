@@ -105,6 +105,7 @@ const displayItem = (items) => {
     });
 };
 
+
 // Initial display of all products
 displayItem(product);
 
