@@ -196,8 +196,6 @@ document.addEventListener('DOMContentLoaded', function () {
       navbar.classList.remove('fixed');
       navbar.classList.add('container');
       navbar.classList.add('grid-pos');
-
-
     }
   });
 });
