@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CONTACT - ATHLETICS </title>
+    <title>Contact | ATHLETICS </title>
     <link rel="icon" type="image/x-icon" href="./images/icons/small-logo2.png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -25,6 +25,10 @@
 
 .content{
     margin-top:14%;
+}
+
+.content section{
+  margin-top:10%;
 }
   
 .fixed {
@@ -186,6 +190,24 @@ ul {
   opacity: 0;
   padding:1%;
 }
+.contact-div{
+width:100%;
+height:40vh;
+}
+
+.contact-h3{
+  text-align: center;
+  position: relative;
+  top:40%;
+  color: rgba(255, 255, 255, 0.539); 
+  /* opacity: 0.6; */
+
+         font-size:3rem;
+         -webkit-text-stroke: 2px black;  
+         font-weight:800;
+          
+         
+}
     </style>
 </head>
 <body>
@@ -241,14 +263,16 @@ ul {
             </nav>
         </div>
         <div class="content ">
-            <h3 class="">CONTACT US</h3>
+          <div class="contact-div shadow"  style="background-image: url(./images/pages/contact.png); ">
+            <h3 class="contact-h3">CONTACT US</h3>
+          </div>
             <section class="footer_get_touch_outer ">
                 <div class="container">
                   <div class="footer_get_touch_inner grid-70-30 ">
                     <div class="colmun-70 get_form">
                       <div class="get_form_inner">
                         <div class="get_form_inner_text">
-                          <!-- <h3>Get In Touch</h3> -->
+                          <h3>Get In Touch</h3>
                         </div>
                         <form method="POST" action="https://api.web3forms.com/submit" id="form">
                           <input type="hidden" name="access_key" value="5fe3971a-27ba-4a53-8c5e-61956ce3a12f">
