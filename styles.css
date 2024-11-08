@@ -591,6 +591,7 @@ h1{
 border:2px solid #6c757d;
 border-radius:20px;
 background: #d6d4d444;
+background: #eafafa98 ;
 }
 
 
@@ -605,6 +606,11 @@ background: #d6d4d444;
 
 }
 
+.modal{
+    /* position: absolute; */
+    top:5rem;
+}
+
 .modal-body{
     display:flex;
     flex-direction:row;
@@ -616,19 +622,53 @@ background: #d6d4d444;
     overflow: hidden;
     padding-right:0;
     padding-left:0;
-
+    flex-grow: calc();
 }
 .imagepreview {
     width: 100%;
-    height: 100%;
+    /* height: 50vh; */
 }
-
+.magnifier {
+    position: absolute;
+    border: 2px solid black; /* Add border */
+    border-radius: 50%; /* Round shape */
+    width: 40%; /* Adjust the size of the magnifier */
+    height: 40%; /* Adjust the size of the magnifier */
+     /* Adjust according to the size of the image */
+    /* display: none; */
+    overflow: hidden;
+    z-index: 10;
+    /* pointer-events: none;  */
+}
 .right-column{
     display:flex;
     flex-direction: column;
     padding-top:3%;
     padding-bottom:5%;
   }
+  .collapsible-content {
+    display: none; /* Hidden by default */
+    margin-top: 5px;
+}
+
+.arrow {
+    float: right;
+    transition: transform 0.3s ease;
+}
+
+.collapsible-section h6 {
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-right: 10px;
+}
+
+/* Rotate arrow for expanded sections */
+.collapsible-section h6.clicked .arrow {
+    transform: rotate(180deg);
+}
+
   .cart-div{
     display: flex;
     gap:2rem;
@@ -823,3 +863,10 @@ a{
     transform: translateY(0); */
 }
 
+@media only screen and (max-width: 767px){
+    #magnifier{
+      display:none !important;
+    }
+      
+      
+      }

@@ -15,18 +15,24 @@
     <style>
         .grid1{
             background-color: white !important;
+      
+        }
+
+        .grid-pos{
             margin-top:2.2rem;
             padding-top:2.2%;
         }
-        
+.content{
+    margin-top:5%;
+}
 
-        footer{
+        /* footer{
             visibility: hidden;
         }
 
         .last-section{
             visibility: hidden;
-        }
+        } */
     </style>
 </head>
 <body>
@@ -37,7 +43,7 @@
                 All products on sale until December 10th—shop now and save!            
             </div>
         </div>
-        <div class="grid1 ">
+        <div class="grid1 grid-pos">
             <nav class="container">
                 <a href="index.html" class="logo">
                     <img src="./images/icons/mainlogo.png" alt="IMG-LOGO">
@@ -83,13 +89,50 @@
         </div>
         <div class="content container">
            vsddffffffff
+           <div class="browse-catg" >
+            <div class="data">
+               <h3 class="">Featured Products</h3>
+            </div>
+            <div class="body">
+                <div id="root"></div>
+            </div>
+            <button type="button" onclick="window.location.href='./shop.html'" class="btn  btn-outline-secondary seemore-btn"> See More </button>
+
+        </div>
+        <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-lg">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel"><span id="itemName"></span></h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body ">
+                        <div class=" img-container">
+                            <img src="" class="imagepreview "  >
+                            <div class="magnifier" id="magnifier"></div>
+                        </div>
+                        <div class="right-column">
+                            <h6>Product Description:</h6>
+                            <p id="prod-description"></p>
+                            <div class="cart-div">
+                              <input type="number" id="quantityInput" min="1" value="1" class="form-control mr-2">
+                              <button class="btn btn-warning order-request-btn" >Add to Cart</button>
+                            </div>
+                            <div id="added-to-cart" style="font-size:0.8rem;font-weight: 700;color:#FF9843;"></div>
+                            <span class="prod-disclaimer">*This website does not include online payment (yet)! <br>Instead, it sends us an order request that you made including your contact details, which we will use to reach out to you.</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
         </div>
         <div class="last-section bg-body-tertiary hidden">
             <h4>Available at These Stores</h4>
             <div class="retail-stores ">
-                <img src="./images/stores/sportreality.png">
-                <img src="./images/stores/buzz.png">
-                <img src="./images/stores/sportvision.png">
+                <img  onclick="window.open('https:www.sportreality.al', '_blank');" style="cursor: pointer;" src="./images/stores/sportreality.png">
+                <img onclick="window.open('https:www.buzzsneakers.al/', '_blank');" style="cursor: pointer;" src="./images/stores/buzz.png">
+                <img onclick="window.open('https:www.sportvision.al/', '_blank');" style="cursor: pointer;" src="./images/stores/sportvision.png">
             </div>
             <span class="muted"> Tirana, Albania</span>
         </div>
