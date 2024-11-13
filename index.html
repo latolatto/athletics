@@ -14,12 +14,20 @@
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <link href="./styles.css" rel="stylesheet">
     <style>
+               .grid1{
+            /* background-color: white !important; */
+        }
+
+        .grid-pos{
+            margin-top:2.2rem;
+            padding-top:2.2%;
+        }
           .fixed {
     background: white;
     padding-top:1.5%;
     padding-bottom:1.5%;
     position: fixed;
-    top: 0;
+    top: 0 !important;
     left: 0;
     width: 100%;
     z-index: 999999999; /* Ensure the navbar stays above other content */
@@ -60,32 +68,37 @@
                     </ul>
                 </div>	
                 <div class="cart">
-                    <a href="#" id="cartIcon"  role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    <button id="cartIcon"  type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight">
                         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-cart3" viewBox="0 0 16 16">
                             <path d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .49.598l-1 5a.5.5 0 0 1-.465.401l-9.397.472L4.415 11H13a.5.5 0 0 1 0 1H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5M3.102 4l.84 4.479 9.144-.459L13.89 4zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4m7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4m-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2m7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2"/>
                           </svg>
                         <span class="badge position-absolute top-0 start-100 translate-middle badge rounded-pill " id="cartItemCount" >0</span>
-                      </a>
-                    <!-- <a href="#" id="cartIcon" class="dropdown-toggle" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-cart2" viewBox="0 0 16 16">
-                            <path d="M0 2.5A.5.5 0 0 1 .5 2H2a.5.5 0 0 1 .485.379L2.89 4H14.5a.5.5 0 0 1 .485.621l-1.5 6A.5.5 0 0 1 13 11H4a.5.5 0 0 1-.485-.379L1.61 3H.5a.5.5 0 0 1-.5-.5M3.14 5l1.25 5h8.22l1.25-5zM5 13a1 1 0 1 0 0 2 1 1 0 0 0 0-2m-2 1a2 2 0 1 1 4 0 2 2 0 0 1-4 0m9-1a1 1 0 1 0 0 2 1 1 0 0 0 0-2m-2 1a2 2 0 1 1 4 0 2 2 0 0 1-4 0"/>
-                        </svg>
-                        <span class="badge position-absolute top-0 start-100 translate-middle badge rounded-pill bg-warning" id="cartItemCount" >0</span>
-                      </a>
-                      <div class="dropdown-menu" aria-labelledby="cartIcon">
-                        <div  id="cartDropdownMenu"></div>
-                        <hr id="dropdown-divider" class="dropdown-divider">
-                         <a id='viewCartLink'class="dropdown-item" href="cart.html">View Cart</a>
-                         <a id='checkoutLink'class="dropdown-item" href="checkout.html">Proceed to Checkout</a>
-                      </div> -->
+                    </button>
+                    <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
+                        <div class="offcanvas-header">
+                          <h5 id="offcanvasRightLabel">Cart</h5>
+                          <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                        </div>
+                        <div class="offcanvas-body">
+                          <!-- <hr id="dropdown-divider" class="dropdown-divider">
+                          <a id='viewCartLink'class="" href="cart.html">View Cart</a>
+                          <a id='checkoutLink'class="" href="checkout.html">Proceed to Checkout</a> -->
+                        </div>
+                        <div id="cart-buttons-container" style="">
+                            <a href="cart.html" class="btn view-cart-button">View Cart</a>
+                            <a href="checkout.html" class="  checkout-button">Checkout</a>
+                          </div>
+                      </div>
                 </div>
+
+
             </nav>
         </div>
     <section class="slider">
         <div class=" karuseli sticky-top" >
             <div id="carouselExampleSlidesOnly " class="carousel slide carousel-fade" data-bs-ride="carousel">
               <div class="carousel-inner">
-                <div class="carousel-item active" data-bs-interval="4000" style="background-image: url(./images//leatherclean.webp); "loading="lazy" >
+                <div class="carousel-item active" data-bs-interval="4000" style="background-image: url(./images//leatherclean.webp); " loading="lazy" >
                     
                     <div class="container slides-caption">
 						<div class="">
@@ -323,7 +336,7 @@
                               </div> -->
                             <div class="cart-div">
                               <input type="number" id="quantityInput" min="1" value="1" class="form-control mr-2">
-                              <button class="btn btn-warning order-request-btn" >Add to Cart</button>
+                              <button class="btn btn-warning order-request-btn add-to-cart-btn" >Add to Cart</button>
                             </div>
                             <div id="added-to-cart" style="font-size:0.8rem;font-weight: 700;color:#FF9843;"></div>
                         </div>
@@ -469,6 +482,241 @@
     </div>
     </footer>
 </div>
+<script>
+    // const product = [
+    // {
+    //     id: 0 ,
+    //     image: './images/waterstop/waterstop1-removebg-preview.png',
+    //     title: ' Waterproof Solution',
+    //     price: '$5',
+    //     description:'Water Stop is a hydrophobic Solution created with care to Effortlessly repel all types of Liquid. ',
+    //     material: 'Leather, Suede, Canvas',
+    //     howto: `1. Clean and dry materials prior to applying repellent.
+    //     2. In a well ventilated area, hold the can upright and apply light, even coats 6-8 inches away from surface.
+    //      3. Allow to dry 60 minutes before wear.`,
+    //     careful:' Dispose of completely empty cans at recycled material collection. Avoid contact with skin and eyes. Keep out of the reach of children.',
+    // },
+    // {
+    //     id: 1,
+    //     image: './images/basicpack/basicpack1-removebg-preview.png',
+    //     title: 'All-in-One Basic Pack',
+    //     price: '$5',
+    //     description:'Athletics Clean Basic Kit is the ultimate solution to keep your footwear looking brand new! This all-in-one kit includes a premium cleaning solution, a gentle brush for scrubbing, two stick deodorants and a microfiber cloth for polishing. Perfect for leather shoe types, it removes dirt, stains, humidity , smells and grime with ease, ensuring your shoes always make a great impression. Compact and easy to use, it’s a must-have for anyone who values clean, fresh-looking shoes.  ',
+    // },
+    // {
+    //     id: 2,
+    //     image: './images/leatherclean/leatherclean1-removebg-preview.png',
+    //     title: 'Leather Clean Solution',
+    //     price: '$5',
+    //     description:'Athletics Clean - Keep your footwear looking pristine and polished. Experience the difference ',
+    // },
+
+    // {
+    //     id: 3,
+    //     image: './images/deosanitizier/deosanitizier1-removebg-preview.png',
+    //     title: 'Deo Sanitizier',
+    //     price: '$5',
+    //     description:'Athletics Deo , our top-performance shoe deodorant, designed for active lifestyles. This powerful formula tackles tough odors and keeps your shoes smelling fresh, no matter how intense your workouts are. ',
+    // },
+
+    // {
+    //     id: 4,
+    //     image: './images/deostick/deostick1-removebg-preview.png',
+    //     title: 'Deo Stick',
+    //     price: '$5',
+    //     description:'Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. ',
+    // },
+    // {
+    //     id: 5,
+    //     image: './assets/ballina-catalog/6.jpg',
+    //     title: 'Smart Watch',
+    //     price: '$5',
+    //     description:'Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. ',
+    // },
+// ];
+
+
+// Sample Products Array
+
+// Sample Products Array
+const products = [
+  { 
+    id: 0, 
+    title: 'Leather Clean Solution', 
+    price: 5, 
+    image: './images/leatherclean/leatherclean1-removebg-preview.png', 
+    description: 'Cleans and restores leather shoes.'
+     },
+  {
+    id: 1, 
+    title: 'All-in-One Basic Pack', 
+    price: 5, 
+    image: './images/basicpack/basicpack1-removebg-preview.png', 
+    description: 'Includes all essentials for shoe care.'
+ },
+  { 
+    id: 2, 
+    title: 'Waterproof Solution', 
+    price: 5, 
+    image: './images/waterstop/waterstop1-removebg-preview.png', 
+    description: 'Keeps shoes dry and protected.' 
+ }
+];
+
+// Initialize or retrieve cart from local storage
+let cart = JSON.parse(localStorage.getItem('cart')) || [];
+
+// Save cart to local storage
+function saveCart() {
+  localStorage.setItem('cart', JSON.stringify(cart));
+}
+
+// Function to display products
+const displayItem = (items) => {
+  const root = document.getElementById('root');
+  root.innerHTML = ''; // Clear existing content
+  items.forEach((item) => {
+      const card = document.createElement('div');
+      card.classList.add('col-6-sm', 'ballina-col');
+      card.innerHTML = `
+          <a class="catg-item card-text pop" href="#" type="" data-bs-toggle="modal" data-bs-target="#myModal" data-item-id="${item.id}">
+              <img class="album-img" src="${item.image}" alt="pieces">
+              <div class="img-ttl card-body" style="text-decoration: none; color: black;">
+                  ${item.title}
+              </div>
+              <div class="itm-price"> 
+           $ ${item.price}
+              </div>
+          </a>
+      `;
+      root.appendChild(card);
+
+      // Add click listener to open modal with item details
+      card.querySelector('.catg-item').addEventListener('click', () => openModal(item));
+  });
+};
+
+function openModal(item) {
+  document.getElementById('itemName').textContent = item.title;
+  document.querySelector('.imagepreview').src = item.image;
+  document.getElementById('prod-description').textContent = item.description;
+  
+
+  
+  // Add item to cart with specified quantity from modal
+  document.querySelector('.add-to-cart-btn').onclick = () => {
+      const quantity = parseInt(quantityInput.value);
+      addToCart(item.id, quantity);
+      
+      // Display confirmation message and reset quantity input to 1
+      document.getElementById('added-to-cart').textContent = 'Added to Cart!';
+      quantityInput.value = 1;  // Reset quantity after adding to cart
+
+      // Clear confirmation message after 1.5 seconds
+      setTimeout(() => document.getElementById('added-to-cart').textContent = '', 1500);
+  };
+}
+
+
+
+// Function to add item to cart
+function addToCart(productId, quantity = 1) {
+  const product = products.find(item => item.id === productId);
+
+  if (product) {
+      const existingProduct = cart.find(item => item.id === productId);
+      if (existingProduct) {
+          existingProduct.quantity += quantity;
+      } else {
+          cart.push({
+              ...product,
+              quantity: quantity,
+              totalPrice: product.price
+          });
+      }
+  }
+  saveCart();
+  updateCartDisplay();
+}
+
+// Function to update cart display in offcanvas
+function updateCartDisplay() {
+  const cartIconBadge = document.getElementById('cartItemCount');
+  const cartTotal = cart.reduce((sum, item) => sum + (item.totalPrice * item.quantity), 0);
+  const cartCount = cart.reduce((sum, item) => sum + item.quantity, 0);
+
+  cartIconBadge.textContent = cartCount;
+
+  const cartItemsContainer = document.querySelector('.offcanvas-body');
+  cartItemsContainer.innerHTML = '';
+
+  cart.forEach(item => {
+      const itemElement = document.createElement('div');
+      itemElement.innerHTML = `
+          <div class="cart-item">
+              <img src="${item.image}" alt="${item.title}" class="cart-item-img">
+              <div class="cart-item-info">
+                  <h5>${item.title}</h5>
+                  <p>Quantity: ${item.quantity}</p>
+                  <p>Price per item: $${item.price}</p>
+                  <p>Total: $${(item.price * item.quantity).toFixed(2)}</p>
+                  <button class="remove-item-btn" data-product-id="${item.id}">Remove</button>
+              </div>
+          </div>
+      `;
+      cartItemsContainer.appendChild(itemElement);
+
+      // Add event listener for removing items from cart
+      itemElement.querySelector('.remove-item-btn').addEventListener('click', () => removeFromCart(item.id));
+  });
+
+  const totalElement = document.createElement('div');
+  totalElement.innerHTML = `<hr><p>Grand Total: $${cartTotal.toFixed(2)}</p>`;
+  cartItemsContainer.appendChild(totalElement);
+
+  const emptyCartButton = document.createElement('button');
+  emptyCartButton.textContent = 'Empty Cart';
+  emptyCartButton.addEventListener('click', emptyCart);
+  cartItemsContainer.appendChild(emptyCartButton);
+}
+
+// Function to remove item from cart
+function removeFromCart(productId) {
+  cart = cart.filter(item => item.id !== productId);
+  saveCart();
+  updateCartDisplay();
+}
+
+// Function to empty the cart
+function emptyCart() {
+  cart = [];
+  saveCart();
+  updateCartDisplay();
+}
+
+// Initial display of all products
+displayItem(products);
+updateCartDisplay();
+
+
+document.addEventListener('DOMContentLoaded', function () {
+  const navbar = document.querySelector('.grid1');
+
+  window.addEventListener('scroll', function () {
+    if (window.scrollY > 0) {
+      navbar.classList.add('fixed');
+      navbar.classList.remove('container');
+      navbar.classList.remove('grid-pos');
+
+    } else {
+      navbar.classList.remove('fixed');
+      navbar.classList.add('container');
+      navbar.classList.add('grid-pos');
+    }
+  });
+});
+
+</script>
 <!-- <link href="https://maxcdn.bootstrapcdn.com/bootstrap/5.1.3/css/bootstrap.min.css" rel="stylesheet"> -->
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.bundle.min.js"></script>
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-8QJyADusSlo2zlfzM1T4fPfeg7xrJrwPqPML0VjMI1TjIkGbtkCBMdqD3Z7e+LxR" crossorigin="anonymous">

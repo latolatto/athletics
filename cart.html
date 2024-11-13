@@ -3,7 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>A T H L E T I C S</title>
+    <title>Cart | ATHLETICS</title>
+    <link rel="icon" type="image/x-icon" href="./images/icons/small-logo2.png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
@@ -15,13 +16,289 @@
     <style>
         .grid1{
             background-color: white !important;
-            margin-top:31px;
-            padding-top:2.5%;
         }
 
-        footer{
-            visibility: hidden;
+        .grid-pos{
+            margin-top:2.2rem;
+            padding-top:2.2%;
         }
+
+  
+.fixed {
+    background: white;
+    padding-top:1.5%;
+    padding-bottom:1.5%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 999999999; /* Ensure the navbar stays above other content */
+    box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.1); /* Optional: Add a subtle shadow */
+  }
+
+  .shop-header{
+    width:100%;
+    text-align: center;
+    background-color: #e5f3fa;
+    margin-top:14%;
+    padding-top:3%;
+    padding-bottom:3%;
+    margin-bottom:4%;
+} 
+ .shop-header h3{
+    font-size:3rem;
+    color:black;
+         /* font-family: "Playfair Display", serif; */
+    font-weight: 600;
+    font-style: normal;
+    color: rgba(255, 255, 255, 0.6);     /* Partially transparent white text */
+    -webkit-text-stroke: 1.5px black;  
+  }
+
+  /* Basic cart page styling */
+
+.cart-item {
+    display: flex;
+    margin-bottom: 20px;
+    border-bottom: 1px solid #ccc;
+    padding-bottom: 10px;
+}
+
+.cart-item-img {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    margin-right: 20px;
+}
+
+.cart-item-info {
+    display: flex;
+    flex-direction: row;
+    gap:2rem;
+    align-items:baseline;
+    width:100%;
+}
+
+.quantity-container {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+    width:25%;
+
+}
+
+.quantity-container p{
+    align-self: flex-end;
+}
+.quantity-btn {
+    padding: 5px 10px;
+    margin: 0 10px;
+    cursor: pointer;
+}
+
+.quantity-input {
+    width: 100%;
+    text-align: center;
+    padding: 5px;
+}
+
+.remove-item-btn {
+    background-color: rgb(234, 1, 1);
+    color: white;
+    padding: 5px 10px;
+    border: none;
+    cursor: pointer;
+    border-radius: 7px;
+}
+
+#cart-total {
+    margin-top: 20px;
+    font-size: 18px;
+    align-self:flex-end;
+}
+
+hr {
+    margin: 10px 0;
+}
+
+/* Main cart page container */
+.cart-page-container {
+    width: 90%;
+    max-width: 60rem;
+    margin: 2rem auto;
+    padding: 1rem;
+}
+
+/* Cart header styling */
+.cart-page-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 1.2rem;
+    font-weight: bold;
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+/* Cart item container - flexbox layout for each item in a single row */
+.cart-page-item {
+    display: flex;
+    align-items: center;
+    padding: 1rem 0;
+    border-bottom: 1px solid #ddd;
+}
+
+/* Cart item image */
+.cart-item-image {
+    width: 6rem;
+    height: 6rem;
+    object-fit: cover;
+    border-radius: 0.5rem;
+    margin-right: 1rem;
+}
+
+/* Cart item details section in row layout */
+.cart-item-details {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex: 1;
+    gap: 1rem;
+}
+
+/* Each item detail in the row */
+.cart-item-title {
+    font-size: 1rem;
+    font-weight: bold;
+    color: #333;
+}
+
+.cart-item-price,
+.cart-item-quantity,
+.cart-item-total {
+    font-size: 1rem;
+    text-align: center;
+    flex: 1;
+}
+
+.cart-remove-btn {
+    background: none;
+    color: #d9534f;
+    border: none;
+    cursor: pointer;
+    font-size: 0.9rem;
+    padding: 0.5rem;
+}
+
+/* Grand total section */
+.cart-total-section {
+    text-align: center;
+    margin-top: 2rem;
+}
+
+.cart-grand-total {
+    font-size: 1.4rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+}
+
+/* Action buttons */
+.cart-action-btn {
+    display: inline-block;
+    padding: 0.75rem 1.5rem;
+    margin: 0.5rem;
+    font-size: 1rem;
+    font-weight: bold;
+    color: #fff;
+    background-color: #5cb85c;
+    border: none;
+    border-radius: 0.25rem;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.cart-action-btn.empty-cart {
+    background-color: #d9534f;
+}
+
+
+.cart-item-info h5 {
+    margin: 0;
+    font-size: 1rem;
+    width:35%;
+}
+
+.cart-item-info p{
+    width:20%;
+}
+
+.subtotal{
+    text-align: right;
+}
+#cart-items-container{
+    width:100%;
+}
+/* Responsive adjustments */
+@media (max-width: 48em) {
+    .cart-page-container {
+        width: 95%;
+    }
+
+    /* Stacked layout for smaller screens */
+    .cart-page-item {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .cart-item-image {
+        width: 5rem;
+        height: 5rem;
+        margin: 0 auto;
+    }
+
+    .cart-item-details {
+        flex-direction: column;
+        align-items: center;
+        gap: 0.5rem;
+    }
+
+    .cart-item-title,
+    .cart-item-price,
+    .cart-item-quantity,
+    .cart-item-total,
+    .cart-remove-btn {
+        font-size: 0.9rem;
+    }
+
+    .cart-grand-total {
+        font-size: 1.2rem;
+    }
+
+    .cart-action-btn {
+        width: 100%;
+        margin: 0.5rem 0;
+        font-size: 0.9rem;
+    }
+}
+
+.btn-cat{
+    text-align: left;
+}
+.browse{
+    display: flex;
+    width: 100%;
+    justify-content: flex-start;
+    
+}
+
+.checkout-btn{
+    display: flex;
+    width: 100%;
+    justify-content: flex-end;
+    margin-bottom:5%;
+}
     </style>
 </head>
 <body>
@@ -32,7 +309,7 @@
                 All products on sale until December 10th—shop now and save!            
             </div>
         </div>
-        <div class="grid1 ">
+        <div class="grid1 grid-pos">
             <nav class="container">
                 <a href="index.html" class="logo">
                     <img src="./images/icons/mainlogo.png" alt="IMG-LOGO">
@@ -54,30 +331,26 @@
                         </li>
                     </ul>
                 </div>	
-                <div class="cart">
-                    <a href="#" id="cartIcon"  role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-cart3" viewBox="0 0 16 16">
-                            <path d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .49.598l-1 5a.5.5 0 0 1-.465.401l-9.397.472L4.415 11H13a.5.5 0 0 1 0 1H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5M3.102 4l.84 4.479 9.144-.459L13.89 4zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4m7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4m-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2m7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2"/>
-                          </svg>
-                        <span class="badge position-absolute top-0 start-100 translate-middle badge rounded-pill " id="cartItemCount" >0</span>
-                      </a>
-                    <!-- <a href="#" id="cartIcon" class="dropdown-toggle" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-cart2" viewBox="0 0 16 16">
-                            <path d="M0 2.5A.5.5 0 0 1 .5 2H2a.5.5 0 0 1 .485.379L2.89 4H14.5a.5.5 0 0 1 .485.621l-1.5 6A.5.5 0 0 1 13 11H4a.5.5 0 0 1-.485-.379L1.61 3H.5a.5.5 0 0 1-.5-.5M3.14 5l1.25 5h8.22l1.25-5zM5 13a1 1 0 1 0 0 2 1 1 0 0 0 0-2m-2 1a2 2 0 1 1 4 0 2 2 0 0 1-4 0m9-1a1 1 0 1 0 0 2 1 1 0 0 0 0-2m-2 1a2 2 0 1 1 4 0 2 2 0 0 1-4 0"/>
-                        </svg>
-                        <span class="badge position-absolute top-0 start-100 translate-middle badge rounded-pill bg-warning" id="cartItemCount" >0</span>
-                      </a>
-                      <div class="dropdown-menu" aria-labelledby="cartIcon">
-                        <div  id="cartDropdownMenu"></div>
-                        <hr id="dropdown-divider" class="dropdown-divider">
-                         <a id='viewCartLink'class="dropdown-item" href="cart.html">View Cart</a>
-                         <a id='checkoutLink'class="dropdown-item" href="checkout.html">Proceed to Checkout</a>
-                      </div> -->
-                </div>
             </nav>
         </div>
+        <div class="shop-header">
+            <h3>YOUR CART</h3>
+        </div>  
         <div class="content container">
-           vsd
+            <div class="browse"> 
+            <button class="btn btn-outline-secondary btn-cat " onclick="window.location.href='./shop.html'"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-bar-left" viewBox="0 0 16 16">
+                <path fill-rule="evenodd" d="M12.5 15a.5.5 0 0 1-.5-.5v-13a.5.5 0 0 1 1 0v13a.5.5 0 0 1-.5.5M10 8a.5.5 0 0 1-.5.5H3.707l2.147 2.146a.5.5 0 0 1-.708.708l-3-3a.5.5 0 0 1 0-.708l3-3a.5.5 0 1 1 .708.708L3.707 7.5H9.5a.5.5 0 0 1 .5.5"/>
+              </svg> Go back to browsing</button>
+            </div>
+            <div id="cart-items-container"></div>
+            <div id="cart-total"></div>
+            <div class="checkout-btn">
+                <button id='proceedToCheckout'class=" btn btn-warning" onclick="proceedToCheckout()">Proceed to checkout
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-right-short" viewBox="0 0 16 16">
+                        <path fill-rule="evenodd" d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8"/>
+                      </svg>
+                </button>
+             </div>
         </div>
 
         <footer class="">
@@ -176,7 +449,33 @@
             </div>
         </footer>
     </div>
+    <script>
+                document.addEventListener('DOMContentLoaded', function () {
+  const navbar = document.querySelector('.grid1');
+
+  window.addEventListener('scroll', function () {
+    if (window.scrollY > 0) {
+      navbar.classList.add('fixed');
+      navbar.classList.remove('container');
+      navbar.classList.remove('grid-pos');
+
+    } else {
+      navbar.classList.remove('fixed');
+      navbar.classList.add('container');
+      navbar.classList.add('grid-pos');
+
+
+    }
+  });
+});
+    </script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
     <script src="./script.js"></script>
+    <script>
+    document.addEventListener("DOMContentLoaded", function() {
+      updateCartPage(); // Initialize cart display on page load
+      updateCartTotals();
+    });
+    </script>
 </body>
 </html>
