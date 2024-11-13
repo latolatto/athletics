@@ -22,6 +22,44 @@ backToTopBtn.addEventListener("click", function() {
     behavior: "smooth"
   });
 });
+const products = [
+  { 
+    id: 0, 
+    title: 'Leather Clean Solution', 
+    price: 5, 
+    image: './images/leatherclean/leatherclean1-removebg-preview.png', 
+    description: 'Cleans and restores leather shoes.'
+     },
+  {
+    id: 1, 
+    title: 'All-in-One Basic Pack', 
+    price: 5, 
+    image: './images/basicpack/basicpack1-removebg-preview.png', 
+    description: 'Includes all essentials for shoe care.'
+ },
+  { 
+    id: 2, 
+    title: 'Waterproof Solution', 
+    price: 5, 
+    image: './images/waterstop/waterstop1-removebg-preview.png', 
+    description: 'Keeps shoes dry and protected.' 
+ },
+     {
+        id: 3,
+        image: './images/deosanitizier/deosanitizier1-removebg-preview.png',
+        title: 'Deo Sanitizier',
+        price: '5',
+        description:'Athletics Deo , our top-performance shoe deodorant, designed for active lifestyles. This powerful formula tackles tough odors and keeps your shoes smelling fresh, no matter how intense your workouts are. ',
+    },
+
+    {
+        id: 4,
+        image: './images/deostick/deostick1-removebg-preview.png',
+        title: 'Deo Stick',
+        price: '5',
+        description:'Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. ',
+    }
+];
 
 // Initialize or retrieve cart from local storage
 let cart = JSON.parse(localStorage.getItem('cart')) || [];
@@ -108,6 +146,27 @@ function updateCartDisplay() {
 
   const cartItemsContainer = document.querySelector('.offcanvas-body');
   cartItemsContainer.innerHTML = '';
+  
+  // const cartTotalContainer = document.getElementById('cart-total-container');
+  const cartButtonsContainer = document.getElementById('cart-buttons-container');
+
+
+  if (cart.length === 0) {
+    // Display "Cart is empty" message
+    cartItemsContainer.innerHTML = '<p>Your cart is empty!</p>';
+  
+  
+    // cartTotalContainer.style.display = 'none';
+    if (cartButtonsContainer) {
+      cartButtonsContainer.style.opacity = '0';
+      document.querySelector('.empty-crt').style.display='none';
+      document.querySelector('.total-sum').style.display='none';
+    }
+  } else{
+      cartButtonsContainer.style.opacity = '1';
+  
+  
+  }
 
   cart.forEach(item => {
       const itemElement = document.createElement('div');
@@ -127,14 +186,18 @@ function updateCartDisplay() {
 
       // Add event listener for removing items from cart
       itemElement.querySelector('.remove-item-btn').addEventListener('click', () => removeFromCart(item.id));
+
+
   });
 
 
   const totalElement = document.createElement('div');
+  totalElement.classList.add('total-sum');
   totalElement.innerHTML = `<hr><p>Grand Total: $${cartTotal.toFixed(2)}</p>`;
   cartItemsContainer.appendChild(totalElement);
 
   const emptyCartButton = document.createElement('button');
+  emptyCartButton.classList.add('empty-crt');
   emptyCartButton.textContent = 'Empty Cart';
   emptyCartButton.addEventListener('click', emptyCart);
   cartItemsContainer.appendChild(emptyCartButton);
@@ -164,7 +227,6 @@ function emptyCart() {
 // Initial display of all products
 displayItem(products);
 updateCartDisplay();
-
 
 
 

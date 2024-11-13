@@ -639,6 +639,8 @@ function addToCart(productId, quantity = 1) {
   updateCartDisplay();
 }
 
+
+
 // Function to update cart display in offcanvas
 function updateCartDisplay() {
   const cartIconBadge = document.getElementById('cartItemCount');
@@ -649,6 +651,29 @@ function updateCartDisplay() {
 
   const cartItemsContainer = document.querySelector('.offcanvas-body');
   cartItemsContainer.innerHTML = '';
+//   const checkoutButton = document.getElementsByClassName('checkout-button')[0]; // Adjust IDs as needed
+//   const viewCartButton = document.getElementsByClassName('view-cart-button')[0];
+//   const cartTotalContainer = document.getElementById('cart-total-container');
+
+const cartButtonsContainer = document.getElementById('cart-buttons-container');
+
+
+if (cart.length === 0) {
+  // Display "Cart is empty" message
+  cartItemsContainer.innerHTML = '<p>Your cart is empty!</p>';
+
+
+  // cartTotalContainer.style.display = 'none';
+  if (cartButtonsContainer) {
+    cartButtonsContainer.style.opacity = '0';
+    document.querySelector('.empty-crt').style.display='none';
+    document.querySelector('.total-sum').style.display='none';
+  }
+} else{
+    cartButtonsContainer.style.opacity = '1';
+
+
+}
 
   cart.forEach(item => {
       const itemElement = document.createElement('div');
@@ -693,6 +718,8 @@ function emptyCart() {
   saveCart();
   updateCartDisplay();
 }
+
+
 
 // Initial display of all products
 displayItem(products);
