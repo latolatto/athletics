@@ -156,10 +156,10 @@ padding: 20px 25px;
                           <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
                         </div>
                         <div class="offcanvas-body">
-                          
-                          <hr id="dropdown-divider" class="dropdown-divider">
-                          <a id='viewCartLink'class="dropdown-item" href="cart.html">View Cart</a>
-                          <a id='checkoutLink'class="dropdown-item" href="checkout.html">Proceed to Checkout</a>
+                        </div>
+                        <div id="cart-buttons-container" style="">
+                          <button onclick="window.location.href='./cart.html'" class="btn view-cart-button">View Cart</button>
+                          <button onclick="window.location.href='./checkout.html'" id="checkout-button" class="  checkout-button">Checkout</button>
                         </div>
                       </div>
                 </div>
@@ -356,6 +356,8 @@ document.addEventListener('DOMContentLoaded', function () {
         document.addEventListener("DOMContentLoaded", function () {
             // Call updateCartDisplay on each page load to update cart data
             updateCartDisplay();
+            addToCart();
+            removeFromCart();
         });
     </script>
     

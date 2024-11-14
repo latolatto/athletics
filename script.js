@@ -22,47 +22,9 @@ backToTopBtn.addEventListener("click", function() {
     behavior: "smooth"
   });
 });
-const products = [
-  { 
-    id: 0, 
-    title: 'Leather Clean Solution', 
-    price: 5, 
-    image: './images/leatherclean/leatherclean1-removebg-preview.png', 
-    description: 'Cleans and restores leather shoes.'
-     },
-  {
-    id: 1, 
-    title: 'All-in-One Basic Pack', 
-    price: 5, 
-    image: './images/basicpack/basicpack1-removebg-preview.png', 
-    description: 'Includes all essentials for shoe care.'
- },
-  { 
-    id: 2, 
-    title: 'Waterproof Solution', 
-    price: 5, 
-    image: './images/waterstop/waterstop1-removebg-preview.png', 
-    description: 'Keeps shoes dry and protected.' 
- },
-     {
-        id: 3,
-        image: './images/deosanitizier/deosanitizier1-removebg-preview.png',
-        title: 'Deo Sanitizier',
-        price: '5',
-        description:'Athletics Deo , our top-performance shoe deodorant, designed for active lifestyles. This powerful formula tackles tough odors and keeps your shoes smelling fresh, no matter how intense your workouts are. ',
-    },
-
-    {
-        id: 4,
-        image: './images/deostick/deostick1-removebg-preview.png',
-        title: 'Deo Stick',
-        price: '5',
-        description:'Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. ',
-    }
-];
 
 // Initialize or retrieve cart from local storage
-let cart = JSON.parse(localStorage.getItem('cart')) || [];
+window.cart = JSON.parse(localStorage.getItem('cart')) || [];
 
 // Save cart to local storage
 function saveCart() {
@@ -70,7 +32,7 @@ function saveCart() {
 }
 
 // Function to display products
-const displayItem = (items) => {
+window.displayItem = (items) => {
   const root = document.getElementById('root');
   root.innerHTML = ''; // Clear existing content
   items.forEach((item) => {
@@ -151,22 +113,7 @@ function updateCartDisplay() {
   const cartButtonsContainer = document.getElementById('cart-buttons-container');
 
 
-  if (cart.length === 0) {
-    // Display "Cart is empty" message
-    cartItemsContainer.innerHTML = '<p>Your cart is empty!</p>';
-  
-  
-    // cartTotalContainer.style.display = 'none';
-    if (cartButtonsContainer) {
-      cartButtonsContainer.style.opacity = '0';
-      document.querySelector('.empty-crt').style.display='none';
-      document.querySelector('.total-sum').style.display='none';
-    }
-  } else{
-      cartButtonsContainer.style.opacity = '1';
-  
-  
-  }
+
 
   cart.forEach(item => {
       const itemElement = document.createElement('div');
@@ -206,16 +153,55 @@ function updateCartDisplay() {
   // emptyCartButton.textContent = 'Empty Cart';
   // emptyCartButton.addEventListener('click', emptyCart);
   // cartItemsContainer.appendChild(emptyCartButton);
+
+
+  if (cart.length === 0) {
+    // Display "Cart is empty" message
+    cartItemsContainer.innerHTML = '<p>Your cart is empty!</p>';
+    
+    // Check if cartButtonsContainer exists before accessing its style
+    if (cartButtonsContainer) {
+      cartButtonsContainer.style.opacity = '0';
+    } else {
+      console.error('cartButtonsContainer not found');
+    }
+
+    // Check if .empty-crt exists before accessing its style
+    const emptyCart = document.querySelector('.empty-crt');
+    if (emptyCart) {
+      emptyCart.style.display = 'none';
+    } else {
+      // console.error('.empty-crt not found');
+    }
+
+    // Check if .total-sum exists before accessing its style
+    const totalSum = document.querySelector('.total-sum');
+    if (totalSum) {
+      totalSum.style.display = 'none';
+    } else {
+      // console.error('.total-sum not found');
+    }
+
+  } else {
+    // If cart is not empty, show the buttons and total sum
+    if (cartButtonsContainer) {
+      cartButtonsContainer.style.opacity = '1';
+    } else {
+      console.error('cartButtonsContainer not found');
+    }
+  }
 }
 
 
 
-// Function to remove item from cart
-function removeFromCart(productId) {
-  cart = cart.filter(item => item.id !== productId);
-  saveCart();
-  updateCartDisplay();
-}
+// // Function to remove item from cart
+// function removeFromCart(productId) {
+//   cart = cart.filter(item => item.id !== productId);
+//   saveCart();
+//   updateCartDisplay();
+// }
+
+
 
 // Function to empty the cart
 function emptyCart() {
@@ -224,9 +210,6 @@ function emptyCart() {
   updateCartDisplay();
 }
 
-// Initial display of all products
-displayItem(products);
-updateCartDisplay();
 
 
 
@@ -330,12 +313,26 @@ function updateQuantity(productId, change) {
 // Remove from cart function
 function removeFromCart(productId) {
   cart = cart.filter(item => item.id !== productId);
+  localStorage.setItem('cart', JSON.stringify(cart));
+
   saveCart();
   updateCartPage();
+  updateCartDisplay();
+
 }
+
+
 
 // Initial load for cart and offcanvas display
 updateCartDisplay();
 if (document.getElementById('cart-items-container')) {
   updateCartPage();
 }
+
+// Initial display of all products
+document.addEventListener("DOMContentLoaded", function () {
+
+  displayItem(products);
+  updateCartDisplay();
+  
+  })

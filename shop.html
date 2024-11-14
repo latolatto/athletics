@@ -469,7 +469,7 @@ searchBar.addEventListener('keyup', (e) => {
 // ];
 
 // Sample Products Array
-const products = [
+window.products  = [
   { 
     id: 0, 
     title: 'Leather Clean Solution', 
@@ -642,6 +642,8 @@ if (cart.length === 0) {
   cartItemsContainer.appendChild(totalElement);
 
   const emptyCartButton = document.createElement('button');
+  emptyCartButton.classList.add('empty-crt');
+
   emptyCartButton.textContent = 'Empty Cart';
   emptyCartButton.addEventListener('click', emptyCart);
   cartItemsContainer.appendChild(emptyCartButton);
@@ -650,6 +652,7 @@ if (cart.length === 0) {
 // Function to remove item from cart
 function removeFromCart(productId) {
   cart = cart.filter(item => item.id !== productId);
+  console.log("item removed");
   saveCart();
   updateCartDisplay();
 }
