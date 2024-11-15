@@ -2,15 +2,21 @@ body, html {
     margin: 0;
     padding: 0;
     /* box-sizing: border-box; */
-    font-family: "Poppins", sans-serif;
+    font-family: "Poppins", sans-serif !important;
     font-weight: 400;
    font-style: normal;
    overflow-x: hidden;
+   background: black !important;
+   color:rgb(207, 207, 207) !important;
 }
 
 .body-container{
     display:flex;
     flex-direction:column;
+}
+
+a{
+    text-decoration: none !important;
 }
 
 .top-bar{
@@ -82,7 +88,7 @@ nav{
 nav a {
     text-decoration: none;
     color:black ;
-    color:#666666;
+    color:rgb(207, 207, 207);
 }
 .main-menu li{
     list-style: none;
@@ -91,7 +97,7 @@ nav a {
 .main-menu li a{
  
     text-decoration: none  ;
-    color:black ;
+    color:rgb(207, 207, 207) ;
 }
 
 .logo img{
@@ -108,8 +114,7 @@ nav a {
 }
 
 #cartIcon span{
-    background-color: #717fe0;
-}
+    background-color:#f80800;}
 
 .grid1 {
     background: transparent;
@@ -117,7 +122,7 @@ nav a {
   }
   
   .fixed {
-    background: white;
+    background-color:black;
     padding-top:1.5%;
     padding-bottom:1.5%;
     position: fixed;
@@ -149,7 +154,7 @@ nav a {
 
 .txt1{
 line-height: 2;
-color: #333;
+color: rgb(207, 207, 207);
 font-family: "Poppins", sans-serif;
 font-weight: 400;
 font-style: normal;
@@ -163,7 +168,7 @@ font-size: 1.7rem;
     font-weight: 600;
     font-style: normal;
     font-size: 4rem;
-
+    color:rgb(207, 207, 207);
 }
 
 .btn0{
@@ -793,7 +798,7 @@ a{
     right: 20px;
     width: 2.5rem;
     height: 2.5rem;
-    background-color: #7180e093; /* Customize your button color */
+    background-color: #f8080081; /* Customize your button color */
     color: white;
     border: none;
     border-radius: 50%; /* Makes the button circular */
@@ -823,7 +828,7 @@ a{
   }
   
   #backToTopBtn:hover {
-    background-color: #717fe0; /* Change color on hover */
+    background-color: #c70b04; /* Change color on hover */
   }
   .hidden {
     /* opacity: 0;

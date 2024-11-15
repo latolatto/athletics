@@ -22,7 +22,7 @@
             padding-top:2.2%;
         }
           .fixed {
-    background: white;
+    background: black;
     padding-top:1.5%;
     padding-bottom:1.5%;
     position: fixed;
@@ -36,7 +36,7 @@
 </head>
 <body>
     <div class="body-container">
-        <div class="top-bar">
+        <div class="top-bar  border-bottom">
             <div class="sliding-text">
                 <!-- Free shipping for standard orders over $100 -->
                 All products on sale until December 10th—shop now and save!            
@@ -68,7 +68,7 @@
                 </div>	
                 <div class="cart">
                     <button id="cartIcon"  type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-cart3" viewBox="0 0 16 16">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="rgb(207, 207, 207)" class="bi bi-cart3" viewBox="0 0 16 16">
                             <path d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .49.598l-1 5a.5.5 0 0 1-.465.401l-9.397.472L4.415 11H13a.5.5 0 0 1 0 1H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5M3.102 4l.84 4.479 9.144-.459L13.89 4zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4m7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4m-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2m7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2"/>
                           </svg>
                         <span class="badge position-absolute top-0 start-100 translate-middle badge rounded-pill " id="cartItemCount" >0</span>
@@ -97,7 +97,7 @@
         <div class=" karuseli sticky-top" >
             <div id="carouselExampleSlidesOnly " class="carousel slide carousel-fade" data-bs-ride="carousel">
               <div class="carousel-inner">
-                <div class="carousel-item active" data-bs-interval="4000" style="background-image: url(./images//leatherclean.webp); " loading="lazy" >
+                <div class="carousel-item active" data-bs-interval="4000" style="background-image: url(./images/leathercleanslide-removebg-preview.png); " loading="lazy" >
                     
                     <div class="container slides-caption">
 						<div class="">
@@ -119,7 +119,7 @@
 						</div>
 					</div>
                 </div>
-                <div class="carousel-item" data-bs-interval="4000" style="background-image: url(./images/basicpackslide.webp);"loading="lazy" >  
+                <div class="carousel-item" data-bs-interval="4000" style="background-image: url(./images/basicpackslide-removebg-preview.png);"loading="lazy" >  
                   <!-- <img src="./images/basicpackslide.svg" class="d-block  carousel-img" alt="..."> -->
                   <div class="container slides-caption">
                     <div class="">
@@ -141,7 +141,7 @@
                     </div>
                 </div>
                 </div>
-                <div class="carousel-item" data-bs-interval="4000" style="background-image: url(./images/waterstopslide.webp);"loading="lazy" >
+                <div class="carousel-item" data-bs-interval="4000" style="background-image: url(./images/waterstopslide-removebg-preview.png);"loading="lazy" >
                   <!-- <img src="./images/leathercleanslide.svg" class="d-block  carousel-img" alt="..."> -->
                   <div class="container slides-caption">
                         <div class="text31 ">
@@ -345,8 +345,8 @@
         </div>
     </div>
     </div>
-    <div class="last-section bg-body-tertiary hidden">
-        <h4>Available at These Stores</h4>
+    <div class="last-section  hidden">
+        <h4>FEATURED ON THESE STORES</h4>
         <div class="retail-stores ">
             <img  onclick="window.open('https:www.sportreality.al', '_blank');" style="cursor: pointer;" src="./images/stores/sportreality.png">
             <img onclick="window.open('https:www.buzzsneakers.al/', '_blank');" style="cursor: pointer;" src="./images/stores/buzz.png">
@@ -354,7 +354,7 @@
         </div>
         <span class="muted"> Tirana, Albania</span>
     </div>
-    <footer class="">
+    <footer class="border-top">
         <div class="container footer-flex">
             <img class="footer-logo" src="./images/icons/white-logo.png">
             <div class=" footer-flex-row">

@@ -599,24 +599,39 @@ function updateCartDisplay() {
 //   const cartTotalContainer = document.getElementById('cart-total-container');
 
 const cartButtonsContainer = document.getElementById('cart-buttons-container');
-
+const emptyCartMessage = document.querySelector('.empty-crt');
+const totalSumDisplay = document.querySelector('.total-sum');
 
 if (cart.length === 0) {
-  // Display "Cart is empty" message
-  cartItemsContainer.innerHTML = '<p>Your cart is empty!</p>';
+    cartItemsContainer.innerHTML = '<p>Your cart is empty!</p>';
 
+    // Safely update styles if the element exists
+    if (cartButtonsContainer) {
+      cartButtonsContainer.style.opacity = '0';
+    }
 
-  // cartTotalContainer.style.display = 'none';
-  if (cartButtonsContainer) {
-    cartButtonsContainer.style.opacity = '0';
-    document.querySelector('.empty-crt').style.display='none';
-    document.querySelector('.total-sum').style.display='none';
+    if (emptyCartMessage) {
+      emptyCartMessage.style.display = 'none';
+    }
+
+    if (totalSumDisplay) {
+      totalSumDisplay.style.display = 'none';
+    }
+  } else {
+    // Cart has items, show controls if they exist
+    if (cartButtonsContainer) {
+      cartButtonsContainer.style.opacity = '1';
+    }
+
+    // Show emptyCartMessage and totalSumDisplay if needed
+    if (emptyCartMessage) {
+      emptyCartMessage.style.display = 'block';
+    }
+
+    if (totalSumDisplay) {
+      totalSumDisplay.style.display = 'block';
+    }
   }
-} else{
-    cartButtonsContainer.style.opacity = '1';
-
-
-}
   cart.forEach(item => {
       const itemElement = document.createElement('div');
       itemElement.innerHTML = `

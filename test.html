@@ -4,168 +4,176 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <style>
-        /* Basic Style */
-
-html, body {
-    background-color: #ffccdd;
-    margin: 10px;
-}
-
-.wrapper{
-	/* width: 100%; */
-
-}
-
-h1{
-	font-family: "Trebuchet MS", Helvetica, sans-serif;
-	font-size: 38px;
-	text-align: center;
-	
-}
-
-.img-container > div {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 2em;
-    color: #ffeead;
-}
-
-.img-container > div > img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-		border: 1px solid black
-}
-
-/* Grid */
-.img-container {
-    display: grid;
-    grid-gap: 5px;
-    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-    grid-auto-rows: 125px;
-		grid-auto-flow: dense; /* Fill all spaces with fitted images */
-}
-
-.horizontal {
-	grid-column: span 2;
-}
-
-.vertical {
-	grid-row: span 2;
-}
-
-.big {
-	grid-column: span 2;
-	grid-row: span 2;
-}
-
-/* Media Queries */
-
-@media screen and (min-width: 1024px){
-	.wrapper{
-		width: 960px;
-		margin: 0 auto;
-	}
-}
-.wrapper {
-    text-align: center;
-}
-
-
-.image-item {
-    position: relative;
-    overflow: hidden;
-}
-
-.image-item img {
-    width: 100%;
-    display: block;
-    transition: transform 0.3s ease;
-}
-
-.image-item:hover img {
-    transform: scale(1.1);
-}
-
-.overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-color: rgba(0, 0, 0, 0.5); 
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    opacity: 0;
-    transition: opacity 0.5s ease, transform 0.5s ease;
-    transform: translateY(20px);
-}
-
-.image-item:hover .overlay {
-    opacity: 1;
-    transform: translateY(0);
-}
-
-.overlay p {
-    color: #fff;
-    font-size: 18px;
-    margin: 0;
-    text-align: center;
-}
-
-    </style>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
 </head>
 <body>
-    <div class="wrapper">
-        <h1>Image Grid</h1>
-        <div class="container">
-            <div class="horizontal image-item">
-                <img src="./images/main-grid/horizontal.png" alt="">
-                <div class="overlay">
-                    <p>Deo Shoe Sanitizier</p>
-                </div>
+    <div class="row g-5">
+        <div class="col-md-5 col-lg-4 order-md-last">
+          <h4 class="d-flex justify-content-between align-items-center mb-3">
+            <span class="text-primary">Your cart</span>
+            <span class="badge bg-primary rounded-pill">3</span>
+          </h4>
+          <ul class="list-group mb-3">
+            <li class="list-group-item d-flex justify-content-between lh-sm">
+              <div>
+                <h6 class="my-0">Product name</h6>
+                <small class="text-body-secondary">Brief description</small>
+              </div>
+              <span class="text-body-secondary">$12</span>
+            </li>
+            <li class="list-group-item d-flex justify-content-between lh-sm">
+              <div>
+                <h6 class="my-0">Second product</h6>
+                <small class="text-body-secondary">Brief description</small>
+              </div>
+              <span class="text-body-secondary">$8</span>
+            </li>
+            <li class="list-group-item d-flex justify-content-between lh-sm">
+              <div>
+                <h6 class="my-0">Third item</h6>
+                <small class="text-body-secondary">Brief description</small>
+              </div>
+              <span class="text-body-secondary">$5</span>
+            </li>
+            <li class="list-group-item d-flex justify-content-between bg-body-tertiary">
+              <div class="text-success">
+                <h6 class="my-0">Promo code</h6>
+                <small>EXAMPLECODE</small>
+              </div>
+              <span class="text-success">−$5</span>
+            </li>
+            <li class="list-group-item d-flex justify-content-between">
+              <span>Total (USD)</span>
+              <strong>$20</strong>
+            </li>
+          </ul>
+  
+          <form class="card p-2">
+            <div class="input-group">
+              <input type="text" class="form-control" placeholder="Promo code">
+              <button type="submit" class="btn btn-secondary">Redeem</button>
             </div>
-            <div class="vertical image-item">
-                <img src="./images/main-grid/vertical.png" alt="">
-                <div class="overlay">
-                    <p>Leather Shoe Clean</p>
-                </div>
-            </div>
-            <div class="image-item">
-                <img src="./images/main-grid/square1.png" alt="">
-                <div class="overlay">
-                    <p>Deo Stick</p>
-                </div>
-            </div>
-            <div class="big image-item">
-                <img src="./images/main-grid/big.jpeg" alt="">
-                <div class="overlay">
-                    <p>Basic Pack</p>
-                </div>
-            </div>
-            <div class="image-item">
-                <img src="./images/main-grid/square21.png" alt="">
-                <div class="overlay">
-                    <p>Waterstop Solution</p>
-                </div>
-            </div>
-            <div class="image-item">
-                <img src="./images/main-grid/square3.jpeg" alt="">
-                <div class="overlay">
-                    <p>Leather Clean</p>
-                </div>
-            </div>
-            <div class="image-item">
-                <img src="./images/main-grid/square4.png" alt="">
-                <div class="overlay">
-                    <p>Athletics Collection</p>
-                </div>
-            </div>
+          </form>
         </div>
-    </div>
-    
+        <div class="col-md-7 col-lg-8">
+          <form >
+            <div class="row g-3">
+              <div class="col-sm-6">
+                <label for="firstName" class="form-label">First name</label>
+                <input type="text" class="form-control" id="firstName" placeholder="" value="" required>
+                <div class="invalid-feedback">
+                </div>
+              </div>
+  
+              <div class="col-sm-6">
+                <label for="lastName" class="form-label">Last name</label>
+                <input type="text" class="form-control" id="lastName" placeholder="" value="" required>
+                <div class="invalid-feedback">
+                </div>
+              </div>
+  
+              <div class="col-12">
+                <label for="email" class="form-label">Email</label>
+                <input type="email" class="form-control" id="email" placeholder="you@example.com" required>
+                <div class="invalid-feedback">
+                </div>
+              </div>
+  
+              <div class="col-12">
+                <label for="address" class="form-label">Address</label>
+                <input type="text" class="form-control" id="address" placeholder="1234 Main St" required>
+                <div class="invalid-feedback">
+                </div>
+              </div>
+  
+              <div class="col-12">
+                <label for="address2" class="form-label">Address 2 <span class="text-body-secondary">(Optional)</span></label>
+                <input type="text" class="form-control" id="address2" placeholder="Apartment or suite">
+              </div>
+  
+              <div class="col-md-5">
+                <label for="country" class="form-label">Country</label>
+                <select class="form-select" id="country" required>
+                  <option value="">Choose...</option>
+                  <option>United States</option>
+                </select>
+                <div class="invalid-feedback">
+                </div>
+              </div>
+  
+              <div class="col-md-4">
+                <label for="state" class="form-label">State</label>
+                <input type="text" class="form-control" id="state" required>
+                <div class="invalid-feedback">
+                </div>
+              </div>
+
+              <div class="col-md-4">
+                <label for="state" class="form-label">City</label>
+                <input type="text" class="form-control" id="city" required>
+                <div class="invalid-feedback">
+                </div>
+              </div>
+  
+              <div class="col-md-3">
+                <label for="zip" class="form-label">Zip</label>
+                <input type="text" class="form-control" id="zip" placeholder="" required>
+                <div class="invalid-feedback">
+                </div>
+              </div>
+            </div>
+  
+            <hr class="my-4">
+  
+            <h4 class="mb-3">Payment</h4>
+  
+            <div class="my-3">
+              <div class="form-check">
+                <input id="credit" name="paymentMethod" type="radio" class="form-check-input" checked="" required>
+                <label class="form-check-label" for="card">Card</label>
+              </div>
+              <div class="form-check">
+                <input id="paypal" name="paymentMethod" type="radio" class="form-check-input" required>
+                <label class="form-check-label" for="paypal">PayPal</label>
+              </div>
+            </div>
+  
+            <div class="row gy-3">
+              <div class="col-md-6">
+                <label for="cc-name" class="form-label">Name on card</label>
+                <input type="text" class="form-control" id="cc-name" placeholder="" required>
+                <small class="text-body-secondary">Full name as displayed on card</small>
+                <div class="invalid-feedback">
+                </div>
+              </div>
+  
+              <div class="col-md-6">
+                <label for="cc-number" class="form-label">Credit card number</label>
+                <input type="text" class="form-control" id="cc-number" placeholder="" required>
+                <div class="invalid-feedback">
+                </div>
+              </div>
+  
+              <div class="col-md-3">
+                <label for="cc-expiration" class="form-label">Expiration</label>
+                <input type="text" class="form-control" id="cc-expiration" placeholder="" required>
+                <div class="invalid-feedback">
+                </div>
+              </div>
+  
+              <div class="col-md-3">
+                <label for="cc-cvv" class="form-label">CVV</label>
+                <input type="text" class="form-control" id="cc-cvv" placeholder="" required>
+                <div class="invalid-feedback">
+                </div>
+              </div>
+            </div>
+  
+            <hr class="my-4">
+  
+            <button class="w-100 btn btn-primary btn-lg" type="submit">Continue to checkout</button>
+          </form>
+        </div>
+      </div>
 </body>
 </html>

@@ -79,23 +79,30 @@ function openModal(item) {
 
 
 function addToCart(productId, quantity = 1) {
-  const product = products.find(item => item.id === productId);
-  console.log('Adding to cart:', product);  // Check the product object
-  if (product) {
-      const existingProduct = cart.find(item => item.id === productId);
-      if (existingProduct) {
-          existingProduct.quantity += quantity;
-      } else {
-          cart.push({
-              ...product,
-              quantity: quantity,
-              totalPrice: product.price
-          });
-      }
+  if (typeof window.products === 'undefined') {
+    // console.error('Products list is not available.');
+    return;
   }
-  saveCart();
-  updateCartDisplay();
+  
+  const product = window.products.find(item => item.id === productId);
+  console.log('Adding to cart:', product);  // Check the product object
+  
+  if (product) {
+    const existingProduct = cart.find(item => item.id === productId);
+    if (existingProduct) {
+      existingProduct.quantity += quantity;
+    } else {
+      cart.push({
+        ...product,
+        quantity: quantity,
+        totalPrice: product.price
+      });
+    }
+    saveCart();
+    updateCartDisplay();
+  }
 }
+
 
 
 // Function to update cart display in offcanvas
@@ -329,10 +336,11 @@ if (document.getElementById('cart-items-container')) {
   updateCartPage();
 }
 
-// Initial display of all products
 document.addEventListener("DOMContentLoaded", function () {
-
-  displayItem(products);
-  updateCartDisplay();
-  
-  })
+  if (window.products) {  // Ensure products is defined
+    displayItem(products);
+    updateCartDisplay();
+  } else {
+    // console.error("Products are not defined.");
+  }
+});
