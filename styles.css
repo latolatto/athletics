@@ -154,7 +154,7 @@ nav a {
 
 .txt1{
 line-height: 2;
-color: rgb(207, 207, 207);
+color: black;
 font-family: "Poppins", sans-serif;
 font-weight: 400;
 font-style: normal;
@@ -168,11 +168,11 @@ font-size: 1.7rem;
     font-weight: 600;
     font-style: normal;
     font-size: 4rem;
-    color:rgb(207, 207, 207);
+    color:black;
 }
 
 .btn0{
-    background-color: #717fe0;
+    background-color: #c70b04;
     color: #fff;
     border-radius:30px;
     font-family: "Poppins", sans-serif;
@@ -187,7 +187,7 @@ font-size: 1.7rem;
 }
 
 .btn0:hover{
-    background-color: #8394ff;
+    background-color: #930803;
 
 }
 
