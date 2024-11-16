@@ -72,16 +72,17 @@ a{
 nav{
     display:flex;
     flex-direction: row;
-    gap:4rem;
-    font-size: 0.9rem;
-    font-weight:500;
+    gap:4.5rem;
+    font-size: 1rem;
+    font-weight:600;
+    text-transform: uppercase;
     align-items: center;
 }
 
 .main-menu{
     display:flex;
     flex-direction: row;
-    gap:2rem;
+    gap:3.2rem;
     align-items: center;
     margin-bottom: 0;
 }
@@ -89,6 +90,7 @@ nav a {
     text-decoration: none;
     color:black ;
     color:rgb(207, 207, 207);
+
 }
 .main-menu li{
     list-style: none;
@@ -97,16 +99,24 @@ nav a {
 .main-menu li a{
  
     text-decoration: none  ;
-    color:rgb(207, 207, 207) ;
-}
+    /* color:rgb(207, 207, 207) ; */
+    transition: text-shadow 0.3s ease, color 0.3s ease;
 
+}
+.main-menu li a:hover {
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.9), 
+                 0 0 20px rgba(255, 255, 255, 0.8), 
+                 0 0 30px rgba(255, 255, 255, 0.7), 
+                 0 0 40px rgba(255, 255, 255, 0.6);
+    color: black; /* Keep text black */
+}
 .logo img{
     height:1.8rem;
 }
 
 .cart{
     position:relative;
-    left: 40%;
+    left: 28%;
 }
 #cartIcon{
     border:0;
@@ -515,6 +525,53 @@ h1{
     font-size: 0.9rem;
     margin: 0;
     text-align: center;
+}
+.athletics-banner {
+    /* position: absolute; */
+    width: 100%;
+    z-index: 999999;
+    overflow: hidden;
+    background-color: transparent;
+}
+
+.sliding-banner {
+    display: flex;
+    white-space: nowrap; /* Prevents text wrapping */
+    animation: seamless-slide 7s linear infinite;}
+
+/* First Sentence Styling */
+.sliding-banner-first {
+    font-size: 5rem; /* Large text size */
+    font-weight: 600;
+    text-transform: uppercase;
+    color: black; /* Black text */
+    text-stroke: 1px white; /* White outline */
+    -webkit-text-stroke: 1px white; /* White outline for Safari */
+}
+
+.sliding-banner-first svg {
+    margin-left: 1rem; /* Space between text and icon */
+    fill: #F6BE00;
+    /* filter: drop-shadow(0 0 5px rgba(255, 255, 255, 1)) drop-shadow(0 0 10px rgba(255, 223, 0, 1)); White glow + Burnt Yellow */
+}
+
+/* Second Sentence Styling */
+.sliding-banner-second {
+    font-size: 5rem; /* Same size as the first */
+    font-weight: 600;
+    text-transform: uppercase;
+    color: white; /* All-white text */
+    margin-left: 1rem; 
+}
+
+/* Keyframes for sliding animation */
+@keyframes seamless-slide {
+    0% {
+        transform: translateX(-100%); /* Start outside the left */
+    }
+    100% {
+        transform: translateX(100%); /* Move to outside the right */
+    }
 }
 
 .prods{

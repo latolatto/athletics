@@ -279,6 +279,23 @@
                 </div>
             </div>
         </div>
+        <div class="athletics-banner">
+            <div class="sliding-banner">
+                <h1 class="sliding-banner-first">
+                    WE ARE ATHLETICS CLEAN 
+                    <!-- <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" fill="currentColor" class="bi bi-arrow-down-right" viewBox="0 0 16 16">
+                        <path fill-rule="evenodd" d="M14 13.5a.5.5 0 0 1-.5.5h-6a.5.5h4.793L2.146 2.854a.5.5 0 1 1 .708-.708L13 12.293V7.5a.5.5h1 0z" />
+                    </svg> -->
+                    <span class="sliding-banner-second">WE ARE ATHLETICS CLEAN</span>
+                    WE ARE ATHLETICS CLEAN 
+                    <span class="sliding-banner-second">WE ARE ATHLETICS CLEAN</span>
+                    WE ARE ATHLETICS CLEAN 
+
+                </h1>
+            </div>
+        </div>
+        
+        
         <div class="prods">
             <div class="prods-left ">
                 <h3 class="hidden">
@@ -740,11 +757,11 @@ function setupNavbarScrollEffect() {
   window.addEventListener('scroll', function () {
     if (window.scrollY > 0) {
       navbar.classList.add('fixed');
-    //   navbar.classList.remove('container');
+      navbar.classList.remove('container');
       navbar.classList.remove('grid-pos');
     } else {
       navbar.classList.remove('fixed');
-    //   navbar.classList.add('container');
+      navbar.classList.add('container');
       navbar.classList.add('grid-pos');
     }
   });
