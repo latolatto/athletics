@@ -19,15 +19,16 @@
             margin-left:0 !important;
             margin-right:0 !important; */
         }
-
+/* 
         nav a{
-            color:black !important;
+            color:black ;
 
-        }
+        } */
 
         .grid-pos{
             margin-top:2.2rem;
             padding-top:2.2%;
+
         }
           .fixed {
     background: black;
@@ -40,6 +41,18 @@
     z-index: 999999999; /* Ensure the navbar stays above other content */
     box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.1); /* Optional: Add a subtle shadow */
   }
+.best-selling{
+    background-color: rgba(117, 117, 117, 0.434);
+    width:100%;
+    padding:5%;
+}
+
+.item-div{
+    background-color: white;
+    padding:5%;
+    width:50%;
+}
+
     </style>
 </head>
 <body>
@@ -56,21 +69,21 @@
                     <img src="./images/icons/mainlogo.png" alt="IMG-LOGO">
                 </a>
                 <div class="">
-                    <ul class="main-menu">
+                    <ul class="main-menu ">
                         
 
                         <li>
-                            <a href="index.html">Home</a>
+                            <a class=" menu-item" href="index.html">Home</a>
                         </li>
                         <li>
-                            <a href="shop.html">Shop</a>
+                            <a class=" menu-item" href="shop.html">Shop</a>
                         </li>
                         <li>
-                            <a href="about.html">About</a>
+                            <a class=" menu-item" href="about.html">About</a>
                         </li>
 
                         <li>
-                            <a href="contact.html">Contact</a>
+                            <a class=" menu-item" href="contact.html">Contact</a>
                         </li>
                     </ul>
                 </div>	
@@ -279,21 +292,50 @@
                 </div>
             </div>
         </div>
-        <div class="athletics-banner">
-            <div class="sliding-banner">
-                <h1 class="sliding-banner-first">
-                    WE ARE ATHLETICS CLEAN 
-                    <!-- <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" fill="currentColor" class="bi bi-arrow-down-right" viewBox="0 0 16 16">
-                        <path fill-rule="evenodd" d="M14 13.5a.5.5 0 0 1-.5.5h-6a.5.5h4.793L2.146 2.854a.5.5 0 1 1 .708-.708L13 12.293V7.5a.5.5h1 0z" />
-                    </svg> -->
-                    <span class="sliding-banner-second">WE ARE ATHLETICS CLEAN</span>
-                    WE ARE ATHLETICS CLEAN 
-                    <span class="sliding-banner-second">WE ARE ATHLETICS CLEAN</span>
-                    WE ARE ATHLETICS CLEAN 
-
-                </h1>
+        <div class="marquee-cont">
+            <div class="marquee-slider">
+              <p class="bold">WE ARE ATHLETICS CLEAN </p>
+              <p class="med">WE ARE ATHLETICS CLEAN </p>
+              <p class="lit">WE ARE ATHLETICS CLEAN </p>
+              <p class="bold">WE ARE ATHLETICS CLEAN </p>
+              <p class="med">WE ARE ATHLETICS CLEAN </p>
+              <p class="lit">WE ARE ATHLETICS CLEAN </p>
+              <p class="bold">WE ARE ATHLETICS CLEAN </p>
+              <p class="med">WE ARE ATHLETICS CLEAN </p>
+              <p class="lit">WE ARE ATHLETICS CLEAN </p>
+              <p class="bold">WE ARE ATHLETICS CLEAN </p>
+              <p class="med">WE ARE ATHLETICS CLEAN </p>
+              <p class="lit">WE ARE ATHLETICS CLEAN </p>
             </div>
-        </div>
+              <div class="marquee-slider">
+              <p class="bold">WE ARE ATHLETICS CLEAN </p>
+              <p class="med">WE ARE ATHLETICS CLEAN </p>
+              <p class="lit">WE ARE ATHLETICS CLEAN </p>
+              <p class="bold">WE ARE ATHLETICS CLEAN </p>
+              <p class="med">WE ARE ATHLETICS CLEAN </p>
+              <p class="lit">WE ARE ATHLETICS CLEAN </p>
+              <p class="bold">WE ARE ATHLETICS CLEAN </p>
+              <p class="med">WE ARE ATHLETICS CLEAN </p>
+              <p class="lit">WE ARE ATHLETICS CLEAN </p>
+              <p class="bold">WE ARE ATHLETICS CLEAN </p>
+              <p class="med">WE ARE ATHLETICS CLEAN </p>
+              <p class="lit">WE ARE ATHLETICS CLEAN </p>
+            </div>
+              <div class="marquee-slider">
+              <p class="bold">WE ARE ATHLETICS CLEAN </p>
+              <p class="med">WE ARE ATHLETICS CLEAN </p>
+              <p class="lit">WE ARE ATHLETICS CLEAN </p>
+              <p class="bold">WE ARE ATHLETICS CLEAN </p>
+              <p class="med">WE ARE ATHLETICS CLEAN </p>
+              <p class="lit">WE ARE ATHLETICS CLEAN </p>
+              <p class="bold">WE ARE ATHLETICS CLEAN </p>
+              <p class="med">WE ARE ATHLETICS CLEAN </p>
+              <p class="lit">WE ARE ATHLETICS CLEAN </p>
+              <p class="bold">WE ARE ATHLETICS CLEAN </p>
+              <p class="med">WE ARE ATHLETICS CLEAN </p>
+              <p class="lit">WE ARE ATHLETICS CLEAN </p>
+            </div>
+          </div>
         
         
         <div class="prods">
@@ -314,7 +356,7 @@
             <div class="body">
                 <div id="root"></div>
             </div>
-            <button type="button" onclick="window.location.href='./shop.html'" class="btn  btn-outline-secondary seemore-btn"> See More </button>
+            <button type="button" onclick="window.location.href='./shop.html'" class="btn  seemore-btn"> See More </button>
 
         </div>
         <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
@@ -370,8 +412,13 @@
         </div>
     </div>
     </div>
+    <div class="best-selling rounded container">
+        <div class="item-div rounded">
+
+        </div>
+    </div>
     <div class="last-section  hidden">
-        <h4>FEATURED ON THESE STORES</h4>
+        <h4>AVAILABLE ON THESE STORES</h4>
         <div class="retail-stores ">
             <img  onclick="window.open('https:www.sportreality.al', '_blank');" style="cursor: pointer;" src="./images/stores/sportreality.png">
             <img onclick="window.open('https:www.buzzsneakers.al/', '_blank');" style="cursor: pointer;" src="./images/stores/buzz.png">
@@ -753,19 +800,26 @@ function emptyCart() {
 // Navbar Handling Script
 function setupNavbarScrollEffect() {
   const navbar = document.querySelector('.grid1');
+  const menuItems = document.querySelectorAll('.menu-item'); // Use querySelectorAll for `.menu-item`
+  const whitesvg=document.querySelector('.bi-cart3');
   
   window.addEventListener('scroll', function () {
     if (window.scrollY > 0) {
       navbar.classList.add('fixed');
-      navbar.classList.remove('container');
-      navbar.classList.remove('grid-pos');
+      menuItems.forEach((item) => item.classList.add('white')); // Add 'white' to all menu items
+      navbar.classList.remove('container', 'grid-pos'); // Clean way to remove multiple classes
+      whitesvg.classList.add('whitesvg');
+
     } else {
       navbar.classList.remove('fixed');
-      navbar.classList.add('container');
-      navbar.classList.add('grid-pos');
+      menuItems.forEach((item) => item.classList.remove('white')); // Remove 'white' from all menu items
+      navbar.classList.add('container', 'grid-pos');
+      whitesvg.classList.remove('whitesvg');
+
     }
   });
 }
+
 // Initialize on DOMContentLoaded
 document.addEventListener('DOMContentLoaded', function () {
   setupNavbarScrollEffect();
