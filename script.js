@@ -23,6 +23,8 @@ backToTopBtn.addEventListener("click", function() {
   });
 });
 
+
+
 // Initialize or retrieve cart from local storage
 window.cart = JSON.parse(localStorage.getItem('cart')) || [];
 

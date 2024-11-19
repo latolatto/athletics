@@ -79,61 +79,7 @@ padding-bottom:1%;
     grid-template-columns: repeat(4, 1fr) !important;
     grid-gap: 3rem !important;
 }
-.stay-tuned-section {
-    background-color: #eef1ff;
-    padding: 20px;
-    text-align: center;
-    border-radius: 8px;
-    margin: 40px auto;
-    max-width: 60%;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
 
-.stay-tuned-section h2 {
-    font-size: 24px;
-    color: #333;
-    margin-bottom: 10px;
-}
-
-.stay-tuned-section p {
-    font-size: 16px;
-    color: #666;
-    margin-bottom: 0;
-}
-.stay-tuned-section::before {
-    content: "";
-    display: block;
-    width: 50px;
-    height: 4px;
-    background: linear-gradient(to right, #ff1100, #feb47b);
-    margin: 0 auto 10px auto;
-    border-radius: 2px;
-}
-/* Keyframes for jingle + pause */
-@keyframes jinglePauseCycle {
-    0% {
-        transform: rotate(0deg); /* Initial position */
-    }
-    10% {
-        transform: rotate(-15deg); /* Start jingle: move left */
-    }
-    20% {
-        transform: rotate(15deg); /* Jingle: move right */
-    }
-    30% {
-        transform: rotate(0deg); /* Return to original position */
-    }
-    100% {
-        transform: rotate(0deg); /* Stay in position for pause */
-    }
-}
-
-/* Apply the animation to the bell icon */
-.bell-icon {
-    display: inline-block;
-    font-size: 1.5em; /* Adjust size */
-    animation: jinglePauseCycle 4s ease-in-out infinite; /* 0.6 seconds for jingle, 4 seconds pause */
-}
 .no-results-message {
     display: none;
     color: #555555a1; /* Muted black/grey */
@@ -683,6 +629,21 @@ function emptyCart() {
 displayItem(products);
 updateCartDisplay();
     </script>
+        <!-- HoverSignal -->
+<script type="text/javascript" >
+    (function (d, w) {
+    var n = d.getElementsByTagName("script")[0],
+    s = d.createElement("script"),
+    f = function () { n.parentNode.insertBefore(s, n); };
+    s.type = "text/javascript";
+    s.async = true;
+    s.src = "https://app.hoversignal.com/Api/Script/57205124-1cee-4694-992c-f3dc6cd7c81b";
+    if (w.opera == "[object Opera]") {
+    d.addEventListener("DOMContentLoaded", f, false);
+    } else { f(); }
+    })(document, window);
+    </script>
+    <!-- /Hoversignal -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
     <script src="./script.js"></script>
 </body>

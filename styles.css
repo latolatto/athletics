@@ -85,6 +85,7 @@ nav{
     flex-direction: row;
     gap:3.2rem;
     align-items: center;
+    font-weight:400;
     margin-bottom: 0;
 }
 nav a {
@@ -585,7 +586,7 @@ h1{
 .prods-left{
     display:flex;
     flex-direction: column;
-    gap:2rem;
+    gap:1.5rem;
     justify-content: center;
     align-items: flex-start;
     text-align: left;
@@ -597,7 +598,7 @@ h1{
     padding:0.5rem 0.8rem !important;
     background-color: #c70b04 !important;
     color:#e4e4e4 !important;
-    margin-top: 4.5rem;
+    /* margin-top:rem; */
 }
 
 .explore-btn:hover{
@@ -705,7 +706,7 @@ background:#e5f3fa65
     border-radius:20px !important;
     width:max-content;
     padding:0.5rem 0.8rem !important;
-    margin-top:2.8rem;
+    margin-top:3rem;
     /* padding-bottom:5%; */
     border:1px solid rgb(207, 207, 207) !important;
     color: rgb(207, 207, 207) !important;
@@ -748,9 +749,10 @@ background:#e5f3fa65
   }
 
   .retail-stores img{
-/* height:7rem;   */
-width:15%;
+height:7rem;  
+/* width:15%; */
 }
+
 
 .muted{
     font-size:0.7rem;
@@ -786,9 +788,10 @@ footer a{
     flex-direction: row;
     gap:4rem;
     justify-content: flex-start;
-    align-items: center;
+    align-items: flex-start;
     width:100%;
     height:auto;
+    padding-top:3%;
 }
 
 
@@ -823,7 +826,7 @@ gap:1rem;
 }
 
 .footer-about{
-    padding-top:3%;
+    /* padding-top:3%; */
     width:40%;
 
 }
@@ -1270,3 +1273,184 @@ a{
   .image-comparison__range::-ms-tooltip {
     display: none;
   }
+
+
+  .cta-container {
+    text-align: center;
+    padding: 5%;
+  }
+  
+  .cta-text {
+    font-size: 1.8rem;
+    color: #666666;
+    margin: 0;
+  }
+  
+  .cta-highlight {
+    font-weight: bold;
+    color: #930803;
+  }
+  
+  .cta-button {
+    display: inline-block;
+    margin-top: 10px;
+    font-size: 1.2rem;
+    color: #dedede;
+    text-decoration: underline;
+    position: relative;
+    transition: color 1s ease;
+  }
+  
+  .cta-button:hover {
+    /* color: #930803; */
+  }
+  
+  .cta-button::after {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    background-color: #930803;
+    transform: scaleX(1);
+    transition: transform 1s ease;
+  }
+  
+  .cta-button:hover::after {
+    animation: disappear-reappear 1s forwards;
+  }
+  
+  @keyframes disappear-reappear {
+    0% {
+      transform: scaleX(1); /* Start with full underline */
+    }
+    20% {
+      transform: scaleX(0); /* Shrink to disappear */
+    }
+    40% {
+      transform: scaleX(0); /* Stay disappeared briefly */
+    }
+    100% {
+      transform: scaleX(1); /* Reappear the underline fully */
+    }
+  }
+  
+  .stay-tuned{
+    display:flex;
+    justify-content: center;
+    margin-top:5%;
+    width:100%;
+  }
+  .stay-tuned-section {
+    background-color: #f9f9f999;
+    padding: 20px;
+    text-align: center;
+    /* border-radius: 8px; */
+    width:100%;
+    /* margin: ; */
+    /* max-width: 60%; */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.stay-tuned-section h2 {
+    font-size: 24px;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.stay-tuned-section p {
+    font-size: 16px;
+    color: #666;
+    margin-bottom: 0;
+}
+.stay-tuned-section::before {
+    content: "";
+    display: block;
+    width: 50px;
+    height: 4px;
+    background: linear-gradient(to right, #a80c01, #fc6060);
+    margin: 0 auto 10px auto;
+    border-radius: 2px;
+}
+/* Keyframes for jingle + pause */
+@keyframes jinglePauseCycle {
+    0% {
+        transform: rotate(0deg); /* Initial position */
+    }
+    10% {
+        transform: rotate(-15deg); /* Start jingle: move left */
+    }
+    20% {
+        transform: rotate(15deg); /* Jingle: move right */
+    }
+    30% {
+        transform: rotate(0deg); /* Return to original position */
+    }
+    100% {
+        transform: rotate(0deg); /* Stay in position for pause */
+    }
+}
+
+/* Apply the animation to the bell icon */
+.bell-icon {
+    display: inline-block;
+    font-size: 1.5em; /* Adjust size */
+    animation: jinglePauseCycle 4s ease-in-out infinite; /* 0.6 seconds for jingle, 4 seconds pause */
+}
+
+
+.video-section {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    padding: 50px;
+    background-color: #f8f8f8;
+    gap: 20px;
+  }
+  
+  .video-container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    flex: 1;
+  }
+  
+  .video-item {
+    position: relative;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .video-item video {
+    width: 100%;
+    border-radius: 8px;
+  }
+  
+  .video-caption {
+    margin-top: 10px;
+    font-size: 1rem;
+    color: #555;
+    text-align: center;
+  }
+  
+  .video-content {
+    flex: 1;
+    max-width: 400px;
+    text-align: center;
+  }
+  
+  .video-content h2 {
+    font-size: 2rem;
+    margin-bottom: 15px;
+    color: #333;
+  }
+  
+  .video-content p {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+    color: #555;
+  }
+  
