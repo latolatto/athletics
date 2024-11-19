@@ -1401,15 +1401,17 @@ a{
 
 
 .video-section {
+    background-color: #f8f8f8;
+
+  }
+  .video-div{
     display: flex;
     flex-wrap: wrap;
     align-items: center;
-    justify-content: space-between;
-    padding: 50px;
-    background-color: #f8f8f8;
-    gap: 20px;
+    justify-content: center;
+    padding: 5%;
+    gap: 3rem;
   }
-  
   .video-container {
     display: flex;
     flex-direction: column;
