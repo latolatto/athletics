@@ -727,6 +727,7 @@ text-align: left;
     display: flex;
     gap:2rem;
     justify-content: flex-start;
+    width:100%;
   }
   #quantityInput{
     width:18% !important;
@@ -1614,9 +1615,15 @@ footer{
 }
 .modal-body{
   flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .right-column{
   width:100%;
+  align-items: center;
+}
+.cart-div{
+  justify-content: center;
 }
  } 
