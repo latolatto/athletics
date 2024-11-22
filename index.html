@@ -247,7 +247,7 @@ padding-top:10%;
 }
 .floating-div img{
 left:0;
-top:0;
+top:20% !important;
 }
 
 .image-show img {
@@ -626,6 +626,11 @@ Experience premium care with Athletics Clean. Our advanced products protect and 
                               <button class="btn btn-warning order-request-btn add-to-cart-btn" >Add to Cart</button>
                             </div>
                             <div id="added-to-cart" style="font-size:0.8rem;font-weight: 700;color:#FF9843;"></div>
+                            <!-- <div class="extras">
+                                <p><strong>Material:</strong> <span id="prod-material"></span></p>
+                                <p><strong>How to Use:</strong> <span id="prod-howto"></span></p>
+                                <p><strong>Caution:</strong> <span id="prod-careful"></span></p>
+                            </div> -->
                             <div class="accordion">
                                 <div class="accordion__item bg-light">
                                   <div class="accordion__header" data-toggle="#faq1">Ideal for Materials</div>
@@ -646,7 +651,7 @@ Experience premium care with Athletics Clean. Our advanced products protect and 
                                   </div>
                                 </div>
                               </div>
-                           </div>
+                            </div>
                        </div>
                    </div>
                </div>
@@ -992,40 +997,57 @@ function saveCart() {
 
 // Function to display products
 const displayItem = (items) => {
-  const root = document.getElementById('root');
-  root.innerHTML = ''; // Clear existing content
-  items.forEach((item) => {
-      const card = document.createElement('div');
-      card.classList.add('col-6-sm', 'ballina-col');
-      card.innerHTML = `
-          <a class="catg-item card-text pop" href="#" type="" data-bs-toggle="modal" data-bs-target="#myModal" data-item-id="${item.id}">
-              <img class="album-img" src="${item.image}" alt="pieces">
-              <div class="img-ttl card-body" style="text-decoration: none; color: black;">
-                  ${item.title}
-              </div>
-              <div class="itm-price"> 
-           $ ${item.price}
-              </div>
-          </a>
-      `;
-      root.appendChild(card);
+    const root = document.getElementById('root');
+    root.innerHTML = ''; // Clear existing content
 
-      // Add click listener to open modal with item details
-      card.querySelector('.catg-item').addEventListener('click', () => openModal(item));
-  });
+    console.log('Rendering items:', items);  // This will confirm that `items` is populated
+
+    items.forEach((item) => {
+        console.log('Creating card for:', item);  // Log each item being processed
+        const card = document.createElement('div');
+        card.classList.add('col-6-sm', 'ballina-col');
+        card.innerHTML = `
+            <a class="catg-item card-text pop" href="#" type="" data-bs-toggle="modal" data-bs-target="#myModal" data-item-id="${item.id}">
+                <img class="album-img" src="${item.image}" alt="pieces">
+                <div class="img-ttl card-body" style="text-decoration: none; color: black;">
+                    ${item.title}
+                </div>
+                <div class="itm-price"> 
+                    $ ${item.price}
+                </div>
+            </a>
+        `;
+        root.appendChild(card);
+
+        // Add click listener to open modal with item details
+        card.querySelector('.catg-item').addEventListener('click', () => {
+            console.log('Modal clicked for:', item);  // This will confirm the click listener is being triggered
+            openModal(item);
+        });
+    });
 };
 
+
 function openModal(item) {
-  document.getElementById('itemName').textContent = item.title;
-  document.querySelector('.imagepreview').src = item.image;
-  document.getElementById('prod-description').textContent = item.description;
-  document.getElementById('prod-material').textContent = item.material;
-  document.getElementById('prod-howto').textContent = item.howto;
-  document.getElementById('prod-careful').textContent = item.careful;
+    console.log('openModal called for item:', item);
 
-  
+    document.getElementById('itemName').textContent = item.title;
+    document.querySelector('.imagepreview').src = item.image;
+    document.getElementById('prod-description').textContent = item.description;
 
-  
+    // Temporarily set static values for testing
+    document.getElementById('prod-material').innerHTML = item.material || 'Sample Material';
+    document.getElementById('prod-howto').innerHTML = item.howto || 'Sample How To Use';
+    document.getElementById('prod-careful').innerHTML = item.careful || 'Sample Caution';
+
+    console.log('Material:', item.material);
+    console.log('How To Use:', item.howto);
+    console.log('Caution:', item.careful);
+
+    // Show the modal using vanilla JavaScript (Bootstrap 5)
+    const myModalElement = document.getElementById('myModal');
+    const myModal = new bootstrap.Modal(myModalElement);
+    myModal.show();
   // Add item to cart with specified quantity from modal
   document.querySelector('.add-to-cart-btn').onclick = () => {
       const quantity = parseInt(quantityInput.value);

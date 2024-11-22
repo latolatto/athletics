@@ -675,22 +675,25 @@ background:#e5f3fa65
 }
 
 .modal{
-
-    z-index:999999999999999 !important;
+  z-index:999999999999999 !important;
 }
 .modal-dialog{
     /* position: relative; */
     /* top:10%; */
     color:#333;
+    max-height: 85vh;
+    overflow-y: scroll;
+
 
 }
 
 .modal-body{
     display:flex;
     flex-direction:row;
-    gap:5rem;
+    gap:2rem;
     overflow-y: auto;
     align-items: center;
+
     /* max-height:50vh; */
 }
 
@@ -717,6 +720,7 @@ background:#e5f3fa65
 text-align: left;
     width:60%;
     align-items: flex-start;
+
   }
  
   #prod-description{

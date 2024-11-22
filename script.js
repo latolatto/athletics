@@ -51,51 +51,51 @@ function saveCart() {
   localStorage.setItem('cart', JSON.stringify(cart));
 }
 
-// Function to display products
-window.displayItem = (items) => {
-  const root = document.getElementById('root');
-  root.innerHTML = ''; // Clear existing content
-  items.forEach((item) => {
-      const card = document.createElement('div');
-      card.classList.add('col-6-sm', 'ballina-col');
-      card.innerHTML = `
-          <a class="catg-item card-text pop" href="#" type="" data-bs-toggle="modal" data-bs-target="#myModal" data-item-id="${item.id}">
-              <img class="album-img" src="${item.image}" alt="pieces">
-              <div class="img-ttl card-body" style="text-decoration: none; color: black;">
-                  ${item.title}
-              </div>
-              <div class="itm-price"> 
-           $ ${item.price}
-              </div>
-          </a>
-      `;
-      root.appendChild(card);
+// // Function to display products
+// window.displayItem = (items) => {
+//   const root = document.getElementById('root');
+//   root.innerHTML = ''; // Clear existing content
+//   items.forEach((item) => {
+//       const card = document.createElement('div');
+//       card.classList.add('col-6-sm', 'ballina-col');
+//       card.innerHTML = `
+//           <a class="catg-item card-text pop" href="#" type="" data-bs-toggle="modal" data-bs-target="#myModal" data-item-id="${item.id}">
+//               <img class="album-img" src="${item.image}" alt="pieces">
+//               <div class="img-ttl card-body" style="text-decoration: none; color: black;">
+//                   ${item.title}
+//               </div>
+//               <div class="itm-price"> 
+//            $ ${item.price}
+//               </div>
+//           </a>
+//       `;
+//       root.appendChild(card);
 
-      // Add click listener to open modal with item details
-      card.querySelector('.catg-item').addEventListener('click', () => openModal(item));
-  });
-};
+//       // Add click listener to open modal with item details
+//       card.querySelector('.catg-item').addEventListener('click', () => openModal(item));
+//   });
+// };
 
-function openModal(item) {
-  document.getElementById('itemName').textContent = item.title;
-  document.querySelector('.imagepreview').src = item.image;
-  document.getElementById('prod-description').textContent = item.description;
+// function openModal(item) {
+//   document.getElementById('itemName').textContent = item.title;
+//   document.querySelector('.imagepreview').src = item.image;
+//   document.getElementById('prod-description').textContent = item.description;
   
-  const quantityInput = document.getElementById('quantityInput');  // Select the quantity input
+//   const quantityInput = document.getElementById('quantityInput');  // Select the quantity input
 
-  // Add item to cart with specified quantity from modal
-  document.querySelector('.add-to-cart-btn').onclick = () => {
-      const quantity = parseInt(quantityInput.value) || 1; // Use quantity value from input
-      addToCart(item.id, quantity);
+//   // Add item to cart with specified quantity from modal
+//   document.querySelector('.add-to-cart-btn').onclick = () => {
+//       const quantity = parseInt(quantityInput.value) || 1; // Use quantity value from input
+//       addToCart(item.id, quantity);
       
-      // Display confirmation message and reset quantity input to 1
-      document.getElementById('added-to-cart').textContent = 'Added to Cart!';
-      quantityInput.value = 1;  // Reset quantity after adding to cart
+//       // Display confirmation message and reset quantity input to 1
+//       document.getElementById('added-to-cart').textContent = 'Added to Cart!';
+//       quantityInput.value = 1;  // Reset quantity after adding to cart
 
-      // Clear confirmation message after 1.5 seconds
-      setTimeout(() => document.getElementById('added-to-cart').textContent = '', 1500);
-  };
-}
+//       // Clear confirmation message after 1.5 seconds
+//       setTimeout(() => document.getElementById('added-to-cart').textContent = '', 1500);
+//   };
+// }
 
 
 function addToCart(productId, quantity = 1) {
@@ -384,4 +384,3 @@ document.addEventListener('DOMContentLoaded', () => {
   })
 
 
-  
