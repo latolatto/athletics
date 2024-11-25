@@ -720,7 +720,6 @@ background:#e5f3fa65
 text-align: left;
     width:60%;
     align-items: flex-start;
-
   }
  
   #prod-description{
@@ -1574,8 +1573,11 @@ a{
     width:100%;
   }
   .cta-container{
-    margin-top:5%;
-    margin-bottom:10%;
+    height: 50vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
   }
   
   .video-div{
@@ -1631,3 +1633,58 @@ footer{
   justify-content: center;
 }
  } 
+
+/* Default scrollbar styling */
+html {
+  --scrollbar-width: 8px; /* Adjust to desired default width */
+}
+
+html::-webkit-scrollbar {
+  width: var(--scrollbar-width);
+}
+
+html::-webkit-scrollbar-track {
+  background: #f1f1f1; /* Default background */
+}
+
+html::-webkit-scrollbar-thumb {
+  background: #888; /* Default thumb */
+  border-radius: 4px;
+}
+
+html::-webkit-scrollbar-thumb:hover {
+  background: #555; /* Hover effect */
+}
+
+/* Hidden scrollbar when modal is open */
+html[style*="overflow-y: hidden"]::-webkit-scrollbar {
+  width: 0; /* Hide scrollbar width */
+}
+
+html[style*="overflow-y: hidden"]::-webkit-scrollbar-thumb {
+  background: transparent; /* Fully hide the thumb */
+}
+/* Default state: show desktop navigation and hide mobile navigation */
+#desktop-nav {
+  display: flex; /* or another value depending on your layout */
+}
+
+#ipad-mobile-view {
+  display: none;
+}
+
+/* For tablet and mobile views (max-width: 768px) */
+@media (max-width: 768px) {
+  #desktop-nav {
+      display: none;
+  }
+
+  #ipad-mobile-view {
+      display: flex; /* or block, depending on your layout */
+  }
+
+  
+  #offcanvasDarkNavbar{
+    width:60%;
+  }
+}
