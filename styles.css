@@ -1687,4 +1687,10 @@ html[style*="overflow-y: hidden"]::-webkit-scrollbar-thumb {
   #offcanvasDarkNavbar{
     width:60%;
   }
+
+  .navbar-toggler {
+    border: none !important;
+    outline: none !important;
+    box-shadow: none !important;
+}
 }
