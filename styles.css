@@ -519,7 +519,15 @@ h1{
     margin: 0;
     text-align: center;
 }
-
+.item1{
+  background-image: url(./images/leathercleann.webp);
+}
+.item2{
+  background-image: url(./images/basicpackk.webp);
+}
+.item3{
+  background-image: url(./images/waterstopp.webp);
+}
 
   @-webkit-keyframes slide{0%{-webkit-transform:translate(0,0);-ms-transform:translate(0,0);transform:translate(0,0);}100%{-webkit-transform:translate(100%,0);-ms-transform:translate(100%,0);transform:translate(100%,0);}}/*!sc*/
 @keyframes slider{0%{-webkit-transform:translate(0,0);-ms-transform:translate(0,0);transform:translate(0,0);}100%{-webkit-transform:translate(100%,0);-ms-transform:translate(100%,0);transform:translate(100%,0);}}/*!sc*/
@@ -1692,5 +1700,19 @@ html[style*="overflow-y: hidden"]::-webkit-scrollbar-thumb {
     border: none !important;
     outline: none !important;
     box-shadow: none !important;
+}
+
+.item1{
+  background-image: url(./images/leather.webp);
+}
+.item2{
+  background-image: url(./images/basic.webp);
+}
+.item3{
+  background-image: url(./images/water.webp);
+}
+
+.slides-caption{
+  top:55%;
 }
 }
