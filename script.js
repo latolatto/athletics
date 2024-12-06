@@ -8,21 +8,6 @@ const backToTopBtn = document.getElementById("backToTopBtn");
 // };
 
 
-window.onscroll = function() {
-  if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
-    backToTopBtn.style.display = "flex"; /* Shows the button */
-  } else {
-    backToTopBtn.style.display = "none";
-  }
-};
-
-backToTopBtn.addEventListener("click", function() {
-  window.scrollTo({
-    top: 0,
-    behavior: "smooth"
-  });
-});
-
 
 function setupModalScrollLock() {
   const modal = document.getElementById('myModal');
@@ -46,6 +31,39 @@ function setupModalScrollLock() {
 // Initialize the function
 setupModalScrollLock();
 
+
+function setupNavbarScrollEffect() {
+  const navbar = document.querySelector('.grid1');
+  const menuItems = document.querySelectorAll('.menu-item');
+  const whitesvg = document.querySelector('.bi-cart3');
+
+  function handleScroll() {
+    if (window.scrollY > 0) {
+      // Apply styles when the user has scrolled down
+      navbar.classList.add('fixed');
+      menuItems.forEach((item) => item.classList.add('white'));
+      navbar.classList.remove('grid-pos');
+      whitesvg.classList.add('whitesvg');
+    } else {
+      // Remove styles when the user is at the top
+      navbar.classList.remove('fixed');
+      menuItems.forEach((item) => item.classList.remove('white'));
+      navbar.classList.add('grid-pos');
+      whitesvg.classList.remove('whitesvg');
+    }
+  }
+
+  // Run this when the DOM content is fully loaded
+  document.addEventListener('DOMContentLoaded', () => {
+    handleScroll(); // Apply the effect immediately based on the current scroll position
+  });
+
+  // Also handle the scroll event
+  window.addEventListener('scroll', handleScroll);
+}
+
+// Call the function to initialize the effect
+setupNavbarScrollEffect();
 
 
 

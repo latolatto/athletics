@@ -11,6 +11,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">    
 <link href="./styles.css" rel="stylesheet">
     <style>
@@ -26,22 +27,7 @@
 
         } */
 
-        .grid-pos{
-            margin-top:2.2rem;
-            padding-top:2.2%;
 
-        }
-          .fixed {
-    background: black;
-    padding-top:1.5%;
-    padding-bottom:1.5%;
-    position: fixed;
-    top: 0 !important;
-    left: 0;
-    width: 100%;
-    z-index: 999999999; /* Ensure the navbar stays above other content */
-    box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.1); /* Optional: Add a subtle shadow */
-  }
   
 .best-selling{
     width:100%;
@@ -269,106 +255,98 @@ margin-top:10%;
     color:black !important;
 }
 }
+
+
     </style>
 </head>
 <body>
     <div class="body-container">
-        <div class="top-bar ">
+        <div class="top-bar border-bottom">
             <div class="sliding-text">
-                <!-- Free shipping for standard orders over $100 -->
                 All products on sale until December 10th—shop now and save!            
             </div>
         </div>
-        <div class="grid1 ">
-            <nav class="container" id="desktop-nav">
-                <a href="index.html" class="logo">
-                    <img src="./images/icons/mainlogo.png" alt="IMG-LOGO">
-                </a>
-                <div class="">
-                    <ul class="main-menu ">
-                        <li>
-                            <a class=" menu-item" href="index.html">HOME</a>
-                        </li>
-                        <li>
-                            <a class=" menu-item" href="shop.html">SHOP</a>
-                        </li>
-                        <li>
-                            <a class=" menu-item" href="about.html">ABOUT</a>
-                        </li>
-
-                        <li>
-                            <a class=" menu-item" href="contact.html">CONTACT</a>
-                        </li>
-                    </ul>
-                </div>	
-                <div class="cart">
-                    <button id="cartIcon"  type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="black" class="bi bi-cart3" viewBox="0 0 16 16">
-                            <path d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .49.598l-1 5a.5.5 0 0 1-.465.401l-9.397.472L4.415 11H13a.5.5 0 0 1 0 1H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5M3.102 4l.84 4.479 9.144-.459L13.89 4zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4m7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4m-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2m7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2"/>
-                          </svg>
-                        <span class="badge position-absolute top-0 start-100 translate-middle badge rounded-pill " id="cartItemCount" >0</span>
-                    </button>
-                    <div class="offcanvas offcanvas-end " data-bs-scroll="true"  tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
-                        <div class="offcanvas-header">
-                          <h5 id="offcanvasRightLabel">Cart</h5>
-                          <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-                        </div>
-                        <div class="offcanvas-body">
-                        </div>
-                        <div id="cart-buttons-container" style="">
-                            <a href="cart.html" class="btn view-cart-button">View Cart</a>
-                            <a href="checkout.html" class="  checkout-button">Checkout</a>
-                          </div>
-                    </div>
-                </div>
-            </nav>
-
-            <nav class="navbar navbar-dark bg-dark fixed-top" id="ipad-mobile-view">
+        <div class="grid1 grid-pos">
+            <nav class=" container navbar navbar-expand-lg ">
                 <div class="container-fluid">
-                  <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasDarkNavbar" aria-controls="offcanvasDarkNavbar" aria-label="Toggle navigation">
+                  <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo03" aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                   </button>
-                  <div class="offcanvas offcanvas-start text-bg-dark" tabindex="-1" id="offcanvasDarkNavbar" aria-labelledby="offcanvasDarkNavbarLabel">
-                    <div class="offcanvas-body">
-                      <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+                  <a class="navbar-brand" href="#">
+                    <img class="main-logo" src="./images/icons/mainlogo.png" alt="IMG-LOGO">
+                  </a>
+                  <div class="cart">
+                    <button id="cartIcon"  type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight">
+                       <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="black" class="bi bi-cart3" viewBox="0 0 16 16">
+                           <path d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .49.598l-1 5a.5.5 0 0 1-.465.401l-9.397.472L4.415 11H13a.5.5 0 0 1 0 1H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5M3.102 4l.84 4.479 9.144-.459L13.89 4zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4m7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4m-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2m7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2"/>
+                         </svg>
+                       <span class="badge position-absolute top-0 start-100 translate-middle badge rounded-pill " id="cartItemCount" >0</span>
+                    </button>
+                </div>
+                  <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
+                     <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                         <li class="nav-item nav-border-bottom">
+                          <a class="nav-link menu-item " aria-current="page" href="index.html">HOME</a>
+                         </li>
+                         <li class="nav-item nav-border-bottom">
+                          <a class="nav-link menu-item " href="shop.html">SHOP</a>
+                         </li>
+                          <li class="nav-item nav-border-bottom">
+                           <a class="nav-link menu-item " href="about.html">ABOUT</a>
+                          </li>
+                          <li class="nav-item nav-border-bottom">
+                          <a class="nav-link menu-item " href="contact.html">CONTACT</a>
+                         </li>
+                       </ul>
+                  </div>
+
+                </div>
+              </nav>
+              <div class="offcanvas offcanvas-end " data-bs-scroll="true"  tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
+                <div class="offcanvas-header">
+                 <h5 id="offcanvasRightLabel">Cart</h5>
+                 <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                </div>
+                <div class="offcanvas-body">
+                </div>
+                <div id="cart-buttons-container" style="">
+                    <a href="cart.html" class="btn view-cart-button">View Cart</a>
+                    <a href="checkout.html" class="  checkout-button">Checkout</a>
+                </div>
+             </div>
+           
+
+
+
+            <!-- <div class="  " id="menuja">
+                <div class="nav-logo navbar-brand">
+                    <a href="index.html" class="">
+                        <img class="main-logo" src="./images/icons/mainlogo.png" alt="IMG-LOGO">
+                    </a>                    
+                </div>
+                <nav class="navbar  navbar-expand-lg " id="nav" >
+                  <div class="container-fluid" style="width:fit-content;">
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo03" aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                      </button>
+                    <div class="collapse navbar-collapse justify-content-md-center " id="navbarTogglerDemo03"  >
+                      <ul class="navbar-nav  "  >
                         <li class="nav-item">
-                          <a class="nav-link active" aria-current="page" href="index.html">HOME</a>
+                          <a class=" act-link nav-link  menu-item" id="nav-item" href="index.html">HOME </a>
                         </li>
                         <li class="nav-item">
-                          <a class="nav-link" href="shop.html">SHOP</a>
+                          <a class=" act-link nav-link menu-item " id="nav-item" href="shop.html">SHOP </a>
                         </li>
                         <li class="nav-item">
-                          <a class="nav-link" href="about.html">ABOUT</a>
+                          <a class="act-link nav-link menu-item" id="nav-item" href="about.html">ABOUT</a>
                         </li>
-                        <li class="nav-item">
-                          <a class="nav-link"  href="contact.html">CONTACT</a>
+                        <li class="nav-item " >
+                          <a class="act-link nav-link menu-item" id="nav-item" href="contact.html">CONTACT</a>
                         </li>
                       </ul>
                     </div>
                   </div>
-                  <a class="navbar-brand logo" href="./index.html"><img src="./images/icons/mainlogo.png" alt="IMG-LOGO"></a>
-                  <div class="cart">
-                    <button id="cartIcon"  type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="black" class="bi bi-cart3" viewBox="0 0 16 16">
-                            <path d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .49.598l-1 5a.5.5 0 0 1-.465.401l-9.397.472L4.415 11H13a.5.5 0 0 1 0 1H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5M3.102 4l.84 4.479 9.144-.459L13.89 4zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4m7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4m-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2m7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2"/>
-                          </svg>
-                        <span class="badge position-absolute top-0 start-100 translate-middle badge rounded-pill " id="cartItemCount" >0</span>
-                    </button>
-                    <div class="offcanvas offcanvas-end " data-bs-scroll="true"  tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
-                        <div class="offcanvas-header">
-                          <h5 id="offcanvasRightLabel">Cart</h5>
-                          <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-                        </div>
-                        <div class="offcanvas-body">
-                        </div>
-                        <div id="cart-buttons-container" style="">
-                            <a href="cart.html" class="btn view-cart-button">View Cart</a>
-                            <a href="checkout.html" class="  checkout-button">Checkout</a>
-                          </div>
-                    </div>
-                </div>
-                </div>
-              </nav>
+                </nav>   --> 
         </div>
     <section class="slider">
         <div class=" karuseli sticky-top" >
@@ -396,7 +374,7 @@ margin-top:10%;
 						</div>
 					</div>
                 </div>
-                <div class="carousel-item item2" data-bs-interval="4000" style="background-image: url(./images/basicpackk.webp);"loading="lazy" >  
+                <div class="carousel-item item2" data-bs-interval="4000" loading="lazy" >  
                   <!-- <img src="./images/basicpackslide.svg" class="d-block  carousel-img" alt="..."> -->
                   <div class="container slides-caption">
                     <div class="">
@@ -418,7 +396,7 @@ margin-top:10%;
                     </div>
                 </div>
                 </div>
-                <div class="carousel-item item3" data-bs-interval="4000" style="background-image: url(./images/waterstopp.webp);"loading="lazy" >
+                <div class="carousel-item item3" data-bs-interval="4000" loading="lazy" >
                   <!-- <img src="./images/leathercleanslide.svg" class="d-block  carousel-img" alt="..."> -->
                   <div class="container slides-caption">
                         <div class="text31 ">
@@ -1212,28 +1190,7 @@ function emptyCart() {
 // Initial display of all products
 
 
-// Navbar Handling Script
-function setupNavbarScrollEffect() {
-  const navbar = document.querySelector('.grid1');
-  const menuItems = document.querySelectorAll('.menu-item'); // Use querySelectorAll for `.menu-item`
-  const whitesvg=document.querySelector('.bi-cart3');
-  
-  window.addEventListener('scroll', function () {
-    if (window.scrollY > 0) {
-      navbar.classList.add('fixed');
-      menuItems.forEach((item) => item.classList.add('white')); // Add 'white' to all menu items
-      navbar.classList.remove('container', 'grid-pos'); // Clean way to remove multiple classes
-      whitesvg.classList.add('whitesvg');
 
-    } else {
-      navbar.classList.remove('fixed');
-      menuItems.forEach((item) => item.classList.remove('white')); // Remove 'white' from all menu items
-      navbar.classList.add('container', 'grid-pos');
-      whitesvg.classList.remove('whitesvg');
-
-    }
-  });
-}
 
 // Initialize on DOMContentLoaded
 document.addEventListener('DOMContentLoaded', function () {
@@ -1258,13 +1215,12 @@ updateCartDisplay();
     } else { f(); }
     })(document, window);
     </script>
+
+      
 <!-- <link href="https://maxcdn.bootstrapcdn.com/bootstrap/5.1.3/css/bootstrap.min.css" rel="stylesheet"> -->
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script> <!-- Keep only if necessary -->
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-<script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
-<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"></script>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.bundle.min.js"></script>
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous"><script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script> <!-- Keep for Bootstrap dropdowns/tooltips -->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 <script src="./comparison.js"></script>

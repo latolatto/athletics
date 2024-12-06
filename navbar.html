@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #menuja{
+  /* width:100%;
+  display:flex;
+  flex-direction: row;
+  gap:4.5rem;
+  font-size: 1rem;
+  font-weight:500;
+  align-items: center; */
+  
+}
+
+.main-menu{
+  /* display:flex;
+  flex-direction: row;
+  gap:3.2rem;
+  align-items: center;
+  font-weight:400;
+  margin-bottom: 0;
+  justify-content: flex-start; */
+}
+
+#menuja{
+
+  /* padding-left:3rem;
+  padding-right:3rem;
+  display: flex;
+      width: 100%;
+      align-items: center;
+      gap: 4rem;
+      font-size: 1rem;
+      font-weight:500; */
+}
+
+
+.navbar{
+  /* top:0 !important; */
+}
+/* .navbar-nav{
+  display: flex;
+  flex-direction: row;
+  gap:3.5rem ;
+  font-size:0.93rem;
+  font-weight:700;
+
+} */
+    </style>
+</head>
+<body>
+    
+</body>
+</html>
+<nav class="container" id="desktop-nav">
+                <a href="index.html" class="logo">
+                    <img src="./images/icons/mainlogo.png" alt="IMG-LOGO">
+                </a>
+                <div class="">
+                    <ul class="main-menu ">
+                        <li>
+                            <a class=" menu-item" href="index.html">HOME</a>
+                        </li>
+                        <li>
+                            <a class=" menu-item" href="shop.html">SHOP</a>
+                        </li>
+                        <li>
+                            <a class=" menu-item" href="about.html">ABOUT</a>
+                        </li>
+
+                        <li>
+                            <a class=" menu-item" href="contact.html">CONTACT</a>
+                        </li>
+                    </ul>
+                </div>	
+                <div class="cart">
+                    <button id="cartIconDesktop"  type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="black" class="bi bi-cart3" viewBox="0 0 16 16">
+                            <path d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .49.598l-1 5a.5.5 0 0 1-.465.401l-9.397.472L4.415 11H13a.5.5 0 0 1 0 1H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5M3.102 4l.84 4.479 9.144-.459L13.89 4zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4m7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4m-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2m7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2"/>
+                          </svg>
+                        <span class="badge position-absolute top-0 start-100 translate-middle badge rounded-pill " id="cartItemCountDesktop" >0</span>
+                    </button>
+                    <div class="offcanvas offcanvas-end " data-bs-scroll="true"  tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
+                        <div class="offcanvas-header">
+                          <h5 id="offcanvasRightLabel">Cart</h5>
+                          <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                        </div>
+                        <div class="offcanvas-body" id="cartBodyDesktop">
+                        </div>
+                        <div id="cart-buttons-container" style="">
+                            <a href="cart.html" class="btn view-cart-button">View Cart</a>
+                            <a href="checkout.html" class="  checkout-button">Checkout</a>
+                          </div>
+                    </div>
+                </div>
+
+                
+            </nav>
+
+            
+              <nav class="navbar navbar-dark bg-dark fixed-top" id="ipad-mobile-view">
+                <div class="container-fluid">
+                    <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasDarkNavbar" aria-controls="offcanvasDarkNavbar" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+            
+                    <div class="offcanvas offcanvas-start text-bg-dark" tabindex="-1" id="offcanvasDarkNavbar" aria-labelledby="offcanvasDarkNavbarLabel">
+                        <div class="offcanvas-body">
+                            <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+                                <li class="nav-item"><a class="nav-link active" aria-current="page" href="index.html">HOME</a></li>
+                                <li class="nav-item"><a class="nav-link" href="shop.html">SHOP</a></li>
+                                <li class="nav-item"><a class="nav-link" href="about.html">ABOUT</a></li>
+                                <li class="nav-item"><a class="nav-link" href="contact.html">CONTACT</a></li>
+                            </ul>
+                        </div>
+                    </div>
+            
+                    <a class="navbar-brand logo" href="./index.html">
+                        <img src="./images/icons/mainlogo.png" alt="IMG-LOGO">
+                    </a>
+            
+                    <div class="cart">
+                        <button id="cartIconMobile" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasCart" aria-controls="offcanvasCart">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="black" class="bi bi-cart3" viewBox="0 0 16 16">
+                                <path d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .49.598l-1 5a.5.5 0 0 1-.465.401l-9.397.472L4.415 11H13a.5.5 0 0 1 0 1H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5M3.102 4l.84 4.479 9.144-.459L13.89 4zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4m7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4m-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2m7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2"/>
+                            </svg>
+                            <span class="badge position-absolute top-0 start-100 translate-middle badge rounded-pill" id="cartItemCountMobile">0</span>
+                        </button>
+            
+                        <div class="offcanvas offcanvas-end" data-bs-scroll="true" tabindex="-1" id="offcanvasCart" aria-labelledby="offcanvasRightLabel">
+                            <div class="offcanvas-header">
+                                <h5 id="offcanvasRightLabel">Cart</h5>
+                                <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                            </div>
+                            <div class="offcanvas-body" id="cartBodyMobile"></div>
+                            <div id="cart-buttons-container">
+                                <a href="cart.html" class="btn view-cart-button">View Cart</a>
+                                <a href="checkout.html" class="checkout-button">Checkout</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+              
