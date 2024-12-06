@@ -1729,7 +1729,7 @@ html[style*="overflow-y: hidden"]::-webkit-scrollbar-thumb {
   }
 
   .start-100{
-    left:90% !important;
+    left:100% !important;
   }
   .navbar-brand{
     margin-right:0 !important;
@@ -1778,6 +1778,9 @@ html[style*="overflow-y: hidden"]::-webkit-scrollbar-thumb {
   .bi-cart3{
     fill:rgb(207, 207, 207) !important;
 
+  }
+  div#offcanvasRight{
+    width:50% !important;
   }
 }
 
