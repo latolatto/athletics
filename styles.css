@@ -1672,6 +1672,16 @@ footer{
 .cart-div{
   justify-content: center;
 }
+
+.item1{
+  background-image: url(./images/11.png);
+}
+.item2{
+  background-image: url(./images/33.png);
+}
+.item3{
+  background-image: url(./images/22.png);
+}
  } 
 
 /* Default scrollbar styling */
@@ -1771,7 +1781,7 @@ html[style*="overflow-y: hidden"]::-webkit-scrollbar-thumb {
 
 }
 .grid-pos{
-  margin-top:1.3rem;
+  margin-top:1.2rem;
   padding-top:0;
 
 
@@ -1788,6 +1798,32 @@ html[style*="overflow-y: hidden"]::-webkit-scrollbar-thumb {
   div#offcanvasRight{
     width:50% !important;
   }
+
+  .slides-caption{
+    position:absolute;
+    top:52%;
+    /* z-index:99; */
+    left:3%;
+    width:85% !important;
+
+}
+
+.txt1{
+line-height: 1.8;
+font-size: 1.5rem;
+
+}
+
+.txt2{
+    font-size:3.5rem;
+}
+
+.btn0{
+     font-weight: 500;
+     margin-top:1.4rem;
+     padding:1.2% 3.8%;
+     font-size: 0.9rem;
+}
 }
 
 @media screen and (min-width: 578px) and(max-width: 991.5px){
