@@ -35,7 +35,6 @@ a{
   width:100% ;
   z-index:999999;
   background-color:black;
-  color:rgb(227, 227, 227)!important;
   /* opacity:0.8; */
   padding:0.9%;
   padding-right:5% ;
@@ -49,6 +48,8 @@ a{
 
 .sliding-text {
   display: inline-block;
+  color:rgb(227, 227, 227)!important;
+
   white-space: nowrap; /* Prevents the text from wrapping */
   animation: slide 10s linear infinite; /* Adjust the duration as needed */
   animation-delay: 0s; /* Ensures the animation starts immediately on page load */
