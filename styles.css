@@ -35,7 +35,7 @@ a{
   width:100% ;
   z-index:999999;
   background-color:black;
-  color:rgb(227, 227, 227);
+  color:rgb(227, 227, 227)!important;
   /* opacity:0.8; */
   padding:0.9%;
   padding-right:5% ;
@@ -156,6 +156,7 @@ position:relative;
 #cartIcon span{
     background-color:#f80800;
     position:absolute;
+    left:100%;
   }
 #cartIcon svg{
   fill:black;
@@ -1710,6 +1711,10 @@ html[style*="overflow-y: hidden"]::-webkit-scrollbar-thumb {
 @media screen and (max-width: 991.5px){
   .cart{
     order:0;
+  }
+
+  #cartIcon span{
+    left:90%;
   }
 
   .navbar>.container, .navbar>.container-fluid, .navbar>.container-lg, .navbar>.container-md, .navbar>.container-sm, .navbar>.container-xl, .navbar>.container-xxl{

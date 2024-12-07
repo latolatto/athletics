@@ -241,8 +241,10 @@ padding-top:10%;
 }
 
 .floating-div img{
-left:0;
-top:0 !important;
+    left: 50%; /* Center horizontally within the parent */
+        top: 15%; /* Adjust distance from the top */
+        transform: translate(-50%, 0); /* Adjust for proper centering */
+        
 }
 
 .image-show img {
@@ -281,7 +283,7 @@ margin-top:10%;
                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="black" class="bi bi-cart3" viewBox="0 0 16 16">
                            <path d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .49.598l-1 5a.5.5 0 0 1-.465.401l-9.397.472L4.415 11H13a.5.5 0 0 1 0 1H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5M3.102 4l.84 4.479 9.144-.459L13.89 4zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4m7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4m-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2m7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2"/>
                          </svg>
-                       <span class="badge position-absolute top-0 start-100 translate-middle badge rounded-pill " id="cartItemCount" >0</span>
+                       <span class="badge position-absolute top-0 translate-middle badge rounded-pill " id="cartItemCount" >0</span>
                     </button>
                 </div>
                   <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
@@ -734,7 +736,7 @@ Experience premium care with Athletics Clean. Our advanced products protect and 
                     <img src="./images/pages/backgroundlogo.png" alt="">
                 </div>
                 <div class="floating-div">
-                        <img src="./images/pages/O.webp" alt="red-nike" >
+                        <img src="./images/pages/O.webp" alt="" >
                 </div>
             </div>
             <div class="info rounded-bottom">
