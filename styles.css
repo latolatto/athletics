@@ -49,7 +49,7 @@ a{
   white-space: nowrap; 
   animation: slide 10s linear infinite;
   animation-delay: 0s; 
-  transform: translateX(110%);
+  /* transform: translateX(110%); */
   width:100%;
   /* padding-left:  v 100%;  */
   
@@ -57,10 +57,10 @@ a{
 
 @keyframes slide {
   0% {
-      transform: translateX(110%); /* Start with the text outside the left */
+      transform: translateX(120%); /* Start with the text outside the left */
   }
   100% {
-      transform: translateX(-100%) /* Move the text to outside the right */
+      transform: translateX(-110%) /* Move the text to outside the right */
   }
 }  
 
