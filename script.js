@@ -1,5 +1,29 @@
 document.getElementById("year").innerHTML = new Date().getFullYear();
 
+const slidingText = document.getElementById("slidingText"); // Get the text element
+const speed = 2; // Pixels moved per frame (adjust for faster/slower speed)
+let position = window.innerWidth; // Start fully outside the right edge
+
+function animateText() {
+    position -= speed; // Move text leftward
+    slidingText.style.transform = `translateX(${position}px)`; // Apply the translation
+
+    // Reset position when text fully disappears from the left
+    if (position + slidingText.offsetWidth < 0) {
+        position = window.innerWidth; // Reset to the right edge
+    }
+
+    // Continue the animation
+    requestAnimationFrame(animateText);
+}
+
+// Start the animation once the DOM is fully loaded
+animateText();
+
+// Ensure the text adapts to resizing screens
+window.addEventListener("resize", () => {
+    position = window.innerWidth; // Reset position after resizing
+});
 
 // JavaScript for Back-to-Top Button
 document.addEventListener('DOMContentLoaded', () => {
