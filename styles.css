@@ -36,9 +36,9 @@ a{
   z-index:999999;
   background-color:black;
   /* opacity:0.8; */
-  padding:0.9%;
-  padding-right:5% ;
-  padding-left:4% ;
+  padding-top:0.9%;
+  padding-bottom:0.9%;
+
   font-size: 0.8rem;
   font-weight:300;
   overflow: hidden;
@@ -54,21 +54,7 @@ a{
   white-space: nowrap; /* Prevents the text from wrapping */
   animation: slide 10s linear infinite; /* Adjust the duration as needed */
   animation-delay: 0s; /* Ensures the animation starts immediately on page load */
-  padding-left: 100%; 
-}
-
-/* .sliding-text {
-  position: absolute;
-  color: rgb(227, 227, 227) !important;
-  animation: slideText 10s linear infinite; 
-} */
-@keyframes slide{
-  0% {
-    left: 100%; /* Start completely off-screen to the right */
-  }
-  100% {
-    left: -100%; /* Move completely off-screen to the left */
-  }
+  /* padding-left: 100%;  */
 }
 
 .grid1{
