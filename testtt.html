@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=Rubik+Mono+One&family=Ubuntu+Mono&family=VT323&display=swap&family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+      <style>
+#rssBlock{
+  left:0px;
+  width:100%;
+  position: absolute;
+  overflow: hidden;
+}
+
+/*remove p*/
+.cnnContents {
+  width:100%;
+  margin: 0;
+  white-space: nowrap;
+  text-align: left;
+}
+
+.marqueeStyle {
+  display:inline-block;
+  /* Apply animation to this element */
+  -webkit-animation: scrolling-left1 10s linear infinite;
+  animation: scrolling-left1 10s linear infinite;
+  will-change: transform;
+}
+
+
+/* scrolling-left is continuous/repeatly text */
+@keyframes scrolling-left1 {
+    0% {transform: translateX(100%);
+        -webkit-transform: translateX(100%);}
+      100% {transform: translateX(-100%);
+          -webkit-transform: translateX(-100%);}
+}
+
+@-webkit-keyframes scrolling-left1 {
+    0% {-webkit-transform: translateX(100%);}
+      100% {-webkit-transform: translateX(-100%);}
+}
+
+
+
+
+      </style>
+    </head>
+
+<body>
+    <div id='rssBlock'>
+        <p class="cnnContents">
+            <span class="marqueeStyle">&nbsp;All products on sale until December 10th—shop now and save! </span>
+        </p>
+    </div>
+</body>
+</html>
