@@ -42,6 +42,7 @@ a{
   font-size: 0.8rem;
   font-weight:300;
   overflow: hidden;
+  box-sizing: border-box;
   /* margin-bottom:5%; */
 }
 
@@ -49,21 +50,27 @@ a{
 .sliding-text {
   display: inline-block;
   color:rgb(227, 227, 227)!important;
-
+  position: relative;
   white-space: nowrap; /* Prevents the text from wrapping */
   animation: slide 10s linear infinite; /* Adjust the duration as needed */
   animation-delay: 0s; /* Ensures the animation starts immediately on page load */
   padding-left: 100%; 
 }
 
-@keyframes slide {
+/* .sliding-text {
+  position: absolute;
+  color: rgb(227, 227, 227) !important;
+  animation: slideText 10s linear infinite; 
+} */
+@keyframes slide{
   0% {
-      transform: translateX(0%); /* Start with the text outside the left */
+    left: 100%; /* Start completely off-screen to the right */
   }
   100% {
-      transform: translateX(-100%) /* Move the text to outside the right */
+    left: -100%; /* Move completely off-screen to the left */
   }
 }
+
 .grid1{
   padding-top:5%;
   /* height:100vh; */
@@ -1804,24 +1811,25 @@ html[style*="overflow-y: hidden"]::-webkit-scrollbar-thumb {
     top:52%;
     /* z-index:99; */
     left:3%;
-    width:85% !important;
+    width:83% !important;
 
 }
 
 .txt1{
-line-height: 1.8;
+line-height: 1.7;
 font-size: 1.5rem;
 
 }
 
 .txt2{
-    font-size:3.5rem;
+    font-size:3.85rem;
+    line-height:1;
 }
 
 .btn0{
      font-weight: 500;
-     margin-top:1.4rem;
-     padding:1.2% 3.8%;
+     margin-top:1rem;
+     padding:1.5% 4%;
      font-size: 0.9rem;
 }
 }
