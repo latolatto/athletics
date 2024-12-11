@@ -61,7 +61,7 @@ input[type="text"], input[type="text"], input[type="email"], input[type="tel"] {
 }
 .grid-full {
   margin: 20px 0;
-  gap:1rem;
+  gap:2rem;
   display:flex;
   flex-direction: column;
   font-size: 1rem;
@@ -107,23 +107,23 @@ input[type="submit"] {
   padding: 10px 20px;
   outline: 0;
   cursor: pointer;
-  color: #103e65;
+  color: black;
   -webkit-transition: all 0.3s cubic-bezier(0.55, 0.055, 0.675, 0.19);
   -moz-transition: all 0.3s cubic-bezier(0.55, 0.055, 0.675, 0.19);
   -ms-transition: all 0.3s cubic-bezier(0.55, 0.055, 0.675, 0.19);
   -o-transition: all 0.3s cubic-bezier(0.55, 0.055, 0.675, 0.19);
 }
 input[type="submit"]:hover {
-  background-color: #0a132c;
-  border-color: #0a132c;
+  background-color: black;
+  border-color: black;
   color: #fff;
 }
 .get_say_form {
   display: inline-block;
   padding: 45px 0 25px 30px;
-  background:rgba(255, 169, 169, 0.845);
+  background: hsla(348, 46%, 48%, 0.781);
   position: relative;
-  color:black !important;
+  color: rgb(241, 241, 241) !important;
   border-radius: 20px;
 
 }
@@ -144,11 +144,11 @@ ul {
 }
 .get_say_social-icn a {
   font-size: 22px;
-  color: #fff;
+  /* color: #fff; */
   padding: 0 20px 0 0;
 }
 .get_say_info_sec i {
-  color: #fff;
+  /* color: #fff; */
   font-size: 32px;
 }
 .get_say_info_sec > li {
@@ -161,18 +161,20 @@ ul {
   width: 100%;
   display: block;
   padding: 15px 25px;
-  color: #fff;
+  color: black;
   font-size: 16px;
   text-decoration: unset;
   font-weight: 500;
-  background: #414141;
+  background:  rgba(241, 241, 241, 0.943);
   border-radius: 5px 0 0 5px;
   /* transition: background 0.3s cubic-bezier(0.55, 0.055, 0.675, 0.19); */
 
   
 }
 .get_say_info_sec > li a:hover {
-  background-color: #0a132c;
+  background-color: black;
+  color:  rgb(241, 241, 241);
+
 }
 
 #result{
@@ -190,21 +192,26 @@ background-color:#333;
 .contact-h3{
   text-align: center;
   position: relative;
-  top:45%;
+  top:40%;
   /* color:black;
          font-family: "Playfair Display", serif;
     font-weight: 600;
     font-style: normal; */
           font-size:3rem;
-          color: rgba(255, 255, 255, 0.6);     /* Partially transparent white text */
+          color: rgba(255, 255, 255, 0.6);   
           -webkit-text-stroke: 1.5px black;  
           font-weight:700;
           
          
 }
+.get_say_social-icn {
+    margin-top:1rem;
+    bottom: 2rem;
+    left:2rem;
+  }
 @media (max-width: 768px) {
   .grid-70-30 {
-    grid-template-columns: 1fr; /* Stack columns */
+    grid-template-columns: 1fr;
   }
   
   .get_form_inner form {
@@ -223,11 +230,11 @@ background-color:#333;
   .grid-50-50 {
     grid-template-columns: 1fr;
     grid-gap: 1.5rem;
-}
+  }
   .get_form_inner form input,
   .get_form_inner form textarea,
   .get_form_inner form button {
-    font-size: 0.9rem;
+    font-size: 1rem;
   }
   
   .get_touch_info {
@@ -236,28 +243,34 @@ background-color:#333;
 
   .get_say_social-icn {
     margin-top:1rem;
-  bottom: 2rem;
-  left:0;
-}
-ul.get_say_info_sec {
+    bottom: 2rem;
+    left:2rem;
+  }
+  ul.get_say_info_sec {
     margin-bottom: 5rem;
-}
+  }
 }
 @media  (min-width: 480px) and (max-width:767px){
-
   .get_say_social-icn {
     margin-top:1rem;
-  bottom: 2rem;
-  left:0;
-}
-ul.get_say_info_sec {
+    bottom: 2rem;
+    left:2rem;
+  }
+  ul.get_say_info_sec {
     margin-bottom: 5rem;
+  }
+  .get_form_inner{
+    padding:5%;
+  }
+  .grid-50-50{
+    gap:1rem;
+    grid-template-columns: 1fr;
+    grid-gap: 1.5rem;
+  }
 }
 
-}
 nav a {
-
-color:rgb(207, 207, 207) !important;
+  color:rgb(207, 207, 207) !important;
 }
 
 #cartIcon svg{
@@ -272,6 +285,28 @@ color:rgb(207, 207, 207) !important;
 
   ul.get_say_info_sec{
     padding-left:0;
+  }
+  .get_say_social-icn {
+    margin-top:1rem;
+    bottom: 2rem;
+    left:0;
+  }
+  .get_form_inner{
+    padding:5%;
+  }
+  .grid-50-50{
+    gap:1rem;
+  }
+  form{
+    font-size:0.9rem !important;
+  }
+  input{
+    font-size:0.9rem !important;
+    padding:0 !important;
+  }
+  textarea{
+    font-size:0.9rem !important;
+    padding:0 !important;
   }
 }
 
@@ -367,13 +402,13 @@ color:rgb(207, 207, 207) !important;
                       <h5>Say Hi!</h5>
                       <ul class="get_say_info_sec">
                         <li>
-                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="black" class="bi bi-envelope-fill" viewBox="0 0 16 16">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill=" rgb(241, 241, 241)" class="bi bi-envelope-fill" viewBox="0 0 16 16">
                                 <path d="M.05 3.555A2 2 0 0 1 2 2h12a2 2 0 0 1 1.95 1.555L8 8.414zM0 4.697v7.104l5.803-3.558zM6.761 8.83l-6.57 4.027A2 2 0 0 0 2 14h12a2 2 0 0 0 1.808-1.144l-6.57-4.027L8 9.586zm3.436-.586L16 11.801V4.697z"/>
                               </svg>
                           <a href="mailto:">info@shopathletics.store</a>
                         </li>
                         <li>
-                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="black" class="bi bi-whatsapp" viewBox="0 0 16 16">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill=" rgb(241, 241, 241)" class="bi bi-whatsapp" viewBox="0 0 16 16">
                                 <path d="M13.601 2.326A7.85 7.85 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c0 1.399.366 2.76 1.057 3.965L0 16l4.204-1.102a7.9 7.9 0 0 0 3.79.965h.004c4.368 0 7.926-3.558 7.93-7.93A7.9 7.9 0 0 0 13.6 2.326zM7.994 14.521a6.6 6.6 0 0 1-3.356-.92l-.24-.144-2.494.654.666-2.433-.156-.251a6.56 6.56 0 0 1-1.007-3.505c0-3.626 2.957-6.584 6.591-6.584a6.56 6.56 0 0 1 4.66 1.931 6.56 6.56 0 0 1 1.928 4.66c-.004 3.639-2.961 6.592-6.592 6.592m3.615-4.934c-.197-.099-1.17-.578-1.353-.646-.182-.065-.315-.099-.445.099-.133.197-.513.646-.627.775-.114.133-.232.148-.43.05-.197-.1-.836-.308-1.592-.985-.59-.525-.985-1.175-1.103-1.372-.114-.198-.011-.304.088-.403.087-.088.197-.232.296-.346.1-.114.133-.198.198-.33.065-.134.034-.248-.015-.347-.05-.099-.445-1.076-.612-1.47-.16-.389-.323-.335-.445-.34-.114-.007-.247-.007-.38-.007a.73.73 0 0 0-.529.247c-.182.198-.691.677-.691 1.654s.71 1.916.81 2.049c.098.133 1.394 2.132 3.383 2.992.47.205.84.326 1.129.418.475.152.904.129 1.246.08.38-.058 1.171-.48 1.338-.943.164-.464.164-.86.114-.943-.049-.084-.182-.133-.38-.232"/>
                               </svg>
                           <a href="tel:">+355698136849</a>
@@ -384,10 +419,10 @@ color:rgb(207, 207, 207) !important;
                         </li> -->
                       </ul>  
                       <ul class="get_say_social-icn">
-                        <li><a href="https://www.facebook.com/AthleticsClean"  target="_blank"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="black" class="bi bi-facebook" viewBox="0 0 16 16">
+                        <li><a href="https://www.facebook.com/AthleticsClean"  target="_blank"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill=" rgb(241, 241, 241)" class="bi bi-facebook" viewBox="0 0 16 16">
                             <path d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951"/>
                           </svg></a></li>
-                        <li><a href="https://www.instagram.com/athletics.clean/"  target="_blank"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="black" class="bi bi-instagram" viewBox="0 0 16 16">
+                        <li><a href="https://www.instagram.com/athletics.clean/"  target="_blank"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill=" rgb(241, 241, 241)" class="bi bi-instagram" viewBox="0 0 16 16">
                             <path d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.9 3.9 0 0 0-1.417.923A3.9 3.9 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.9 3.9 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.9 3.9 0 0 0-.923-1.417A3.9 3.9 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599s.453.546.598.92c.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.5 2.5 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.5 2.5 0 0 1-.92-.598 2.5 2.5 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233s.008-2.388.046-3.231c.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92s.546-.453.92-.598c.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92m-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217m0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334"/>
                           </svg></a></li>
                         <!-- <li><a href="#"><i class="fa fa-twitter"></i></a></li>
