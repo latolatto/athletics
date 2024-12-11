@@ -16,133 +16,7 @@
 <link href="./styles.css" rel="stylesheet">
     <style>
 
-.best-selling{
-    width:100%;
-    padding:5%;
-    display: flex;
-    justify-content: center;
-}
 
-.card-container{
-    display: flex;
-    background-color: rgba(117, 117, 117, 0.434);
-    flex-direction: row;
-    /* background-color: wheat; */
-    box-sizing: border-box;
-    box-shadow: 0px 0px 10px 0px  rgb(145, 145, 145); 
-    border-radius: 0.8rem;
-    width:80%;
-    height:70vh;
-}
-
-.shoe-area{
-    width: 50%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    position: relative;
-    border-radius: 0.8rem 0 0 0.8rem;
-    background-color: white;
-    /* height:fit-content; */
-}
-
-.info{
-    background-color: hsl(348, 68%, 34%);
-    width:50%;
-    padding:5%;
-    text-align: right;
-    display:flex;
-    flex-direction: column;
-    gap:1rem;
-    align-items: flex-end;
-}
-
-.info h4{
-padding-top:7%;
-font-size:1rem;
-font-weight: 400;;
-}
-
-.info h6{
-    font-weight:400;
-}
-
-.logo-div{
-    margin: 2rem 0  0 1.5rem;
-    position: absolute;
-    opacity: 1;
-    top: 0;
-    left: 0;
-    width: 100%;
-    /* background-color: yellowgreen; */
-}
-
-.logo-div img{
-    width: 70%;
-    opacity: 0.1;
-}
-
-.floating-div{
-    /* background-color: yellowgreen; */
-    /* height: 100%; */
-    width: 100%;
-    display: grid;
-    place-items: center;
-    align-items: center;
-    animation: float 6s ease-in-out infinite;
-    box-sizing: border-box; 
-}
-.floating-div img{
-    position:relative;
-    left:30%;
-    height:20rem;
-    top:7vh;
-}
-
-@keyframes float{
-    0%{
-        transform: translateY(0%);
-    }
-
-    50%{
-        transform: translateY(-6%);
-    }
-
-    100%{
-        transform: translateY(0%);
-    }
-}
-
-
-.buy-btn{
-    padding: 0.5em 1em;
-    font-size: 1.2rem;
-    border-radius: 2rem;
-    border: none;
-    font-weight: 600;
-    width:60%;
-    cursor: pointer;
-    transition: background-color 0.3s ease-in-out;
-}
-
-
-
-
-
-video{
-    height:20rem;
-    border-radius: 15px;
-
-}
-
-.image-show img{
-height:20vh;
-width:100%;
-opacity:0.8;
-margin-top:5%;
-
-}
 
 .accordion {
     display: flex;
@@ -199,51 +73,37 @@ margin-top:5%;
     
 }
 
-
-@media screen and (max-width: 768px){
-.best-selling{
-    position:relative;
-
-}
-.card-container{
-display: flex;
-flex-direction: column;
-width:100%;
-height:max-content;
-}
-
-.shoe-area{
-width:100%;
-}
-.logo-div img{
-width: 60%;
-}
-.info{
-width:100%;
-padding-top:10%;
-}
-
-.floating-div{
-    position:relative;
-}
-
-.floating-div img{
+.cta-button::after {
+    content: '';
+    position: absolute;
+    bottom: -2px;
     left: 0;
-    top: 7vh ; 
+    width: 100%;
+    height: 1px;
+    background-color: #930803;
+    transform: scaleX(1);
+    transition: transform 1s ease;
+  }
+  
+  .cta-button:hover::after {
+    animation: disappear-reappear 1s forwards;
+  }
+  
+  @keyframes disappear-reappear {
+    0% {
+      transform: scaleX(1); /* Start with full underline */
+    }
+    20% {
+      transform: scaleX(0); /* Shrink to disappear */
+    }
+    40% {
+      transform: scaleX(0); /* Stay disappeared briefly */
+    }
+    100% {
+      transform: scaleX(1); /* Reappear the underline fully */
+    }
+  }
 
-}
-
-.image-show img {
-width:200%;
-height:12vh;
-margin-top:10%;
-/* margin-bottom:5%; */
-}
-
-.buy-btn{
-    color:black !important;
-}
-}
 
 
     </style>
@@ -256,7 +116,7 @@ margin-top:10%;
             </div>
         </div>
         <div class="grid1 grid-pos">
-            <nav class=" container navbar navbar-expand-lg ">
+            <nav class="  navbar navbar-expand-lg ">
                 <div class="container-fluid">
                   <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo03" aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
@@ -503,7 +363,7 @@ margin-top:10%;
                 <div class="image-item hidden">
                     <img src="./images/main-grid/square3.jpeg" alt="">
                     <div class="overlay">
-                        <p>Leather Clean</p>
+                        <p>Deo Stick</p>
                     </div>
                 </div>
                 <div class="image-item hidden">
@@ -891,12 +751,6 @@ Experience premium care with Athletics Clean. Our advanced products protect and 
            </span>
        </button>
 
-           <!-- Back to top -->
-    <div class="btn-back-to-top" id="myBtn">
-        <span class="symbol-btn-back-to-top">
-            <i class="zmdi zmdi-chevron-up"></i>
-        </span>
-    </div>
     </footer>
 </div>
 <script>

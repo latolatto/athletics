@@ -26,20 +26,20 @@
   
 
 
-  .footer_get_touch_outer {
+.footer_get_touch_outer {
   /* margin-top: 1%; */
   width:100%;
 }
 
 .grid-70-30 {
   display: grid;
-  grid-template-columns: 70% 30%;
+  grid-template-columns: 60% 40%;
 
 }
 .get_form_inner {
   /* display: block; */
   padding: 50px 40px;
-  background: #fff;
+  background: rgb(241, 241, 241);
   box-shadow: -4px -2px 20px -7px #cfd5df;
   border-radius: 20px;
 }
@@ -88,6 +88,13 @@ form{
     flex-direction: column;
     gap:0.8rem;
 }
+
+input{
+  background-color: rgb(241, 241, 241);
+}
+textarea{
+  background-color: rgb(241, 241, 241);
+}
 input[type="submit"] {
   /* display: inline-block; */
   font-size: 1rem;
@@ -107,14 +114,14 @@ input[type="submit"] {
   -o-transition: all 0.3s cubic-bezier(0.55, 0.055, 0.675, 0.19);
 }
 input[type="submit"]:hover {
-  background-color: #717fe0;
-  border-color: #717fe0;
+  background-color: #0a132c;
+  border-color: #0a132c;
   color: #fff;
 }
 .get_say_form {
   display: inline-block;
   padding: 45px 0 25px 30px;
-  background:#e5f3fa;
+  background:rgba(255, 169, 169, 0.845);
   position: relative;
   color:black !important;
   border-radius: 20px;
@@ -158,14 +165,14 @@ ul {
   font-size: 16px;
   text-decoration: unset;
   font-weight: 500;
-  background: #162b65;
+  background: #414141;
   border-radius: 5px 0 0 5px;
   /* transition: background 0.3s cubic-bezier(0.55, 0.055, 0.675, 0.19); */
 
   
 }
 .get_say_info_sec > li a:hover {
-  background-color: #717fe0;
+  background-color: #0a132c;
 }
 
 #result{
@@ -176,7 +183,9 @@ ul {
 .contact-div{
 width:100%;
 height:40vh;
-}
+background-color:#333;
+ }
+
 
 .contact-h3{
   text-align: center;
@@ -193,22 +202,90 @@ height:40vh;
           
          
 }
-
-.main-menu{
-    padding-left: 2rem !important;
+@media (max-width: 768px) {
+  .grid-70-30 {
+    grid-template-columns: 1fr; /* Stack columns */
+  }
+  
+  .get_form_inner form {
+    gap: 10px;
+  }
+  
+  .get_touch_info {
+    font-size: 0.85rem;
+  }
 }
+
+@media (max-width: 480px) {
+  .footer_get_touch_outer {
+    padding: 15px;
+  }
+  .grid-50-50 {
+    grid-template-columns: 1fr;
+    grid-gap: 1.5rem;
+}
+  .get_form_inner form input,
+  .get_form_inner form textarea,
+  .get_form_inner form button {
+    font-size: 0.9rem;
+  }
+  
+  .get_touch_info {
+    font-size: 0.8rem;
+  }
+
+  .get_say_social-icn {
+    margin-top:1rem;
+  bottom: 2rem;
+  left:0;
+}
+ul.get_say_info_sec {
+    margin-bottom: 5rem;
+}
+}
+@media  (min-width: 480px) and (max-width:767px){
+
+  .get_say_social-icn {
+    margin-top:1rem;
+  bottom: 2rem;
+  left:0;
+}
+ul.get_say_info_sec {
+    margin-bottom: 5rem;
+}
+
+}
+nav a {
+
+color:rgb(207, 207, 207) !important;
+}
+
+#cartIcon svg{
+  fill:rgb(207, 207, 207) !important;
+}
+
+@media  (min-width: 769px) and (max-width:990px){
+  .get_say_info_sec > li a{
+    font-size:14px;
+    padding: 10px 15px;
+  }
+
+  ul.get_say_info_sec{
+    padding-left:0;
+  }
+}
+
     </style>
 </head>
 <body>
     <div class="body-container">
-        <div class="top-bar border-bottom">
-            <div class="sliding-text">
-                <!-- Free shipping for standard orders over $100 -->
-                All products on sale until December 10th—shop now and save!            
-            </div>
+      <div class="top-bar border-bottom">
+        <div class="sliding-text" id="slidingText">
+            &nbsp;All products on sale until December 10th—shop now and save!            
         </div>
+    </div>
         <div class="grid1 grid-pos">
-          <nav class=" container navbar navbar-expand-lg ">
+          <nav class=" navbar navbar-expand-lg ">
               <div class="container-fluid">
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo03" aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
                   <span class="navbar-toggler-icon"></span>
@@ -256,7 +333,7 @@ height:40vh;
            </div>
         </div>
         <div class="content ">
-          <div class="contact-div shadow"  style="background-image: url(./images/pages/contact.png); ">
+          <div class="contact-div shadow"  >
             <h3 class="contact-h3">CONTACT US</h3>
           </div>
             <section class="footer_get_touch_outer ">
@@ -321,96 +398,129 @@ height:40vh;
                 </div>
               </section>
         </div>
-        <div class="last-section bg-body-tertiary hidden">
-            <h4>Available at These Stores</h4>
-            <div class="retail-stores ">
-                <img  onclick="window.open('https:www.sportreality.al', '_blank');" style="cursor: pointer;" src="./images/stores/sportreality.png">
-                <img onclick="window.open('https:www.buzzsneakers.al/', '_blank');" style="cursor: pointer;" src="./images/stores/buzz.png">
-                <img onclick="window.open('https:www.sportvision.al/', '_blank');" style="cursor: pointer;" src="./images/stores/sportvision.png">
-            </div>
-            <span class="muted"> Tirana, Albania</span>
-        </div>
-        <footer class="">
-            <div class="container footer-flex">
-                <img class="footer-logo" src="./images/icons/white-logo.png">
-                <div class=" footer-flex-row">
-                   <div class="flex-row-cells footer-about">
-                        <p class="">
-                            Keep your shoes looking their best with our premium cleaning solutions. From sanitizers to waterproofing, we’ve got everything you need for spotless, long-lasting footwear.
-                        </p>
-                        <div class="social-icons">
-                            <a href="https://www.facebook.com/AthleticsClean" class="" target="_blank">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-facebook" viewBox="0 0 16 16">
-                                    <path d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951"/>
+        <div class="last-section  hidden">
+          <h4>AVAILABLE ON THESE STORES</h4>
+          <div class="retail-stores ">
+              <img  onclick="window.open('https:www.sportreality.al', '_blank');" style="cursor: pointer;" src="./images/stores/sportreality.png">
+              <img onclick="window.open('https:www.buzzsneakers.al/', '_blank');" style="cursor: pointer;" src="./images/stores/buzz.png">
+              <img onclick="window.open('https:www.sportvision.al/', '_blank');" style="cursor: pointer;" src="./images/stores/Untitled-Photoroom.png">
+          </div>
+          <span class="muted"> Tirana, Albania</span>
+      </div>
+      
+      <footer class="border-top">
+          <div class="container footer-flex">
+              <img class="footer-logo" src="./images/icons/white-logo.png">
+              <div class=" footer-flex-row">
+                  <!-- <img class="footer-logo" src="./images/icons/white-logo.png"> -->
+  
+                <div class="flex-row-cells footer-about">
+  
+                      <p class="">
+                          Keep your shoes looking their best with our premium cleaning solutions. From sanitizers to waterproofing, we’ve got everything you need for spotless, long-lasting footwear.
+                      <BR><BR>
+                          <h6><b>STAY CONNECTED</b></h6>
+                          <div class="social-icons">
+                          <a href="https://www.facebook.com/AthleticsClean" class="" target="_blank">
+                              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-facebook" viewBox="0 0 16 16">
+                                  <path d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951"/>
                                 </svg>
-                            </a>
-                            <a href="https://www.instagram.com/athletics.clean/" class="" target="_blank">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-instagram" viewBox="0 0 16 16">
-                                    <path d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.9 3.9 0 0 0-1.417.923A3.9 3.9 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.9 3.9 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.9 3.9 0 0 0-.923-1.417A3.9 3.9 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599s.453.546.598.92c.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.5 2.5 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.5 2.5 0 0 1-.92-.598 2.5 2.5 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233s.008-2.388.046-3.231c.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92s.546-.453.92-.598c.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92m-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217m0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334"/>
-                                </svg>
-                            </a>
-                            <!-- <a href="#" class="fs-18 cl7 hov-cl1 trans-04 m-r-16">
-                                <i class="fa fa-pinterest-p"></i>
-                            </a> -->
-                        </div>
-                    </div>
-                    <div class="flex-row-cells footer-column">
-                        <!-- <h4 class="">
-                            INFORMATION
-                        </h4> -->
-                        <ul>
-                            <li class="">
-                                <a href="./about.html" class="">
-                                    About Us
-                                </a>
-                            </li>
-                            <li class="">
-                                <a href="./shop.html" class="">
-                                    Store
-                                </a>
-                            </li>
-                            <li class="">
-                                <a href="./cart.html" class="">
-                                    My Cart
-                                </a>
-                            </li>
-                        </ul>
-                    </div>
-                    <div class="flex-row-cells footer-column">
-                        <!-- <h4 class="">
-                            HELP
-                        </h4> -->
-                        <ul>
-                            <li class="">
-                                <a href="./faqs.html" class="">
-                                    FAQs
-                                </a>
-                            </li>
-                            <li class="">
-                                <a href="./index.html" class="">
-                                    Homepage
-                                </a>
-                            </li>
-                            <li class="">
-                                <a href="./contact.html" class="">
-                                    Contact Us
-                                </a>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="cards-footer">
-                    <div class="">
-                        <img class="" src="images/icons/icon-pay-01.png" alt="ICON-PAY">
-                        <img class="" src="images/icons/icon-pay-02.png" alt="ICON-PAY">
-                        <img class="" src="images/icons/icon-pay-03.png" alt="ICON-PAY">
-                    </div>
-                    <p class="stext-107 cl6 txt-center">
-                        <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-                        © <span id="year"> </span> | All rights reserved
-                    </p>
-                </div>
-            </div>
+                          </a>
+                          
+                          <a href="https://www.instagram.com/athletics.clean/" class="" target="_blank">
+                              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-instagram" viewBox="0 0 16 16">
+                                  <path d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.9 3.9 0 0 0-1.417.923A3.9 3.9 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.9 3.9 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.9 3.9 0 0 0-.923-1.417A3.9 3.9 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599s.453.546.598.92c.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.5 2.5 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.5 2.5 0 0 1-.92-.598 2.5 2.5 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233s.008-2.388.046-3.231c.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92s.546-.453.92-.598c.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92m-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217m0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334"/>
+                              </svg>
+                          </a>
+  
+                          <!-- <a href="#" class="fs-18 cl7 hov-cl1 trans-04 m-r-16">
+                              <i class="fa fa-pinterest-p"></i>
+                          </a> -->
+                      </div>
+                  </div>
+  
+                  <div class="flex-row-cells footer-column">
+                      <!-- <h4 class="">
+                          INFORMATION
+                      </h4> -->
+  
+                      <ul>
+                          <li class="">
+                              <a href="./about.html" class="">
+                                  About Us
+                              </a>
+                          </li>
+  
+                          <li class="">
+                              <a href="./shop.html" class="">
+                                  Store
+                              </a>
+                          </li>
+  
+                          <li class="">
+                              <a href="./cart.html" class="">
+                                  My Cart
+                              </a>
+                          </li>
+                      </ul>
+                  </div>
+  
+                  <div class="flex-row-cells footer-column">
+                      <!-- <h4 class="">
+                          HELP
+                      </h4> -->
+  
+                      <ul>
+                          <li class="">
+                              <a href="./faqs.html" class="">
+                                  FAQs
+                              </a>
+                          </li>
+  
+  
+                          <li class="">
+                              <a href="./index.html" class="">
+                                  Homepage
+                              </a>
+                          </li>
+  
+                          <li class="">
+                              <a href="./contact.html" class="">
+                                  Contact Us
+                              </a>
+                          </li>
+                      </ul>
+                  </div>
+              </div>
+  
+              <div class="cards-footer">
+                  <div class="">
+                          <img class="" src="images/icons/icon-pay-01.png" alt="ICON-PAY">
+                          <!-- <img class="" src="./images/waterstop/waterstop1.png" alt="ICON-PAY"> -->
+  
+  
+                          <img class="" src="images/icons/icon-pay-02.png" alt="ICON-PAY">
+  
+                          <img class="" src="images/icons/icon-pay-03.png" alt="ICON-PAY">
+  
+                      <!-- <a href="#" class="m-all-1">
+                          <img src="images/icons/icon-pay-04.png" alt="ICON-PAY">
+                      </a>
+  
+                      <a href="#" class="m-all-1">
+                          <img src="images/icons/icon-pay-05.png" alt="ICON-PAY">
+                      </a> -->
+                  </div>
+  
+                  <p class="stext-107 cl6 txt-center">
+                      <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+                      © <span id="year"> </span> | All rights reserved
+                      <!-- <a href="./index.html"><img class="copyright-logo" src="./images/icons/mainlogo.png"> </a> -->
+                      <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+  
+                  </p>
+              </div>
+          </div>
             <button id="backToTopBtn">
               <span class="arrow">
                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#fff" class="bi bi-chevron-up" viewBox="0 0 16 16">
@@ -418,12 +528,6 @@ height:40vh;
                  </svg>
                </span>
             </button>
-            <!-- Back to top -->
-            <div class="btn-back-to-top" id="myBtn">
-              <span class="symbol-btn-back-to-top">
-                 <i class="zmdi zmdi-chevron-up"></i>
-              </span>
-            </div>
         </footer>
     </div>
     <script>
@@ -477,7 +581,38 @@ const result = document.getElementById('result');
 });
     });
 
-    
+    function setupNavbarScrollEffect() {
+  const navbar = document.querySelector('.grid1');
+  const menuItems = document.querySelectorAll('.menu-item');
+  const whitesvg = document.querySelector('.bi-cart3');
+
+  function handleScroll() {
+    if (window.scrollY > 0) {
+      // Apply styles when the user has scrolled down
+      navbar.classList.add('fixed');
+      menuItems.forEach((item) => item.classList.add('white'));
+      navbar.classList.remove('grid-pos');
+      whitesvg.classList.add('whitesvg');
+    } else {
+      // Remove styles when the user is at the top
+      navbar.classList.remove('fixed');
+      menuItems.forEach((item) => item.classList.remove('white'));
+      navbar.classList.add('grid-pos');
+      whitesvg.classList.remove('whitesvg');
+    }
+  }
+
+  // Run this when the DOM content is fully loaded
+  document.addEventListener('DOMContentLoaded', () => {
+    handleScroll(); // Apply the effect immediately based on the current scroll position
+  });
+
+  // Also handle the scroll event
+  window.addEventListener('scroll', handleScroll);
+}
+
+// Call the function to initialize the effect
+setupNavbarScrollEffect();
 
     </script>
         <!-- HoverSignal -->
@@ -502,6 +637,9 @@ const result = document.getElementById('result');
           addToCart();
           removeFromCart();
       });
+
+
+
   </script>
       <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script> <!-- Keep only if necessary -->
       <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"></script>
