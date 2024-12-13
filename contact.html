@@ -13,302 +13,10 @@
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <link href="./styles.css" rel="stylesheet">
+    <link href="./styling/contact.css" rel="stylesheet">
+
     <style>
 
-
-.content{
-    margin-top:14%;
-}
-
-.content section{
-  margin-top:10%;
-}
-  
-
-
-.footer_get_touch_outer {
-  /* margin-top: 1%; */
-  width:100%;
-}
-
-.grid-70-30 {
-  display: grid;
-  grid-template-columns: 60% 40%;
-
-}
-.get_form_inner {
-  /* display: block; */
-  padding: 50px 40px;
-  background: rgb(241, 241, 241);
-  box-shadow: -4px -2px 20px -7px #cfd5df;
-  border-radius: 20px;
-}
-input[type="text"], input[type="text"], input[type="email"], input[type="tel"] {
-  /* border: 1px solid #dbdbdb; */
-  border:0;
-  border-radius: 2px;
-  color: #333;
-  height: 1.5rem;
-  padding: 0 0 0 20px;
-  width: 100%;
-  outline: 0;
-  
-}
-.grid-50-50 {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-gap: 5rem;
-}
-.grid-full {
-  margin: 20px 0;
-  gap:2rem;
-  display:flex;
-  flex-direction: column;
-  font-size: 1rem;
-}
-textarea {
-  /* border: 1px solid #dbdbdb; */
-  border:0;
-  border-radius: 2px;
-  color: #333;
-  padding: 12px 0 0 20px;
-  width: 100%;
-  outline: 0;
-  margin-bottom: 20px;
-}
-.get_form_inner_text h3 {
-  color: #333;
-  font-size: 26px;
-  font-weight: 600;
-  margin-bottom: 40px;
-}
-
-form{
-    display:flex;
-    flex-direction: column;
-    gap:0.8rem;
-}
-
-input{
-  background-color: rgb(241, 241, 241);
-}
-textarea{
-  background-color: rgb(241, 241, 241);
-}
-input[type="submit"] {
-  /* display: inline-block; */
-  font-size: 1rem;
-  width:30%;
-  text-transform: uppercase;
-  background: transparent;
-  border: 2px solid;
-  border-radius:8px;
-  font-weight: 500;
-  padding: 10px 20px;
-  outline: 0;
-  cursor: pointer;
-  color: black;
-  -webkit-transition: all 0.3s cubic-bezier(0.55, 0.055, 0.675, 0.19);
-  -moz-transition: all 0.3s cubic-bezier(0.55, 0.055, 0.675, 0.19);
-  -ms-transition: all 0.3s cubic-bezier(0.55, 0.055, 0.675, 0.19);
-  -o-transition: all 0.3s cubic-bezier(0.55, 0.055, 0.675, 0.19);
-}
-input[type="submit"]:hover {
-  background-color: black;
-  border-color: black;
-  color: #fff;
-}
-.get_say_form {
-  display: inline-block;
-  padding: 45px 0 25px 30px;
-  background: hsla(348, 46%, 48%, 0.781);
-  position: relative;
-  color: rgb(241, 241, 241) !important;
-  border-radius: 20px;
-
-}
-.get_say_form h5 {
-  /* color: #fff; */
-  font-size: 26px;
-  margin: 0 0 40px;
-}
-ul {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-}
-.get_say_social-icn {
-  display: flex;
-  position: absolute;
-  bottom: 40px;
-}
-.get_say_social-icn a {
-  font-size: 22px;
-  /* color: #fff; */
-  padding: 0 20px 0 0;
-}
-.get_say_info_sec i {
-  /* color: #fff; */
-  font-size: 32px;
-}
-.get_say_info_sec > li {
-  display: grid;
-  grid-template-columns: 40px auto;
-  align-items: center;
-  margin-bottom: 40px;
-}
-.get_say_info_sec > li a {
-  width: 100%;
-  display: block;
-  padding: 15px 25px;
-  color: black;
-  font-size: 16px;
-  text-decoration: unset;
-  font-weight: 500;
-  background:  rgba(241, 241, 241, 0.943);
-  border-radius: 5px 0 0 5px;
-  /* transition: background 0.3s cubic-bezier(0.55, 0.055, 0.675, 0.19); */
-
-  
-}
-.get_say_info_sec > li a:hover {
-  background-color: black;
-  color:  rgb(241, 241, 241);
-
-}
-
-#result{
-  height:1rem;
-  opacity: 0;
-  padding:1%;
-}
-.contact-div{
-width:100%;
-height:40vh;
-background-color:#333;
- }
-
-
-.contact-h3{
-  text-align: center;
-  position: relative;
-  top:40%;
-  /* color:black;
-         font-family: "Playfair Display", serif;
-    font-weight: 600;
-    font-style: normal; */
-          font-size:3rem;
-          color: rgba(255, 255, 255, 0.6);   
-          -webkit-text-stroke: 1.5px black;  
-          font-weight:700;
-          
-         
-}
-.get_say_social-icn {
-    margin-top:1rem;
-    bottom: 2rem;
-    left:2rem;
-  }
-@media (max-width: 768px) {
-  .grid-70-30 {
-    grid-template-columns: 1fr;
-  }
-  
-  .get_form_inner form {
-    gap: 10px;
-  }
-  
-  .get_touch_info {
-    font-size: 0.85rem;
-  }
-}
-
-@media (max-width: 480px) {
-  .footer_get_touch_outer {
-    padding: 15px;
-  }
-  .grid-50-50 {
-    grid-template-columns: 1fr;
-    grid-gap: 1.5rem;
-  }
-  .get_form_inner form input,
-  .get_form_inner form textarea,
-  .get_form_inner form button {
-    font-size: 1rem;
-  }
-  
-  .get_touch_info {
-    font-size: 0.8rem;
-  }
-
-  .get_say_social-icn {
-    margin-top:1rem;
-    bottom: 2rem;
-    left:2rem;
-  }
-  ul.get_say_info_sec {
-    margin-bottom: 5rem;
-  }
-}
-@media  (min-width: 480px) and (max-width:767px){
-  .get_say_social-icn {
-    margin-top:1rem;
-    bottom: 2rem;
-    left:2rem;
-  }
-  ul.get_say_info_sec {
-    margin-bottom: 5rem;
-  }
-  .get_form_inner{
-    padding:5%;
-  }
-  .grid-50-50{
-    gap:1rem;
-    grid-template-columns: 1fr;
-    grid-gap: 1.5rem;
-  }
-}
-
-nav a {
-  color:rgb(207, 207, 207) !important;
-}
-
-#cartIcon svg{
-  fill:rgb(207, 207, 207) !important;
-}
-
-@media  (min-width: 769px) and (max-width:990px){
-  .get_say_info_sec > li a{
-    font-size:14px;
-    padding: 10px 15px;
-  }
-
-  ul.get_say_info_sec{
-    padding-left:0;
-  }
-  .get_say_social-icn {
-    margin-top:1rem;
-    bottom: 2rem;
-    left:0;
-  }
-  .get_form_inner{
-    padding:5%;
-  }
-  .grid-50-50{
-    gap:1rem;
-  }
-  form{
-    font-size:0.9rem !important;
-  }
-  input{
-    font-size:0.9rem !important;
-    padding:0 !important;
-  }
-  textarea{
-    font-size:0.9rem !important;
-    padding:0 !important;
-  }
-}
 
     </style>
 </head>
@@ -392,7 +100,7 @@ nav a {
                           <div class="grid-full">
                             <input type="text" placeholder="Subject" class="border-bottom" name="Message Subject" required >
                             <textarea placeholder="Message " cols="30" rows="4" class="border-bottom" name="message" required ></textarea>
-                            <input type="submit" value="Send">
+                            <input type="submit" value="Send" class="submit">
                           </div>
                           <div id='result' style="font-size:0.8rem;font-weight: 700;color:#717fe0;"></div>
                         </form>
@@ -405,13 +113,13 @@ nav a {
                             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill=" rgb(241, 241, 241)" class="bi bi-envelope-fill" viewBox="0 0 16 16">
                                 <path d="M.05 3.555A2 2 0 0 1 2 2h12a2 2 0 0 1 1.95 1.555L8 8.414zM0 4.697v7.104l5.803-3.558zM6.761 8.83l-6.57 4.027A2 2 0 0 0 2 14h12a2 2 0 0 0 1.808-1.144l-6.57-4.027L8 9.586zm3.436-.586L16 11.801V4.697z"/>
                               </svg>
-                          <a href="mailto:">info@shopathletics.store</a>
+                          <a href="mailto:info@shopathletics.store" target="_blank">info@shopathletics.store</a>
                         </li>
                         <li>
                             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill=" rgb(241, 241, 241)" class="bi bi-whatsapp" viewBox="0 0 16 16">
                                 <path d="M13.601 2.326A7.85 7.85 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c0 1.399.366 2.76 1.057 3.965L0 16l4.204-1.102a7.9 7.9 0 0 0 3.79.965h.004c4.368 0 7.926-3.558 7.93-7.93A7.9 7.9 0 0 0 13.6 2.326zM7.994 14.521a6.6 6.6 0 0 1-3.356-.92l-.24-.144-2.494.654.666-2.433-.156-.251a6.56 6.56 0 0 1-1.007-3.505c0-3.626 2.957-6.584 6.591-6.584a6.56 6.56 0 0 1 4.66 1.931 6.56 6.56 0 0 1 1.928 4.66c-.004 3.639-2.961 6.592-6.592 6.592m3.615-4.934c-.197-.099-1.17-.578-1.353-.646-.182-.065-.315-.099-.445.099-.133.197-.513.646-.627.775-.114.133-.232.148-.43.05-.197-.1-.836-.308-1.592-.985-.59-.525-.985-1.175-1.103-1.372-.114-.198-.011-.304.088-.403.087-.088.197-.232.296-.346.1-.114.133-.198.198-.33.065-.134.034-.248-.015-.347-.05-.099-.445-1.076-.612-1.47-.16-.389-.323-.335-.445-.34-.114-.007-.247-.007-.38-.007a.73.73 0 0 0-.529.247c-.182.198-.691.677-.691 1.654s.71 1.916.81 2.049c.098.133 1.394 2.132 3.383 2.992.47.205.84.326 1.129.418.475.152.904.129 1.246.08.38-.058 1.171-.48 1.338-.943.164-.464.164-.86.114-.943-.049-.084-.182-.133-.38-.232"/>
                               </svg>
-                          <a href="tel:">+355698136849</a>
+                          <a href="https://api.whatsapp.com/send?phone=355698136849" target="_blank">+355698136849</a>
                         </li>
                         <!-- <li>
                           <i class="fa fa-skype"></i>
@@ -669,10 +377,9 @@ setupNavbarScrollEffect();
       document.addEventListener("DOMContentLoaded", function () {
           // Call updateCartDisplay on each page load to update cart data
           updateCartDisplay();
-          addToCart();
           removeFromCart();
-      });
 
+      });
 
 
   </script>

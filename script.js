@@ -34,27 +34,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
 
-function setupModalScrollLock() {
-  const modal = document.getElementById('myModal');
-  const html = document.documentElement;
 
-  modal.addEventListener('show.bs.modal', () => {
-    console.log('Modal opened');
-    // Hide scrollbar visually but keep its space and functionality removed
-    html.style.overflowY = 'hidden'; // Disable scrolling
-    html.style.setProperty('--scrollbar-width', `${window.innerWidth - html.clientWidth}px`);
-  });
-
-  modal.addEventListener('hidden.bs.modal', () => {
-    console.log('Modal closed');
-    // Restore scrollbar visibility and functionality
-    html.style.overflowY = ''; // Enable scrolling
-    html.style.setProperty('--scrollbar-width', '8px'); // Default scrollbar width
-  });
-}
-
-// Initialize the function
-setupModalScrollLock();
 
 
 function setupNavbarScrollEffect() {
