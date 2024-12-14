@@ -201,12 +201,18 @@ font-size: 1.7rem;
 
 .txt2{
     text-transform: uppercase;
-    font-family: "Playfair Display", serif;
+    /* font-family: "Playfair Display", serif;
     font-weight: 600;
+    font-style: normal; */
+    font-family: "Russo One", sans-serif;
+    font-weight: 300;
     font-style: normal;
-    font-size: 4rem;
+    font-size: 3.7rem;
     color:black;
+    opacity:0.8;
+
 }
+
 
 .btn0{
     background-color: #c70b04;
@@ -1839,13 +1845,13 @@ footer{
 }
 
 .item1{
-  background-image: url(./images/d1.webp);
+  background-image: url(./images/d1\ \(1\).webp);
 }
 .item2{
-  background-image: url(./images/d2.webp);
+  background-image: url(./images/d2\ \(1\).webp);
 }
 .item3{
-  background-image: url(./images/d3.webp);
+  background-image: url(./images/d3\ \(1\).webp);
 }
  } 
 
@@ -1984,8 +1990,9 @@ font-size: 1.5rem;
 }
 
 .txt2{
-    font-size:3.85rem;
+    font-size:3.5rem;
     line-height:1;
+    opacity:0.7;
 }
 
 .btn0{
