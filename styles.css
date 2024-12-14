@@ -723,7 +723,7 @@ video{
     animation-timing-function: linear;
     animation-iteration-count: infinite;
     animation-play-state: running;
-  animation-duration: 35s;
+  animation-duration: 45s;
 }
 
 .marquee-slider p {
@@ -1839,13 +1839,13 @@ footer{
 }
 
 .item1{
-  background-image: url(./images/11.webp);
+  background-image: url(./images/d1.webp);
 }
 .item2{
-  background-image: url(./images/33.webp);
+  background-image: url(./images/d2.webp);
 }
 .item3{
-  background-image: url(./images/22.webp);
+  background-image: url(./images/d3.webp);
 }
  } 
 
@@ -1970,7 +1970,7 @@ html[style*="overflow-y: hidden"]::-webkit-scrollbar-thumb {
 
   .slides-caption{
     position:absolute;
-    top:52%;
+    top:55%;
     /* z-index:99; */
     left:3%;
     width:83% !important;

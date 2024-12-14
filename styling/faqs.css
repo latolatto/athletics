@@ -99,10 +99,23 @@ padding: 20px 25px;
         .last-section{
             visibility: hidden;
         } */
-
+        .still-q{
+            padding:5%;
+            width:100%;
+            background-color: hsla(348, 46%, 48%, 0.781);
+            text-align: center;
+        }
+        .email{
+            color:rgb(207, 207, 207) !important;
+            text-decoration: underline !important;
+            text-decoration-color: rgba(255, 255, 255, 0.6);
+        }
         @media screen and (max-width: 768px){
             .contact-div{
   margin-top:5rem;
+}
+.still-q{
+    text-align: left;
 }
 }
 
@@ -120,14 +133,3 @@ padding-top:3%;
 }
 }
 
-.still-q{
-    padding:5%;
-    width:100%;
-    background-color: hsla(348, 46%, 48%, 0.781);
-    text-align: center;
-}
-.email{
-    color:rgb(207, 207, 207) !important;
-    text-decoration: underline !important;
-    text-decoration-color: rgba(255, 255, 255, 0.6);
-}
