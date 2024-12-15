@@ -282,7 +282,7 @@ function updateCartPage() {
   cartItemsContainer.innerHTML = ''; // Clear any existing content
 
   if (cart.length === 0) {
-    cartItemsContainer.innerHTML = '<p>Your cart is empty!</p>';
+    cartItemsContainer.innerHTML = '<p style="text-align:center;font-size:2rem;">Your cart is empty!</p>';
     cartTotalContainer.style.display ='none';
     document.getElementsByClassName('checkout-btn')[0].innerHTML='';
   } else {
@@ -303,7 +303,7 @@ function updateCartPage() {
               <button class="quantity-btn" data-action="increase" data-product-id="${item.id}">+</button>
             </div>
             <button class="remove-item-btn" data-product-id="${item.id}">Remove</button>
-            <p class="subtotal">Total: $${(item.price * item.quantity).toFixed(2)}</p>
+            <p class="subtotal"><b>Total: $${(item.price * item.quantity).toFixed(2)}</b></p>
           </div>
         </div>
       `;
@@ -334,7 +334,7 @@ function updateCartPage() {
       
     });
 
-    cartTotalContainer.innerHTML = `<hr><p>Grand Total: $${grandTotal.toFixed(2)}</p>`;
+    cartTotalContainer.innerHTML = `<hr><p>Subtotal: $${grandTotal.toFixed(2)}</p>`;
   }
 }
 
@@ -354,7 +354,7 @@ function updateCartTotals() {
   });
 
   // Update the grand total display
-  cartTotalContainer.innerHTML = `<hr><p>Grand Total: $${grandTotal.toFixed(2)}</p>`;
+  cartTotalContainer.innerHTML = `<hr><p>Subtotal: $${grandTotal.toFixed(2)}</p>`;
 }
 
 

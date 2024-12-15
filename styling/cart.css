@@ -54,6 +54,7 @@ color:rgb(207, 207, 207) !important;
     gap:2rem;
     align-items:baseline;
     width:100%;
+    color:rgb(207, 207, 207);
 }
 
 .quantity-container {
@@ -77,6 +78,9 @@ color:rgb(207, 207, 207) !important;
     width: 100%;
     text-align: center;
     padding: 5px;
+    background-color: black;
+    color:rgb(207, 207, 207);
+    border: 1px solid white;
 }
 
 .remove-item-btn {
@@ -91,7 +95,8 @@ color:rgb(207, 207, 207) !important;
 #cart-total {
     margin-top: 20px;
     font-size: 18px;
-    align-self:flex-end;
+    display:flex;
+    justify-content: flex-end;
 }
 
 hr {
@@ -142,6 +147,7 @@ hr {
     justify-content: space-between;
     flex: 1;
     gap: 1rem;
+    color:rgb(207, 207, 207) !important;
 }
 
 /* Each item detail in the row */
@@ -208,21 +214,60 @@ hr {
 
 .cart-item-info p{
     width:20%;
+    color:rgb(207, 207, 207);
 }
+
 
 .subtotal{
     text-align: right;
 }
+
+p.subtotal{
+    font-weight: 700;
+}
+
 #cart-items-container{
     width:100%;
 }
+
+.btn-cat{
+    text-align: left;
+}
+.browse{
+    padding-bottom:5%;
+    display: flex;
+    width: 100%;
+    justify-content: flex-start;
+    margin-bottom: 5%;
+    
+}
+
+.checkout-btn{
+    display: flex;
+    width: 100%;
+    justify-content: flex-end;
+    margin-bottom:5%;
+}
+
+.cart{
+    opacity: 0;
+}
+
+button.quantity-btn{
+    background-color: black;
+    color:rgb(207, 207, 207);
+    border: 1px solid white;
+}
+#proceedToCheckout{
+    /* padding-top:5%; */
+    margin-top:10%;
+}
 /* Responsive adjustments */
-@media (max-width: 48em) {
+/* @media (max-width: 48em) {
     .cart-page-container {
         width: 95%;
     }
 
-    /* Stacked layout for smaller screens */
     .cart-page-item {
         flex-direction: column;
         align-items: center;
@@ -258,21 +303,90 @@ hr {
         margin: 0.5rem 0;
         font-size: 0.9rem;
     }
-}
+    .browse{
+        padding-bottom:10%;
+    }
+} */
 
-.btn-cat{
-    text-align: left;
-}
-.browse{
-    display: flex;
-    width: 100%;
-    justify-content: flex-start;
-    
-}
+/* Responsive adjustments for cart page */
+@media (max-width: 768px) {
+    .cart-page-item {
+        flex-direction: row; /* Ensure image and details are in a row */
+        align-items: flex-start; /* Align content at the start */
+        text-align: left; /* Align text to the left */
+    }
 
-.checkout-btn{
-    display: flex;
-    width: 100%;
-    justify-content: flex-end;
-    margin-bottom:5%;
+    .cart-item-image {
+        width: 5rem;
+        height: 5rem;
+        margin-right: 1rem; /* Add space between image and details */
+    }
+
+    .cart-item-details {
+        flex: 1; /* Let details take up remaining space */
+        display: flex;
+        flex-direction: row; /* Stack details as a column */
+        gap: 0.5rem; /* Add spacing between elements */
+        width:100%;
+        padding-left:5%;
+        padding-right:5%;
+    }
+
+    .cart-item-info p{
+        width:100%;
+    }
+
+    .cart-item-info h5{
+        width:100%;
+    }
+    .cart-item-info {
+        display: flex;
+        flex-direction: column; /* Stack item info vertically */
+        align-items: flex-start; /* Align items to the left */
+        gap: 0.5rem;
+    }
+
+    .quantity-container {
+        width: 100%; /* Ensure buttons and input span the full width */
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+    }
+
+    .quantity-btn {
+        flex: 0 0 auto; /* Prevent buttons from stretching */
+        width: 2rem; /* Set fixed width for buttons */
+        height: 2rem; /* Set fixed height for buttons */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 1rem; /* Adjust font size for buttons */
+    }
+
+    .quantity-input {
+        width: 3rem; /* Set fixed width for quantity input */
+        text-align: center;
+    }
+
+    .remove-item-btn {
+        align-self: flex-start; /* Align the remove button to the top */
+        margin-top: 1rem; /* Add space between remove button and other content */
+        padding: 0.5rem 1rem;
+    }
+
+    .subtotal {
+        align-self: flex-end; /* Align subtotal to the bottom right */
+        font-weight: bold;
+        margin-top: 0.5rem;
+    }
+
+    .cart-grand-total {
+        font-size: 1.2rem;
+    }
+
+    .cart-action-btn {
+        width: 100%; /* Make action buttons span full width */
+        margin: 0.5rem 0;
+        font-size: 0.9rem;
+    }
 }
