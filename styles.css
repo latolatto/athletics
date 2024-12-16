@@ -623,6 +623,9 @@ video{
 }
 
 .page-no{
+  margin-top:10%;
+  margin-bottom:10%;
+
   display:flex;
   justify-content: center;
   width:100%;
@@ -825,6 +828,7 @@ video{
     text-align: center;
     height:fit-content;
     padding:2%;
+    align-items: center;
 }
 
 .ballina-col{
@@ -852,6 +856,10 @@ background:#e5f3fa65 */
 
 }
 
+.itm-price{
+  font-weight:500;
+
+}
 .album-img{
     /* width:30%; */
     height:14rem;
@@ -908,7 +916,7 @@ background:#e5f3fa65 */
     overflow: hidden;
     padding-right:0;
     padding-left:0;
-    width:40%;
+    /* width:40%; */
 }
 .imagepreview {
     width: 100%;
@@ -1785,7 +1793,12 @@ a{
     align-items: center;
 }
 
-
+.img-ttl.card-body{
+  margin-top: 5%;
+    height: 20%;
+    line-height: 1rem;
+    font-size:0.9rem;
+}
   }
 
  @media screen and (max-width: 768px) {
@@ -1793,7 +1806,10 @@ a{
     display:flex;
     flex-direction: column;
   }
-
+  .page-no{
+    margin-top:20%;
+    margin-bottom:20%;
+  }
   .best-selling{
     display:flex;
     flex-direction: column;
@@ -2384,43 +2400,28 @@ text-align:center;
 }
 
 /* Product image container */
-.product-image {
+.img-container {
   position: relative;
-  width: 100%;
-  overflow: hidden;
+  display: inline-block;
 }
 
-.default-img {
-  /* position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: auto; */
-  /* opacity: 1; */
-  display:block;
-  transition: opacity 0.3s ease-in-out;
+.album-img {
+
+  transition: opacity 0.3s ease;
 }
 
 .hover-img {
-  /* position: absolute;
+  position: absolute;
   top: 0;
-  left: 0; */
-  /* width: 100%;
-  height: auto; */
-  /* opacity: 0; */
-  display:none;
-  transition: opacity 0.3s ease-in-out;
+  left: 0;
+  opacity: 0; /* Hide hover image by default */
 }
 
-.catg-item img:hover .default-img {
-  /* opacity: 0; */
-  display:none;
-
+.catg-item:hover .hover-img {
+  opacity: 1; /* Show hover image on hover */
 }
 
-.catg-item img:hover .hover-img {
-  /* opacity: 1; */
-  display:block;
-
+.catg-item:hover .default-img {
+  opacity: 0; /* Hide default image on hover */
 }
 

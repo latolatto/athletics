@@ -339,7 +339,7 @@
                 </div>
                 <div class="modal-body ">
                   <div class="top-part">
-                    <div class=" img-container">
+                    <div class=" ">
                       <div id="carouselExampleDark" class="carousel carousel-dark slide" style="z-index:999999;">
                         <div class="carousel-inner" id="carouselImages">
                           <!-- <div class="carousel-item ">
@@ -628,7 +628,6 @@ function saveCart() {
   localStorage.setItem('cart', JSON.stringify(cart));
 }
 
-// Function to display products
 const displayItem = (items) => {
     const root = document.getElementById('root');
     root.innerHTML = ''; // Clear existing content
@@ -641,8 +640,10 @@ const displayItem = (items) => {
         card.classList.add('col-6-sm', 'ballina-col');
         card.innerHTML = `
             <a class="catg-item card-text pop" href="#" type="" data-bs-toggle="modal" data-bs-target="#myModal" data-item-id="${item.id}">
-                <img class="default-img album-img" src="${item.image}" alt="pieces">
-                <img class="hover-img album-img" src="${item.hoverImage}" alt="${item.title}">
+                <div class="img-container">
+                    <img class="default-img album-img" src="${item.image}" alt="pieces">
+                    <img class="hover-img album-img" src="${item.hoverImage}" alt="${item.title}">
+                </div>
                 <div class="img-ttl card-body" style="text-decoration: none; color: black;">
                     ${item.title}
                 </div>
@@ -652,6 +653,8 @@ const displayItem = (items) => {
             </a>
         `;
         root.appendChild(card);
+
+
 
         // Add click listener to open modal with item details
         card.querySelector('.catg-item').addEventListener('click', () => {
@@ -809,7 +812,7 @@ if (cart.length === 0) {
 
   const totalElement = document.createElement('div');
   totalElement.classList.add('total-sum');
-  totalElement.innerHTML = `<hr><p>Grand Total: $${cartTotal.toFixed(2)}</p>`;
+  totalElement.innerHTML = `<hr><p>Subtotal: $${cartTotal.toFixed(2)}</p>`;
   cartItemsContainer.appendChild(totalElement);
 
   const emptyCartButton = document.createElement('button');

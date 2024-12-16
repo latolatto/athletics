@@ -94,8 +94,11 @@ padding-bottom:1%;
   margin-top:30%;
 }
 .searchBar{
-    margin-bottom:10%;
+    margin-bottom:20%;
 }
+
+
+
 }
 
 #root {
@@ -705,23 +708,31 @@ function saveCart() {
 
 // Function to display products
 const displayItem = (items) => {
-  const root = document.getElementById('root');
-  root.innerHTML = ''; // Clear existing content
-  items.forEach((item) => {
-      const card = document.createElement('div');
-      card.classList.add('col-6-sm', 'ballina-col');
-      card.innerHTML = `
-          <a class="catg-item card-text pop" href="#" type="" data-bs-toggle="modal" data-bs-target="#myModal" data-item-id="${item.id}">
-              <img class="album-img" src="${item.image}" alt="pieces">
-              <div class="img-ttl card-body" style="text-decoration: none; color: black;">
-                  ${item.title}
-              </div>
-              <div class="itm-price"> 
-           $ ${item.price}
-              </div>
-          </a>
-      `;
-      root.appendChild(card);
+    const root = document.getElementById('root');
+    root.innerHTML = ''; // Clear existing content
+
+    console.log('Rendering items:', items);  // This will confirm that `items` is populated
+
+    items.forEach((item) => {
+        console.log('Creating card for:', item);  // Log each item being processed
+        const card = document.createElement('div');
+        card.classList.add('col-6-sm', 'ballina-col');
+        card.innerHTML = `
+            <a class="catg-item card-text pop" href="#" type="" data-bs-toggle="modal" data-bs-target="#myModal" data-item-id="${item.id}">
+                <div class="img-container">
+                    <img class="default-img album-img" src="${item.image}" alt="pieces">
+                    <img class="hover-img album-img" src="${item.hoverImage}" alt="${item.title}">
+                </div>
+                <div class="img-ttl card-body" style="text-decoration: none; color: black;">
+                    ${item.title}
+                </div>
+                <div class="itm-price"> 
+                    $ ${item.price}
+                </div>
+            </a>
+        `;
+        root.appendChild(card);
+
 
       // Add click listener to open modal with item details
       card.querySelector('.catg-item').addEventListener('click', () => openModal(item));
@@ -885,7 +896,7 @@ if (cart.length === 0) {
   });
 
   const totalElement = document.createElement('div');
-  totalElement.innerHTML = `<hr><p>Grand Total: $${cartTotal.toFixed(2)}</p>`;
+  totalElement.innerHTML = `<hr><p>Subtotal: $${cartTotal.toFixed(2)}</p>`;
   cartItemsContainer.appendChild(totalElement);
 
   const emptyCartButton = document.createElement('button');
