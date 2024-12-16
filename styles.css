@@ -902,7 +902,7 @@ background:#e5f3fa65 */
     display:flex;
     flex-direction:column;
     gap:2rem;
-    overflow-y: auto;
+    /* overflow-y: auto; */
     align-items: center;
 
     /* max-height:50vh; */
