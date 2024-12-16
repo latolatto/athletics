@@ -114,7 +114,7 @@ padding-bottom:1%;
     grid-row-gap:5rem;
     text-align: center;
     height:fit-content;
-    padding:2%;
+    /* padding:2%; */
 }
 
 @media screen and (max-width: 480px){
@@ -586,7 +586,7 @@ window.products  = [
 { 
     id: 0, 
     title: 'Leather Clean Solution', 
-    price: 5, 
+    price: 1900, 
     image: './images/leatherclean/l1.png',
     hoverImage: './images/leatherclean/l2.png',  
     description: 'Keep your footwear looking pristine, polished, and protected with Athletics Clean. Experience the ultimate care and shine for your shoes.',
@@ -595,12 +595,13 @@ window.products  = [
          2. In a well ventilated area, hold the can upright and apply light, even coats 6-8 inches away from surface.
          3. Allow to dry 60 minutes before wear.`,
     careful:' Dispose of completely empty cans at recycled material collection. Avoid contact with skin and eyes. Keep out of the reach of children.',
- 
+    comingSoon: false 
+
 },
   {
     id: 1, 
     title: 'All-in-One Basic Pack', 
-    price: 5, 
+    price: 2900, 
     image: './images/basicpack/b1.png', 
     hoverImage: './images/basicpack/b2.png', 
     description: 'Athletics Clean Basic Kit is your all-in-one solution for spotless, fresh shoes. Removes dirt, stains, and odors with ease.',
@@ -609,12 +610,13 @@ window.products  = [
          2. In a well ventilated area, hold the can upright and apply light, even coats 6-8 inches away from surface.
          3. Allow to dry 60 minutes before wear.`,
     careful:' Dispose of completely empty cans at recycled material collection. Avoid contact with skin and eyes. Keep out of the reach of children.',
- 
+    comingSoon: false
+
 },
   { 
     id: 2, 
     title: 'Waterproof Solution', 
-    price: 5, 
+    price: 2200, 
     image: './images/waterstop/w1.png', 
     hoverImage: './images/waterstop/w2.png', 
     description: 'Water Stop is a hydrophobic Solution created with care to Effortlessly repel all types of Liquid from your shoes.' ,
@@ -623,20 +625,24 @@ window.products  = [
          2. In a well ventilated area, hold the can upright and apply light, even coats 6-8 inches away from surface.
          3. Allow to dry 60 minutes before wear.`,
     careful:' Dispose of completely empty cans at recycled material collection. Avoid contact with skin and eyes. Keep out of the reach of children.',
- },
+    comingSoon: false
+
+  },
      {
         id: 3,
         image: './images/deosanitizier/s1.png',
         hoverImage: './images/deosanitizier/s2.png', 
         title: 'Deo Sanitizier',
-        price: '5',
+        price: 1900,
         description:'Athletics Deo , our top-performance shoe deodorant, designed for active lifestyles. This powerful formula tackles tough odors and keeps your shoes smelling fresh, no matter how intense your workouts are. ',
         material: 'Leather, Suede, Canvas',
     howto: `1. Clean and dry materials prior to applying repellent.
          2. In a well ventilated area, hold the can upright and apply light, even coats 6-8 inches away from surface.
          3. Allow to dry 60 minutes before wear.`,
     careful:' Dispose of completely empty cans at recycled material collection. Avoid contact with skin and eyes. Keep out of the reach of children.',
- },
+    comingSoon: false
+
+  },
 
 
     {
@@ -644,57 +650,67 @@ window.products  = [
         image: './images/deostickmente/stm1.png',
         hoverImage: './images/deostickmente/stm2.png', 
         title: 'Deo Stick Mint Scent',
-        price: '5',
+        price: 800,
         description:'Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. ',
         material: 'Leather, Suede, Canvas',
     howto: `1. Clean and dry materials prior to applying repellent.
          2. In a well ventilated area, hold the can upright and apply light, even coats 6-8 inches away from surface.
          3. Allow to dry 60 minutes before wear.`,
     careful:' Dispose of completely empty cans at recycled material collection. Avoid contact with skin and eyes. Keep out of the reach of children.',
- },
+    comingSoon: false
+
+  },
  
  {
         id: 5,
-        image: './images/deostickorchid/storch1.png',
-        hoverImage: './images/deostickorchid/storch1.png', 
-        title: 'Deo Stick Orchid Scent',
-        price: '5',
+        image: './images/deostickorange/sto1.png',
+        hoverImage: './images/deostickorange/sto2.png', 
+        title: 'Deo Stick Orange Scent',
+        price: 800,
         description:'Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. ',
         material: 'Leather, Suede, Canvas',
-    howto: `1. Clean and dry materials prior to applying repellent.
+          howto: `1. Clean and dry materials prior to applying repellent.
          2. In a well ventilated area, hold the can upright and apply light, even coats 6-8 inches away from surface.
          3. Allow to dry 60 minutes before wear.`,
     careful:' Dispose of completely empty cans at recycled material collection. Avoid contact with skin and eyes. Keep out of the reach of children.',
- },
+    comingSoon: false
+
+  },
 
  
  {
+
         id: 6,
-        image: './images/deostickorange/sto1.png',
-        hoverImage: './images/deostickorange/sto1.png', 
-        title: 'Deo Stick Orange Scent',
-        price: '5',
+        image: './images/deostickjasmine/stj1.png',
+        hoverImage: './images/deostickjasmine/stj1.png', 
+        title: 'Deo Stick Jasmine Scent',
+        price: 800,
         description:'Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. ',
         material: 'Leather, Suede, Canvas',
     howto: `1. Clean and dry materials prior to applying repellent.
          2. In a well ventilated area, hold the can upright and apply light, even coats 6-8 inches away from surface.
          3. Allow to dry 60 minutes before wear.`,
     careful:' Dispose of completely empty cans at recycled material collection. Avoid contact with skin and eyes. Keep out of the reach of children.',
- },
+    comingSoon: true
+
+ 
+  },
  
  {
         id: 7,
         image: './images/deostickpomegranate/stp1.png',
         hoverImage: './images/deostickpomegranate/stp1.png', 
         title: 'Deo Stick Pomegranate Scent',
-        price: '5',
+        price: 800,
         description:'Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. ',
         material: 'Leather, Suede, Canvas',
     howto: `1. Clean and dry materials prior to applying repellent.
          2. In a well ventilated area, hold the can upright and apply light, even coats 6-8 inches away from surface.
          3. Allow to dry 60 minutes before wear.`,
     careful:' Dispose of completely empty cans at recycled material collection. Avoid contact with skin and eyes. Keep out of the reach of children.',
- }
+    comingSoon: true
+
+  }
   
 ];
 
@@ -727,10 +743,19 @@ const displayItem = (items) => {
                     ${item.title}
                 </div>
                 <div class="itm-price"> 
-                    $ ${item.price}
+                     ${item.price} ALL
                 </div>
             </a>
+             ${item.comingSoon ? `
+          <div class="coming-soon-overlay">
+              <span>Coming Soon</span>
+          </div>` : ''}
+          
         `;
+        if (item.comingSoon) {
+  card.querySelector('.catg-item').style.pointerEvents = 'none';
+  card.querySelector('.catg-item').style.cursor = 'default';
+}
         root.appendChild(card);
 
 

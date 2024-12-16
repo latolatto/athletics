@@ -827,7 +827,7 @@ video{
     justify-content: flex-start; */
     text-align: center;
     height:fit-content;
-    padding:2%;
+    /* padding:2%; */
     align-items: center;
 }
 
@@ -841,8 +841,26 @@ video{
     justify-content: center;
     align-items: center;
     gap:2rem;
+    position: relative;
 
 
+}
+.coming-soon-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6); /* Semi-transparent black */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 1.5em;
+  font-weight: bold;
+  text-transform: uppercase;
+  z-index: 2; /* Make sure it's on top */
+  pointer-events: none !important;
 }
 .ballina-col:hover{
 /* border:2px solid #fdfdfd8e;
@@ -1697,7 +1715,12 @@ a{
     margin-top:5%;
     
     }
-
+    .img-ttl.card-body{
+      margin-top: 5%;
+        height: 2rem;
+        line-height: 1rem;
+        font-size:0.9rem;
+    }
     @media screen and (max-width: 768px){
       .best-selling{
           position:relative;
@@ -1795,11 +1818,12 @@ a{
 
 .img-ttl.card-body{
   margin-top: 5%;
-    height: 20%;
+    height: 2rem;
     line-height: 1rem;
     font-size:0.9rem;
 }
   }
+  
 
  @media screen and (max-width: 768px) {
   .prods{

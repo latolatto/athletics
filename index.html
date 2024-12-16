@@ -580,7 +580,7 @@ window.products = [
   { 
     id: 0, 
     title: 'Leather Clean Solution', 
-    price: 5, 
+    price: 1900, 
     image: './images/leatherclean/l1.png',
     hoverImage: './images/leatherclean/l2.png',  
     description: 'Keep your footwear looking pristine, polished, and protected with Athletics Clean. Experience the ultimate care and shine for your shoes.',
@@ -594,7 +594,7 @@ window.products = [
   {
     id: 1, 
     title: 'All-in-One Basic Pack', 
-    price: 5, 
+    price: 2900, 
     image: './images/basicpack/b1.png', 
     hoverImage: './images/basicpack/b2.png', 
     description: 'Athletics Clean Basic Kit is your all-in-one solution for spotless, fresh shoes. Removes dirt, stains, and odors with ease.',
@@ -608,7 +608,7 @@ window.products = [
   { 
     id: 2, 
     title: 'Waterproof Solution', 
-    price: 5, 
+    price: 2200, 
     image: './images/waterstop/w1.png', 
     hoverImage: './images/waterstop/w2.png', 
     description: 'Water Stop is a hydrophobic Solution created with care to Effortlessly repel all types of Liquid from your shoes.' ,
@@ -648,10 +648,18 @@ const displayItem = (items) => {
                     ${item.title}
                 </div>
                 <div class="itm-price"> 
-                    $ ${item.price}
+                     ${item.price} ALL
                 </div>
+                 ${item.comingSoon ? `
+          <div class="coming-soon-overlay">
+              <span>Coming Soon</span>
+          </div>` : ''}
             </a>
         `;
+        if (item.comingSoon) {
+  card.querySelector('.catg-item').style.pointerEvents = 'none';
+  card.querySelector('.catg-item').style.cursor = 'default';
+}
         root.appendChild(card);
 
 
