@@ -234,11 +234,11 @@ p.subtotal{
     text-align: left;
 }
 .browse{
-    padding-bottom:5%;
+    margin-bottom:10%;
     display: flex;
     width: 100%;
     justify-content: flex-start;
-    margin-bottom: 5%;
+    /* margin-bottom: 5%; */
     
 }
 
@@ -388,5 +388,9 @@ button.quantity-btn{
         width: 100%; /* Make action buttons span full width */
         margin: 0.5rem 0;
         font-size: 0.9rem;
+    }
+
+    .browse{
+        margin-bottom:5rem;
     }
 }
