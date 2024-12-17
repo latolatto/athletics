@@ -799,7 +799,7 @@ video{
     padding:0.5rem 0.8rem !important;
     background-color: #c70b04 !important;
     color:#e4e4e4 !important;
-    margin-top:1.5rem;
+    margin-top:1.6rem;
 }
 
 .explore-btn:hover{
@@ -896,7 +896,6 @@ background:#e5f3fa65 */
     /* top:10%; */
     color:#333;
     max-height: 85vh;
-    overflow-y: scroll;
 
 
 }
@@ -1925,36 +1924,8 @@ footer{
 
  }
 
-/* Default scrollbar styling */
-html {
-  --scrollbar-width: 8px; /* Adjust to desired default width */
-}
 
-html::-webkit-scrollbar {
-  width: var(--scrollbar-width);
-}
 
-html::-webkit-scrollbar-track {
-  background: #f1f1f1; /* Default background */
-}
-
-html::-webkit-scrollbar-thumb {
-  background: #888; /* Default thumb */
-  border-radius: 4px;
-}
-
-html::-webkit-scrollbar-thumb:hover {
-  background: #555; /* Hover effect */
-}
-
-/* Hidden scrollbar when modal is open */
-html[style*="overflow-y: hidden"]::-webkit-scrollbar {
-  width: 0; /* Hide scrollbar width */
-}
-
-html[style*="overflow-y: hidden"]::-webkit-scrollbar-thumb {
-  background: transparent; /* Fully hide the thumb */
-}
 
 
 /*NAVBARRRRRRRR */
