@@ -700,7 +700,7 @@ video{
     text-align: center;
 }
 .item1{
-  background-image: url(./images/leathercleann.webp);
+  background-image: url(./images/Untitled\ design.png);
 }
 .item2{
   background-image: url(./images/basicpackk.webp);
@@ -774,8 +774,8 @@ video{
 .prods{
     display:flex;
     flex-direction: row;
-    gap:5rem;
-    align-items:center;
+    gap:4rem;
+    align-items:flex-start;
     padding:4%;
     justify-content: center;
     text-align: center;
@@ -784,10 +784,13 @@ video{
 .prods-left{
     display:flex;
     flex-direction: column;
-    gap:1.5rem;
+    gap:2rem;
     justify-content: center;
     align-items: flex-start;
     text-align: left;
+}
+.prods-left p{
+  line-height:1.5rem;
 }
 
 .explore-btn{
@@ -796,7 +799,7 @@ video{
     padding:0.5rem 0.8rem !important;
     background-color: #c70b04 !important;
     color:#e4e4e4 !important;
-    /* margin-top:rem; */
+    margin-top:1.5rem;
 }
 
 .explore-btn:hover{
@@ -970,7 +973,7 @@ text-align: left;
     border-radius:20px !important;
     width:max-content;
     padding:0.5rem 0.8rem !important;
-    margin-top:3rem;
+    margin-top:1.5rem;
     /* padding-bottom:5%; */
     border:1px solid rgb(207, 207, 207) !important;
     color: rgb(207, 207, 207) !important;
@@ -1645,6 +1648,7 @@ a{
 
 .video-section {
     background-color: #f8f8f8;
+    width:100%;
 
   }
   .video-div{
