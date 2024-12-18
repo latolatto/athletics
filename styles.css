@@ -700,13 +700,13 @@ video{
     text-align: center;
 }
 .item1{
-  background-image: url(./images/Untitled\ design.png);
+  background-image: url(./images/e1.webp);
 }
 .item2{
-  background-image: url(./images/basicpackk.webp);
+  background-image: url(./images/e2.webp);
 }
 .item3{
-  background-image: url(./images/waterstopp.webp);
+  background-image: url(./images/e3.webp);
 }
 
   @-webkit-keyframes slide{0%{-webkit-transform:translate(0,0);-ms-transform:translate(0,0);transform:translate(0,0);}100%{-webkit-transform:translate(100%,0);-ms-transform:translate(100%,0);transform:translate(100%,0);}}/*!sc*/
@@ -891,6 +891,22 @@ background:#e5f3fa65 */
 .modal{
   z-index:999999999999999 !important;
 }
+
+div#myModal{
+  top:5%;
+}
+/* 
+div#myModal{
+  display:flex;
+  justify-content: center;
+} */
+
+/* div#myModal {
+  display: flex;
+  justify-content: center;
+  pointer-events: auto;
+} */
+
 .modal-dialog{
     /* position: relative; */
     /* top:10%; */
@@ -940,7 +956,7 @@ background:#e5f3fa65 */
 }
 .imagepreview {
     width: 100%;
-    /* height: 15rem; */
+    height: 15rem;
 }
 
 .right-column{
@@ -1916,7 +1932,7 @@ footer{
   background-image: url(./images/d2\ \(1\).webp);
 }
 .item3{
-  background-image: url(./images/d3\ \(1\).webp);
+  background-image: url(./images/d3\ \(1\)\ .webp);
 }
  } 
 

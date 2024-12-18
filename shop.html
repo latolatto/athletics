@@ -908,8 +908,8 @@ if (cart.length === 0) {
               <div class="cart-item-info">
                   <h5>${item.title}</h5>
                   <p>Quantity: ${item.quantity}</p>
-                  <p>Price per item: $${item.price}</p>
-                  <p>Total: $${(item.price * item.quantity).toFixed(2)}</p>
+                  <p>Price per item: ${item.price} ALL</p>
+                  <p>Total: ${(item.price * item.quantity).toFixed(2)} ALL</p>
                   <button class="remove-item-btn" data-product-id="${item.id}">Remove</button>
               </div>
           </div>
@@ -921,7 +921,7 @@ if (cart.length === 0) {
   });
 
   const totalElement = document.createElement('div');
-  totalElement.innerHTML = `<hr><p>Subtotal: $${cartTotal.toFixed(2)}</p>`;
+  totalElement.innerHTML = `<hr><p>Subtotal: ${cartTotal.toFixed(2)} ALL</p>`;
   cartItemsContainer.appendChild(totalElement);
 
   const emptyCartButton = document.createElement('button');

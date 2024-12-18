@@ -346,7 +346,7 @@
             <button type="button" onclick="window.location.href='./shop.html'" class="btn  seemore-btn">View Full Collection</button>
           </div>
           <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-            <div class="modal-dialog modal-lg">
+            <div class="modal-dialog modal-dialog-centered  modal-lg">
               <div class="modal-content">
                 <div class="modal-header">
                   <h5 class="modal-title" id="exampleModalLabel"><span id="itemName"></span></h5>
@@ -377,6 +377,7 @@
                     </div>
                     <div class="right-column">
                       <p id="prod-description"></p>
+                      <b><p id="item-price"></p></b>
                       <div class="cart-div">
                        <input type="number" id="quantityInput" min="1" value="1" class="form-control mr-2">
                        <button class="btn btn-warning order-request-btn add-to-cart-btn" >Add to Cart</button>
@@ -675,6 +676,7 @@ function openModal(item) {
     console.log('openModal called for item:', item);
 
     document.getElementById('itemName').textContent = item.title;
+    document.getElementById('item-price').textContent= item.price +' ALL';
     // document.querySelector('.img1').src = item.image;
     // document.querySelector('.img2').src = item.hoverImage;
 
@@ -805,8 +807,8 @@ if (cart.length === 0) {
               <div class="cart-item-info">
                   <h5>${item.title}</h5>
                   <p>Quantity: ${item.quantity}</p>
-                  <p>Price per item: $${item.price}</p>
-                  <p>Total: $${(item.price * item.quantity).toFixed(2)}</p>
+                  <p>Price per item: ${item.price} ALL</p>
+                  <p>Total: ${(item.price * item.quantity).toFixed(2)} ALL</p>
                   <button class="remove-item-btn" data-product-id="${item.id}">Remove</button>
               </div>
           </div>
@@ -819,7 +821,7 @@ if (cart.length === 0) {
 
   const totalElement = document.createElement('div');
   totalElement.classList.add('total-sum');
-  totalElement.innerHTML = `<hr><p>Subtotal: $${cartTotal.toFixed(2)}</p>`;
+  totalElement.innerHTML = `<hr><p>Subtotal: ${cartTotal.toFixed(2)} ALL</p>`;
   cartItemsContainer.appendChild(totalElement);
 
   const emptyCartButton = document.createElement('button');

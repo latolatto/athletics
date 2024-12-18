@@ -181,8 +181,8 @@ function updateCartDisplay() {
               <div class="cart-item-info">
                   <h5>${item.title}</h5>
                   <p>Quantity: ${item.quantity}</p>
-                  <p>Price per item: $${item.price}</p>
-                  <p>Total: $${(item.price * item.quantity).toFixed(2)}</p>
+                  <p>Price per item: ${item.price} ALL</p>
+                  <p>Total: ${(item.price * item.quantity).toFixed(2)} ALL</p>
                   <button class="remove-item-btn" data-product-id="${item.id}">Remove</button>
               </div>
           </div>
@@ -198,7 +198,7 @@ function updateCartDisplay() {
 
   const totalElement = document.createElement('div');
   totalElement.classList.add('total-sum');
-  totalElement.innerHTML = `<hr><p>Grand Total: $${cartTotal.toFixed(2)}</p>`;
+  totalElement.innerHTML = `<hr><p>Grand Total:$${cartTotal.toFixed(2)} ALL</p>`;
   cartItemsContainer.appendChild(totalElement);
 
   const emptyCartButton = document.createElement('button');
@@ -296,14 +296,14 @@ function updateCartPage() {
           <img src="${item.image}" alt="${item.title}" class="cart-item-img">
           <div class="cart-item-info">
             <h5>${item.title}</h5>
-            <p>Price: $${item.price}</p>
+            <p>Price: ${item.price} ALL</p>
             <div class="quantity-container">
               <button class="quantity-btn" data-action="decrease" data-product-id="${item.id}">-</button>
               <input type="number" class="quantity-input" value="${item.quantity}" min="1" data-product-id="${item.id}">
               <button class="quantity-btn" data-action="increase" data-product-id="${item.id}">+</button>
             </div>
             <button class="remove-item-btn" data-product-id="${item.id}">Remove</button>
-            <p class="subtotal"><b>Total: $${(item.price * item.quantity).toFixed(2)}</b></p>
+            <p class="subtotal"><b>Total: ${(item.price * item.quantity).toFixed(2)} ALL</b></p>
           </div>
         </div>
       `;
@@ -334,7 +334,7 @@ function updateCartPage() {
       
     });
 
-    cartTotalContainer.innerHTML = `<hr><p>Subtotal: $${grandTotal.toFixed(2)}</p>`;
+    cartTotalContainer.innerHTML = `<hr><p>Subtotal: ${grandTotal.toFixed(2)} ALL</p>`;
   }
 }
 
@@ -350,11 +350,11 @@ function updateCartTotals() {
 
     // Update the displayed subtotal for each item
     const itemElement = cartItemsContainer.querySelector(`[data-product-id="${item.id}"]`).closest('.cart-item');
-    itemElement.querySelector('.subtotal').textContent = `Total: $${itemSubtotal.toFixed(2)}`;
+    itemElement.querySelector('.subtotal').textContent = `Total: ${itemSubtotal.toFixed(2)} ALL` ;
   });
 
   // Update the grand total display
-  cartTotalContainer.innerHTML = `<hr><p>Subtotal: $${grandTotal.toFixed(2)}</p>`;
+  cartTotalContainer.innerHTML = `<hr><p>Subtotal: ${grandTotal.toFixed(2)} ALL</p>`;
 }
 
 
