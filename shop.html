@@ -148,6 +148,11 @@ padding-bottom:1%;
 
   }
 }
+@media (min-width:481px) and (max-width:576px){
+  .album-img{
+    height:9rem;
+  }
+}
 @media screen and (min-width: 651px) and (max-width: 767px){
 
 #root {
@@ -220,6 +225,7 @@ padding-bottom:1%;
     font-size:0.9rem;
     padding:1%;
     opacity: 0.9;
+    text-align: center;
 }
 
 .accordion__item {
@@ -368,11 +374,12 @@ padding-bottom:1%;
                       </div>
                       <div class="right-column">
                         <p id="prod-description"></p>
+                        <b><p id="item-price"></p></b>
                         <div class="cart-div">
                          <input type="number" id="quantityInput" min="1" value="1" class="form-control mr-2">
                          <button class="btn btn-warning order-request-btn add-to-cart-btn" >Add to Cart</button>
                         </div>
-                        <div id="added-to-cart" style="font-size:0.8rem;font-weight: 700;color:#FF9843;"></div>
+                        <div id="added-to-cart" style="font-size:0.8rem;font-weight: 700;color:hsla(348, 46%, 48%, 0.781);">Added to Cart!</div>
                       </div>
                     </div>
                     <div class="accordion">
@@ -589,13 +596,14 @@ window.products  = [
     price: 1900, 
     image: './images/leatherclean/l1.png',
     hoverImage: './images/leatherclean/l2.png',  
-    description: 'Keep your footwear looking pristine, polished, and protected with Athletics Clean. Experience the ultimate care and shine for your shoes.',
-    material: 'Leather, Suede, Canvas',
-    howto: `1. Clean and dry materials prior to applying repellent.
-         2. In a well ventilated area, hold the can upright and apply light, even coats 6-8 inches away from surface.
-         3. Allow to dry 60 minutes before wear.`,
-    careful:' Dispose of completely empty cans at recycled material collection. Avoid contact with skin and eyes. Keep out of the reach of children.',
-    comingSoon: false 
+    description: 'Keep your footwear looking pristine, polished, and protected with Athletics Clean. This spray gently removes dirt and stains, leaving your shoes refreshed and shining.',
+    material: 'Leather',
+    howto: `1. Push the applicator against the shoe generously.
+         <br>2. Wait 30 seconds.
+         <br>3. Scrub with bristles to build up foam.
+         <br>4.Wipe the foam with a clean cloth and allow to dry. Do not rinse.`,
+    careful:' Dispose of completely empty cans at a recycled materials collection site. Avoid contact with skin and eyes. Keep out of reach of children.<br>In case of drinking, contact the doctor!<br>DO NOT USE ON SUEDE OR NUBUCK!',
+  comingSoon: false 
 
 },
   {
@@ -604,13 +612,17 @@ window.products  = [
     price: 2900, 
     image: './images/basicpack/b1.png', 
     hoverImage: './images/basicpack/b2.png', 
-    description: 'Athletics Clean Basic Kit is your all-in-one solution for spotless, fresh shoes. Removes dirt, stains, and odors with ease.',
-    material: 'Leather, Suede, Canvas',
-    howto: `1. Clean and dry materials prior to applying repellent.
-         2. In a well ventilated area, hold the can upright and apply light, even coats 6-8 inches away from surface.
-         3. Allow to dry 60 minutes before wear.`,
-    careful:' Dispose of completely empty cans at recycled material collection. Avoid contact with skin and eyes. Keep out of the reach of children.',
-    comingSoon: false
+    description: 'Athletics Clean Basic Kit: your go-to solution for brand-new looking footwear! This kit includes a premium cleaner, gentle brush, two deodorant sticks, and a microfiber cloth.',
+    material: 'Leather',
+    howto: `1. Remove the cap of the refilling brush.
+         <br>2. Fill it with the cleaning solution.
+         3. Put the cap back on and position it on the sneaker and apply light pressure to it.
+         <br> 4. Do this often by scrubbing with the brush until your sneaker is clean.
+         <br> 5. Wipe the sneaker with the available cloth or any type of cloth.
+         <br> 6. Open the base of the stick and pour the contents of the plastic bag inside.
+         <br> 7. Close the base and place them one by one in each sneaker. Repeat until the perfume is completely dry.`,
+    careful:' Dispose of completely empty cans at a recycled materials collection site. Avoid contact with skin and eyes. Keep out of reach of children.<br>In case of drinking, contact the doctor!',
+  comingSoon: false
 
 },
   { 
@@ -619,13 +631,13 @@ window.products  = [
     price: 2200, 
     image: './images/waterstop/w1.png', 
     hoverImage: './images/waterstop/w2.png', 
-    description: 'Water Stop is a hydrophobic Solution created with care to Effortlessly repel all types of Liquid from your shoes.' ,
+    description: 'Water Stop is a hydrophobic Solution created with care to Effortlessly repel all types of Liquid from your shoes. Works for almost all materials.' ,
     material: 'Leather, Suede, Canvas',
     howto: `1. Clean and dry materials prior to applying repellent.
-         2. In a well ventilated area, hold the can upright and apply light, even coats 6-8 inches away from surface.
-         3. Allow to dry 60 minutes before wear.`,
-    careful:' Dispose of completely empty cans at recycled material collection. Avoid contact with skin and eyes. Keep out of the reach of children.',
-    comingSoon: false
+        <br> 2. In a well ventilated area, hold the can upright and apply light, even coats 6-8 inches away from surface.
+         <br>3. Allow to dry 60 minutes before wear.`,
+    careful:' Dispose of completely empty cans at a recycled materials collection site. Avoid contact with skin and eyes. Keep out of reach of children.<br>In case of drinking, contact the doctor!',
+  comingSoon: false
 
   },
      {
@@ -635,11 +647,10 @@ window.products  = [
         title: 'Deo Sanitizier',
         price: 1900,
         description:'Athletics Deo , our top-performance shoe deodorant, designed for active lifestyles. This powerful formula tackles tough odors and keeps your shoes smelling fresh, no matter how intense your workouts are. ',
-        material: 'Leather, Suede, Canvas',
-    howto: `1. Clean and dry materials prior to applying repellent.
-         2. In a well ventilated area, hold the can upright and apply light, even coats 6-8 inches away from surface.
-         3. Allow to dry 60 minutes before wear.`,
-    careful:' Dispose of completely empty cans at recycled material collection. Avoid contact with skin and eyes. Keep out of the reach of children.',
+        material: 'All materials.',
+    howto: `1. Spray inside the shoe.
+         <br>2. Let it sit for 10 minutes.`,
+    careful:'Dispose of completely empty cans at a recycled materials collection site. Avoid contact with skin and eyes. Keep out of reach of children.',
     comingSoon: false
 
   },
@@ -651,12 +662,13 @@ window.products  = [
         hoverImage: './images/deostickmente/stm2.png', 
         title: 'Deo Stick Mint Scent',
         price: 800,
-        description:'Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. ',
-        material: 'Leather, Suede, Canvas',
-    howto: `1. Clean and dry materials prior to applying repellent.
-         2. In a well ventilated area, hold the can upright and apply light, even coats 6-8 inches away from surface.
-         3. Allow to dry 60 minutes before wear.`,
-    careful:' Dispose of completely empty cans at recycled material collection. Avoid contact with skin and eyes. Keep out of the reach of children.',
+        description:'Eliminate odors and bacteria overnight with our compact Athletics Deo Stick. With the refreshing scent of mint, it neutralizes smells and kills odor-causing bacteria, leaving your footwear fresh and hygienic by morning. ',
+        material: 'All materials.',
+    howto: `1. Open the base of the stick and pour the contents of the plastic bag inside the base.
+         <br> 2. Close the base and place the sticks in each sneaker.
+         <br>3. Leave overnight.
+         <br> Use until the perfume is completely dry.`,
+    careful:' Dispose of completely empty cans at a recycled materials collection site. Avoid contact with skin and eyes. Keep out of reach of children.',
     comingSoon: false
 
   },
@@ -667,12 +679,13 @@ window.products  = [
         hoverImage: './images/deostickorange/sto2.png', 
         title: 'Deo Stick Orange Scent',
         price: 800,
-        description:'Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. ',
-        material: 'Leather, Suede, Canvas',
-          howto: `1. Clean and dry materials prior to applying repellent.
-         2. In a well ventilated area, hold the can upright and apply light, even coats 6-8 inches away from surface.
-         3. Allow to dry 60 minutes before wear.`,
-    careful:' Dispose of completely empty cans at recycled material collection. Avoid contact with skin and eyes. Keep out of the reach of children.',
+        description:'Eliminate odors and bacteria overnight with our compact Athletics Deo Stick. With the refreshing scent of orange, it neutralizes smells and kills odor-causing bacteria, leaving your footwear fresh and hygienic by morning. ',
+        material: 'All materials.',
+          howto: `1. Open the base of the stick and pour the contents of the plastic bag inside the base.
+         <br> 2. Close the base and place the sticks in each sneaker.
+         <br>3. Leave overnight.
+         <br> Use until the perfume is completely dry.`,
+    careful:'Dispose of completely empty cans at a recycled materials collection site. Avoid contact with skin and eyes. Keep out of reach of children.',
     comingSoon: false
 
   },
@@ -685,12 +698,13 @@ window.products  = [
         hoverImage: './images/deostickjasmine/stj1.png', 
         title: 'Deo Stick Jasmine Scent',
         price: 800,
-        description:'Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. ',
-        material: 'Leather, Suede, Canvas',
-    howto: `1. Clean and dry materials prior to applying repellent.
-         2. In a well ventilated area, hold the can upright and apply light, even coats 6-8 inches away from surface.
-         3. Allow to dry 60 minutes before wear.`,
-    careful:' Dispose of completely empty cans at recycled material collection. Avoid contact with skin and eyes. Keep out of the reach of children.',
+        description:'Eliminate odors and bacteria overnight with our compact Athletics Deo Stick. With the refreshing scent of jasmine, it neutralizes smells and kills odor-causing bacteria, leaving your footwear fresh and hygienic by morning. ',
+        material: 'All materials.',
+    howto: `1. Open the base of the stick and pour the contents of the plastic bag inside the base.
+         <br> 2. Close the base and place the sticks in each sneaker.
+         <br>3. Leave overnight.
+         <br> Use until the perfume is completely dry.`,
+    careful:' Dispose of completely empty cans at a recycled materials collection site. Avoid contact with skin and eyes. Keep out of reach of children.',
     comingSoon: true
 
  
@@ -702,12 +716,13 @@ window.products  = [
         hoverImage: './images/deostickpomegranate/stp1.png', 
         title: 'Deo Stick Pomegranate Scent',
         price: 800,
-        description:'Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. ',
-        material: 'Leather, Suede, Canvas',
-    howto: `1. Clean and dry materials prior to applying repellent.
-         2. In a well ventilated area, hold the can upright and apply light, even coats 6-8 inches away from surface.
-         3. Allow to dry 60 minutes before wear.`,
-    careful:' Dispose of completely empty cans at recycled material collection. Avoid contact with skin and eyes. Keep out of the reach of children.',
+        description:'Eliminate odors and bacteria overnight with our compact Athletics Deo Stick. With the refreshing scent of pomegranate, it neutralizes smells and kills odor-causing bacteria, leaving your footwear fresh and hygienic by morning. ',
+        material: 'All materials.',
+    howto: `1. Open the base of the stick and pour the contents of the plastic bag inside the base.
+         <br> 2. Close the base and place the sticks in each sneaker.
+         <br>3. Leave overnight.
+         <br> Use until the perfume is completely dry.`,
+    careful:' Dispose of completely empty cans at a recycled materials collection site. Avoid contact with skin and eyes. Keep out of reach of children.',
     comingSoon: true
 
   }
@@ -768,6 +783,8 @@ function openModal(item) {
     console.log('openModal called for item:', item);
 
     document.getElementById('itemName').textContent = item.title;
+    document.getElementById('item-price').textContent= item.price +' ALL';
+
     // document.querySelector('.img1').src = item.image;
     // document.querySelector('.img2').src = item.hoverImage;
 
@@ -808,6 +825,7 @@ function openModal(item) {
         </div>
     `;
 }
+document.getElementById('added-to-cart').style.opacity = 0;
 
 
   // Add item to cart with specified quantity from modal
@@ -816,11 +834,13 @@ function openModal(item) {
       addToCart(item.id, quantity);
       
       // Display confirmation message and reset quantity input to 1
-      document.getElementById('added-to-cart').textContent = 'Added to Cart!';
+      document.getElementById('added-to-cart').style.opacity = 1;
+
+      // document.getElementById('added-to-cart').textContent = 'Added to Cart!';
       quantityInput.value = 1;  // Reset quantity after adding to cart
 
       // Clear confirmation message after 1.5 seconds
-      setTimeout(() => document.getElementById('added-to-cart').textContent = '', 1500);
+      setTimeout(() => document.getElementById('added-to-cart').style.opacity = 0, 1500);
   };
 
 

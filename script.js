@@ -198,7 +198,7 @@ function updateCartDisplay() {
 
   const totalElement = document.createElement('div');
   totalElement.classList.add('total-sum');
-  totalElement.innerHTML = `<hr><p>Grand Total:$${cartTotal.toFixed(2)} ALL</p>`;
+  totalElement.innerHTML = `<hr><p>Subtotal : ${cartTotal.toFixed(2)} ALL</p>`;
   cartItemsContainer.appendChild(totalElement);
 
   const emptyCartButton = document.createElement('button');

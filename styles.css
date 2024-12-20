@@ -19,6 +19,7 @@ body{
 
 .offcanvas{
   overflow-y: auto;
+  z-index:9999999999 !important;
 }
 .body-container{
   display:flex;
@@ -137,6 +138,7 @@ align-items: center;
   /* right:4rem;
   left:25%; */
   order:3;
+  z-index: 999999999 !important;
 }
 nav.container.navbar.navbar-expand-lg{
   padding-top: 1.5rem;
@@ -784,13 +786,15 @@ video{
 .prods-left{
     display:flex;
     flex-direction: column;
-    gap:2rem;
+    gap:1rem;
     justify-content: center;
     align-items: flex-start;
     text-align: left;
 }
 .prods-left p{
   line-height:1.5rem;
+  text-align: left;
+  padding:5%;
 }
 
 .explore-btn{
@@ -799,7 +803,7 @@ video{
     padding:0.5rem 0.8rem !important;
     background-color: #c70b04 !important;
     color:#e4e4e4 !important;
-    margin-top:1.6rem;
+    margin-top:0.5rem;
 }
 
 .explore-btn:hover{
@@ -890,13 +894,32 @@ background:#e5f3fa65 */
 
 .modal{
   z-index:999999999999999 !important;
+  
 }
 
+.modal-backdrop {
+  z-index: 9999999999999; /* Make sure it overlays everything but the modal */
+}
+body.modal-open {
+  pointer-events: none; /* Disable pointer events on the entire body */
+}
+
+body.modal-open .modal {
+  pointer-events: auto; /* Re-enable pointer events for the modal */
+}
+.modal-body {
+  max-height: 75vh; /* Limit the height to a percentage of the viewport height */
+  overflow-y: auto; /* Enable vertical scrolling */
+}
 div#myModal{
   top:5%;
 }
-/* 
-div#myModal{
+
+.modal.show .modal-dialog {
+  height:60vh !important;
+}
+
+/* div#myModal{
   display:flex;
   justify-content: center;
 } */
@@ -911,7 +934,7 @@ div#myModal{
     /* position: relative; */
     /* top:10%; */
     color:#333;
-    max-height: 85vh;
+    /* max-height: 85vh; */
 
 
 }
@@ -936,8 +959,23 @@ div#myModal{
   margin-right: 0 !important;
   margin-right: 0 !important;
 }
+div#myModal {
+  top: 8%;
+  left: 4%;
 }
 
+.modal-dialog.modal-lg {
+  margin: 0 !important;
+}
+/* .itm-price{
+  text-align: left;
+    }  */
+}
+
+.added-to-cart{
+  opacity:0;
+  height:1rem;
+}
 
 .top-part{
   display: flex;
@@ -984,6 +1022,8 @@ text-align: left;
   #quantityInput{
     width:18% !important;
   }
+
+  
   .seemore-btn{
     border-radius:20px !important;
     width:max-content;
@@ -1844,6 +1884,8 @@ a{
   }
   
 
+  
+
  @media screen and (max-width: 768px) {
   .prods{
     display:flex;
@@ -1909,11 +1951,11 @@ align-items: center;
 footer{
   padding-top:7%;
 }
-.modal-body{
+/* .modal-body{
   flex-direction: column;
   justify-content: center;
   align-items: center;
-}
+} */
 .top-part{
   flex-direction: column;
 }
@@ -2114,6 +2156,11 @@ font-size: 1.5rem;
   }
 
 }
+@media (min-width:481px) and (max-width:576px){
+  .album-img{
+    height:9rem;
+  }
+}
 
 @media screen and (min-width: 567px) and (max-width: 767px){
 
@@ -2182,15 +2229,27 @@ font-size: 1.5rem;
     height:20vh ;
   }
 
+.album-img{
+  height:13rem;
+}
+.top-part{
+  flex-direction: column;
+  gap:0;
+}
 
-
-  .album-img{
-    /* width:30%; */
-    height:35vh;
-    justify-self: center;
-
+.right-column{
+  width:100%;
+  gap:0;
+}
+.itm-price{
+  margin-bottom:0 !important;
+}
+  .cart-div{
+    justify-content: center;
   }
-
+img.d-block.w-100{
+height:15rem;
+}
   .image-comparison{
     width:80%;
     text-shadow: 
@@ -2242,6 +2301,13 @@ width:100%;
 }
 }
 
+@media screen and (min-width: 481px) and (max-width: 767px) {
+  img.d-block.w-100 {
+    height: 20rem;
+  }
+}
+
+
 @media screen and (min-width: 768px) and (max-width: 900px) {
 #root {
   /* width: 100%; */
@@ -2249,14 +2315,22 @@ width:100%;
   grid-template-columns: repeat(3, 1fr);
   grid-gap: 1rem;
 }
-}
 
+
+}
+.prods-left p{
+  padding-left:0;
+}
 @media screen and (min-width: 901px) and (max-width: 990px) {
   #root {
     /* width: 100%; */
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     grid-gap: 1rem;
+  }
+
+  .prods-left p{
+    padding:0;
   }
   }
 @media screen and (min-width: 991px) and (max-width: 1030px)  {
