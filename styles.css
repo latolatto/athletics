@@ -1958,10 +1958,20 @@ footer{
 } */
 .top-part{
   flex-direction: column;
+  gap:0;
+}
+
+#prod-description{
+  font-size:0.9rem;
+}
+
+#prod-description p{
+  margin-bottom: 0 !important;
 }
 .right-column{
   width:100%;
   align-items: center;
+  gap:0;
 }
 .cart-div{
   justify-content: center;
