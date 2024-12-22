@@ -338,6 +338,39 @@ function updateCartPage() {
   }
 }
 
+// Function to update the cart on the cart page
+function updateCheckoutPage() {
+
+const checkoutcartpage=document.getElementById('cartItems')
+    cart.forEach(item => {
+      const productElement = document.createElement('div');
+      productElement.classList.add('cart-item');
+      productElement.innerHTML = `
+        <div class="cart-item-details">
+          <img src="${item.image}" alt="${item.title}" class="cart-item-img">
+          <div class="cart-item-info">
+            <h5>${item.title}</h5>
+            <p>${item.quantity}</p>
+            </div>
+            <p class="subtotal"><b>Total: ${(item.price * item.quantity).toFixed(2)} ALL</b></p>
+          </div>
+        </div>
+      `;
+      checkoutcartpage.appendChild(itemElement);
+
+      grandTotal += item.price * item.quantity;
+
+
+
+        saveCart();  // Save the updated cart to local storage
+        updateCartTotals();  // Update totals based on new quantity
+      });
+      checkoutcartpage.innerHTML = `<hr><p>Subtotal: ${grandTotal.toFixed(2)} ALL</p>`;
+
+    };
+
+  
+
 // Function to update the grand total after any quantity change
 function updateCartTotals() {
   const cartItemsContainer = document.getElementById('cart-items-container');
@@ -414,4 +447,28 @@ document.addEventListener('DOMContentLoaded', () => {
     })
   })
 
-
+  $(document).ready(function() {
+    // Initially disable the city dropdown and reset its value
+    $('#city').prop('disabled', true).val('');
+  
+    // When a country is selected
+    $('#country').on('change', function() {
+      if ($(this).val()) {
+        // If a country is selected, enable the city dropdown
+        $('#city').prop('disabled', false);
+      } else {
+        // If no country is selected, disable the city dropdown and reset its value
+        $('#city').prop('disabled', true).val('');
+      }
+    });
+    
+    // When a city is selected, the country dropdown is still required but city can be reset
+    $('#city').on('change', function() {
+      if (!$(this).val()) {
+        // If no city is selected, ensure the city is reset when the country is deselected
+        $('#country').val(''); 
+      }
+    });
+  });
+  
+  

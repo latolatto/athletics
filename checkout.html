@@ -1,210 +1,227 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
+  <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Checkout | ATHLETICS </title>
     <link rel="icon" type="image/x-icon" href="./images/icons/small-logo2.png">    <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
-<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <link href="./styles.css" rel="stylesheet">
     <link href="./styling/checkout.css" rel="stylesheet">
-
-    <style>
-
-
-    </style>
-</head>
-<body>
+  </head>
+  <body>
     <div class="body-container">
-        <div class="top-bar border-bottom">
-            <div class="sliding-text">
-                <!-- Free shipping for standard orders over $100 -->
-                All products on sale until December 10th—shop now and save!            
-            </div>
+      <div class="top-bar border-bottom">
+        <div class="sliding-text">
+          <!-- Free shipping for standard orders over $100 -->
+          All products on sale until December 10th—shop now and save!            
         </div>
-        <div class="grid1 grid-pos">
-          <nav class="  navbar navbar-expand-lg ">
-              <div class="container-fluid">
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo03" aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
-                  <span class="navbar-toggler-icon"></span>
-                </button>
-                <a class="navbar-brand" href="./index.html">
-                  <img class="main-logo" src="./images/icons/mainlogo.png" alt="IMG-LOGO">
-                </a>
-                <div class="cart">
-                  <button id="cartIcon"  type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight">
-                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="black" class="bi bi-cart3" viewBox="0 0 16 16">
-                         <path d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .49.598l-1 5a.5.5 0 0 1-.465.401l-9.397.472L4.415 11H13a.5.5 0 0 1 0 1H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5M3.102 4l.84 4.479 9.144-.459L13.89 4zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4m7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4m-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2m7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2"/>
-                       </svg>
-                     <span class="badge position-absolute top-0 start-100 translate-middle badge rounded-pill " id="cartItemCount" >0</span>
-                  </button>
-              </div>
-                <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
-                   <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                       <li class="nav-item nav-border-bottom">
-                        <a class="nav-link menu-item " aria-current="page" href="index.html">HOME</a>
-                       </li>
-                       <li class="nav-item nav-border-bottom">
-                        <a class="nav-link menu-item " href="shop.html">SHOP</a>
-                       </li>
-                        <li class="nav-item nav-border-bottom">
-                         <a class="nav-link menu-item " href="about.html">ABOUT</a>
-                        </li>
-                        <li class="nav-item nav-border-bottom">
-                        <a class="nav-link menu-item " href="contact.html">CONTACT</a>
-                       </li>
-                     </ul>
-                </div>
-              </div>
-            </nav>
-            <div class="offcanvas offcanvas-end " data-bs-scroll="true"  tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
-              <div class="offcanvas-header">
-               <h5 id="offcanvasRightLabel">Cart</h5>
-               <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-              </div>
-              <div class="offcanvas-body">
-              </div>
-              <div id="cart-buttons-container" style="">
-                  <a href="cart.html" class="btn view-cart-button">View Cart</a>
-                  <a href="checkout.html" class="  checkout-button">Checkout</a>
-              </div>
-           </div>
       </div>
-        <div class="shop-header">
-            <h3>CHECKOUT</h3>
-        </div>  
-        <div class="content container">
-              <div class="row g-5">
-                <div class="viewcart-div">
-                    <button id="btn-cart" type="submit" class="btn-cart btn btn-secondary" onclick="window.location.href='./cart.html'"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-bar-left" viewBox="0 0 16 16">
-                        <path fill-rule="evenodd" d="M12.5 15a.5.5 0 0 1-.5-.5v-13a.5.5 0 0 1 1 0v13a.5.5 0 0 1-.5.5M10 8a.5.5 0 0 1-.5.5H3.707l2.147 2.146a.5.5 0 0 1-.708.708l-3-3a.5.5 0 0 1 0-.708l3-3a.5.5 0 1 1 .708.708L3.707 7.5H9.5a.5.5 0 0 1 .5.5"/>
-                      </svg> Go back to cart</button>
+      <div class="grid1 grid-pos">
+        <nav class="  navbar navbar-expand-lg ">
+          <div class="container-fluid">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo03" aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <a class="navbar-brand" href="./index.html">
+              <img class="main-logo" src="./images/icons/mainlogo.png" alt="IMG-LOGO">
+            </a>
+            <div class="cart">
+              <button id="cartIcon"  type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="black" class="bi bi-cart3" viewBox="0 0 16 16">
+                  <path d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .49.598l-1 5a.5.5 0 0 1-.465.401l-9.397.472L4.415 11H13a.5.5 0 0 1 0 1H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5M3.102 4l.84 4.479 9.144-.459L13.89 4zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4m7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4m-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2m7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2"/>
+                </svg>
+                <span class="badge position-absolute top-0 start-100 translate-middle badge rounded-pill " id="cartItemCount" >0</span>
+              </button>
+            </div>
+            <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
+              <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <li class="nav-item nav-border-bottom">
+                  <a class="nav-link menu-item " aria-current="page" href="index.html">HOME</a>
+                </li>
+                <li class="nav-item nav-border-bottom">
+                  <a class="nav-link menu-item " href="shop.html">SHOP</a>
+                </li>
+                <li class="nav-item nav-border-bottom">
+                  <a class="nav-link menu-item " href="about.html">ABOUT</a>
+                </li>
+                <li class="nav-item nav-border-bottom">
+                  <a class="nav-link menu-item " href="contact.html">CONTACT</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </nav>
+        <div class="offcanvas offcanvas-end " data-bs-scroll="true"  tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
+          <div class="offcanvas-header">
+            <h5 id="offcanvasRightLabel">Cart</h5>
+            <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body"></div>
+          <div id="cart-buttons-container" style="">
+            <a href="cart.html" class="btn view-cart-button">View Cart</a>
+            <a href="checkout.html" class="  checkout-button">Checkout</a>
+          </div>
+        </div>
+      </div>
+      <div class="content">
+        <div class="contact-div shadow" >
+          <h3 class="contact-h3">CHECKOUT</h3>
+        </div> 
+        <div class=" container">
+          <div class="checkout-section">
+            <div class="cart-capsule">
+              <h4 class="d-flex justify-content-between align-items-center mb-3">
+                <span class="">Your cart</span>
+                <span id="cartBadge" class="badge rounded-pill"></span>
+              </h4>
+              <div id="cartItems"></div>
+              <div class="delivery-option">
+                <input type="radio" name="delivery" value="standard" checked>
+                <label for="delivery" class="delivery-flex">
+                  <div class="delivery-title" >Standard Delivery</div>
+                  <p>Delivery in 3-5 business days</p>
+                </label>
+              </div>
+              <div class="other-info">
+                <p id="subtotal"></p>
+                <p id="shipping-cost"></p>
+                <p id="grand-total"></p>
+              </div>
+            </div>
+            <form action="" method="POST" id="form" class="column">
+              <div class="row">
+                <div class="col-5 col-xs-10">
+                  <label for="firstName" class="form-label">First name <span class="required">*</span></label>
+                  <input type="text" name="First Name" id="firstName" class="form-input" required>
                 </div>
-                <div class="col-md-7 col-lg-8">
-                  <form >
-                    <div class="row g-3">
-                      <div class="col-sm-6">
-                        <label for="firstName" class="form-label">First name</label>
-                        <input type="text" class="form-control" id="firstName" placeholder="" value="" required>
-                        <div class="invalid-feedback">
-                        </div>
-                      </div>
-          
-                      <div class="col-sm-6">
-                        <label for="lastName" class="form-label">Last name</label>
-                        <input type="text" class="form-control" id="lastName" placeholder="" value="" required>
-                        <div class="invalid-feedback">
-                        </div>
-                      </div>
-          
-                      <div class="col-12">
-                        <label for="email" class="form-label">Email</label>
-                        <input type="email" class="form-control" id="email" placeholder="you@example.com" required>
-                        <div class="invalid-feedback">
-                        </div>
-                      </div>
-          
-                      <div class="col-12">
-                        <label for="address" class="form-label">Address</label>
-                        <input type="text" class="form-control" id="address" placeholder="1234 Main St" required>
-                        <div class="invalid-feedback">
-                        </div>
-                      </div>
-          
-                      <div class="col-12">
-                        <label for="address2" class="form-label">Address 2 <span class="text-body-secondary">(Optional)</span></label>
-                        <input type="text" class="form-control" id="address2" placeholder="Apartment or suite">
-                      </div>
-          
-                      <div class="col-md-5">
-                        <label for="country" class="form-label">Country</label>
-                        <select class="form-select" id="country" required>
-                          <option value="">Choose...</option>
-                          <option>United States</option>
-                        </select>
-                        <div class="invalid-feedback">
-                        </div>
-                      </div>
-          
-                      <div class="col-md-4">
-                        <label for="state" class="form-label">State</label>
-                        <input type="text" class="form-control" id="state" required>
-                        <div class="invalid-feedback">
-                        </div>
-                      </div>
-        
-                      <div class="col-md-4">
-                        <label for="state" class="form-label">City</label>
-                        <input type="text" class="form-control" id="city" required>
-                        <div class="invalid-feedback">
-                        </div>
-                      </div>
-          
-                      <div class="col-md-3">
-                        <label for="zip" class="form-label">Zip</label>
-                        <input type="text" class="form-control" id="zip" placeholder="" required>
-                        <div class="invalid-feedback">
-                        </div>
-                      </div>
-                    </div>
-          
-                    <hr class="my-4">
-          
-                    <h4 class="mb-3">Payment</h4>
-          
-                    <div class="my-3">
-                      <div class="form-check">
-                        <input id="credit" name="paymentMethod" type="radio" class="form-check-input" checked="" required>
-                        <label class="form-check-label" for="card">Card</label>
-                      </div>
-                      <div class="form-check">
-                        <input id="paypal" name="paymentMethod" type="radio" class="form-check-input" required>
-                        <label class="form-check-label" for="paypal">PayPal</label>
-                      </div>
-                    </div>
-          
-                    <div class="row gy-3">
-                      <div class="col-md-6">
-                        <label for="cc-name" class="form-label">Name on card</label>
-                        <input type="text" class="form-control" id="cc-name" placeholder="" required>
-                        <small class="text-body-secondary">Full name as displayed on card</small>
-                        <div class="invalid-feedback">
-                        </div>
-                      </div>
-          
-                      <div class="col-md-6">
-                        <label for="cc-number" class="form-label">Credit card number</label>
-                        <input type="text" class="form-control" id="cc-number" placeholder="" required>
-                        <div class="invalid-feedback">
-                        </div>
-                      </div>
-          
-                      <div class="col-md-3">
-                        <label for="cc-expiration" class="form-label">Expiration</label>
-                        <input type="text" class="form-control" id="cc-expiration" placeholder="MM/YY" required>
-                        <div class="invalid-feedback">
-                        </div>
-                      </div>
-          
-                      <div class="col-md-3">
-                        <label for="cc-cvv" class="form-label">CVV</label>
-                        <input type="text" class="form-control" id="cc-cvv" placeholder="" required>
-                        <div class="invalid-feedback">
-                        </div>
-                      </div>
-                    </div>
-          
-                    <hr class="my-4">
-          
-                    <button class="w-100 btn btn-primary btn-lg" type="submit">Continue to checkout</button>
-                  </form>
+                <div class="col-5 col-xs-10">
+                  <label for="lastName" class="form-label">Last name <span class="required">*</span></label>
+                  <input type="text" name="Last Name" id="lastName" class="form-input" required>
+                </div>
+                <div class="col-12">
+                  <label for="email" class="form-label">Email <span class="required">*</span></label>
+                  <input type="email" name="Email" id="email" class="form-input" placeholder="you@example.com" required>
+                </div>
+                <div class="col-8">
+                  <label for="phone-number" class="form-label">Phone Number <span class="required">*</span></label>
+                  <input type="tel" name="Phone Number" id="phone-number" class="form-input" placeholder="+3556x1234567/06x1234567" pattern="(\+355|0)6[789][0-9]{7}$" required>
+                </div>
+                <div class="col-6">
+                  <label for="country" class="form-label">Country <span class="required">*</span></label>
+                  <select name="Country" id="country" class="form-input" required>
+                    <option value="">Choose...</option>
+                    <option>Albania</option>
+                  </select>
+                </div>
+                <div class="col-5">
+                  <label for="city" class="form-label">City <span class="required">*</span></label>
+                  <select id="city" class="form-input" required disabled>
+                    <option value="">Choose...</option>
+                    <option value="Belsh">Belsh</option>
+                    <option value="Berat">Berat</option>
+                    <option value="Bulqizë">Bulqizë</option>
+                    <option value="Cërrik">Cërrik</option>
+                    <option value="Delvinë">Delvinë</option>
+                    <option value="Devoll">Devoll</option>
+                    <option value="Dibër">Dibër</option>
+                    <option value="Dimal">Dimal</option>
+                    <option value="Divjakë">Divjakë</option>
+                    <option value="Dropull">Dropull</option>
+                    <option value="Durrës">Durrës</option>
+                    <option value="Elbasan">Elbasan</option>
+                    <option value="Fier">Fier</option>
+                    <option value="Finiq">Finiq</option>
+                    <option value="Fushë-Arrëz">Fushë-Arrëz</option>
+                    <option value="Gjirokastër">Gjirokastër</option>
+                    <option value="Gramsh">Gramsh</option>
+                    <option value="Has">Has</option>
+                    <option value="Himarë">Himarë</option>
+                    <option value="Kamëz">Kamëz</option>
+                    <option value="Kavajë">Kavajë</option>
+                    <option value="Këlcyrë">Këlcyrë</option>
+                    <option value="Klos">Klos</option>
+                    <option value="Kolonjë">Kolonjë</option>
+                    <option value="Konispol">Konispol</option>
+                    <option value="Korçë">Korçë</option>
+                    <option value="Krujë">Krujë</option>
+                    <option value="Kuçovë">Kuçovë</option>
+                    <option value="Kukës">Kukës</option>
+                    <option value="Kurbin">Kurbin</option>
+                    <option value="Lezhë">Lezhë</option>
+                    <option value="Libohovë">Libohovë</option>
+                    <option value="Librazhd">Librazhd</option>
+                    <option value="Lushnjë">Lushnjë</option>
+                    <option value="Malësi e Madhe">Malësi e Madhe</option>
+                    <option value="Maliq">Maliq</option>
+                    <option value="Mallakastër">Mallakastër</option>
+                    <option value="Mat">Mat</option>
+                    <option value="Memaliaj">Memaliaj</option>
+                    <option value="Mirditë">Mirditë</option>
+                    <option value="Patos">Patos</option>
+                    <option value="Peqin">Peqin</option>
+                    <option value="Përmet">Përmet</option>
+                    <option value="Pogradec">Pogradec</option>
+                    <option value="Poliçan">Poliçan</option>
+                    <option value="Prrenjas">Prrenjas</option>
+                    <option value="Pukë">Pukë</option>
+                    <option value="Pustec">Pustec</option>
+                    <option value="Roskovec">Roskovec</option>
+                    <option value="Rrogozhinë">Rrogozhinë</option>
+                    <option value="Sarandë">Sarandë</option>
+                    <option value="Selenicë">Selenicë</option>
+                    <option value="Shijak">Shijak</option>
+                    <option value="Shkodër">Shkodër</option>
+                    <option value="Skrapar">Skrapar</option>
+                    <option value="Tepelenë">Tepelenë</option>
+                    <option value="Tiranë">Tiranë</option>
+                    <option value="Tropojë">Tropojë</option>
+                    <option value="Vau i Dejës">Vau i Dejës</option>
+                    <option value="Vlorë">Vlorë</option>
+                    <option value="Vorë">Vorë</option>
+                  </select>
+                </div>
+                <div class="col-7">
+                  <label for="address" class="form-label">Address <span class="required">*</span></label>
+                  <input type="text" name="Address" id="address" class="form-input" placeholder="1234 Main St" required>
+                </div>
+                <!-- <div class="col">
+                  <label for="address2" class="form-label">Address 2 <span class="optional">(Optional)</span></label>
+                  <input type="text" name="Address2" id="address2" class="form-input" placeholder="Apartment or suite">
+                </div> -->
+                <div class="col-4">
+                  <label for="zip" class="form-label">Postal Code <span class="required">*</span></label>
+                  <input type="text" name="Postal Code" id="zip" class="form-input" required pattern="([0-9]{7})">
                 </div>
               </div>
+              
+                <h4 class="payment-header">Payment Method</h4>
+                
+                <div class="payment-methods">
+                  <div class="payment-option">
+                    <input id="cod" name="paymentMethod" type="radio" class="payment-radio" checked required>
+                    <label for="cod" class="payment-label checked">COD (Cash on Delivery)</label>
+                  </div>
+                  <div class="payment-option">
+                    <input id="credit" name="paymentMethod" type="radio" class="payment-radio" disabled>
+                    <label for="credit" class="payment-label">Card</label>
+                  </div>
+                  <div class="payment-option">
+                    <input id="paypal" name="paymentMethod" type="radio" class="payment-radio" disabled>
+                    <label for="paypal" class="payment-label">PayPal</label>
+                  </div>
+                </div>
+        
+                <button class="submit-btn" type="submit">Continue to checkout</button>
+                <div id="result" style="font-size:0.8rem;font-weight: 700;color:#FF9843;"></div>
+              </form>
+
+            </div>
         </div>
 
         <div class="last-section  hidden">
@@ -339,7 +356,62 @@
             </button>
         </footer>
   </div>
+<script>  document.addEventListener('DOMContentLoaded', () => {
+  const cartItemsDiv = document.getElementById('cartItems');
+  const subtotalDiv = document.getElementById('subtotal');
+  const shippingDiv = document.getElementById('shipping-cost');
+  const grandTotalDiv = document.getElementById('grand-total');
+  const cartBadge = document.getElementById('cartBadge');
 
+  const cart = JSON.parse(localStorage.getItem('cart')) || [];
+
+  if (cart.length === 0) {
+    cartItemsDiv.innerHTML = '<p>Your cart is empty!</p>';
+    cartBadge.textContent = '0';
+
+    return;
+  }
+
+  let subtotal = 0;
+  let totalItems = 0;
+  const shipping = 300;
+
+  cart.forEach(item => {
+    const totalPrice = item.price * item.quantity;
+    subtotal += totalPrice;
+    totalItems += item.quantity;
+
+    // Create a div for each cart item
+    const itemDiv = document.createElement('div');
+    itemDiv.className = 'cart-items';
+
+    itemDiv.innerHTML = `
+      <img src="${item.image}" alt="${item.name}">
+      <div class="cart-items-details">
+        <div class="item-title">
+          <p>${item.title}</p>
+        </div>
+        <div>
+          <p>Quantity: ${item.quantity}</p>
+        </div>
+        <div>
+          <p>${totalPrice.toFixed(2)} ALL</p>
+        </div>
+      </div>
+    `;
+
+    cartItemsDiv.appendChild(itemDiv);
+  });
+  const grandtotal= subtotal + shipping
+
+  cartBadge.textContent = totalItems;
+
+  subtotalDiv.innerHTML = `Subtotal: ${subtotal.toFixed(2)} ALL `;
+  shippingDiv.innerHTML = `Shipping : ${shipping.toFixed(2)} ALL `;
+  grandTotalDiv.innerHTML = `<strong>Grand Total:</strong>  ${grandtotal.toFixed(2)} ALL `;
+
+});
+</script>
           <!-- HoverSignal -->
 <script type="text/javascript" >
     (function (d, w) {
@@ -358,95 +430,99 @@
     <script>
         // Function to handle form submission
 
-const result = document.getElementById('result');
-form.addEventListener('submit', function(e) {
-    e.preventDefault();
-    const formData = new FormData(form);
+// const result = document.getElementById('result');
+// form.addEventListener('submit', function(e) {
+//     e.preventDefault();
+//     const formData = new FormData(form);
 
-    // Get the user's email from the form data
-    const userEmail = formData.get('Email');
+//     // Get the user's email from the form data
+//     const userEmail = formData.get('Email');
     
-    // Add cart details to the form data
-    const cartItems = getCartItems();
-    formData.append('Cart Items', cartItems);
+//     // Add cart details to the form data
+//     // const cartItems = getCartItems();
+//     // formData.append('Cart Items', cartItems);
     
-    // Convert the form data to JSON
-    const object = Object.fromEntries(formData);
-    const json = JSON.stringify(object);
+//     // Convert the form data to JSON
+//     const object = Object.fromEntries(formData);
+//     const json = JSON.stringify(object);
     
-    result.innerHTML = "Please wait...";
+//     result.innerHTML = "Please wait...";
 
-    // Submit the form data
-    fetch('https://api.web3forms.com/submit', {
-        method: 'POST',
-        headers: {
-            'Content-Type': 'application/json',
-            'Accept': 'application/json'
-        },
-        body: json
-    })
-    .then(async (response) => {
-        let json = await response.json();
-        if (response.status == 200) {
-            result.innerHTML = "Thank you for your order request! We will get back to you via email as soon as possible!";
-        } else {
-            console.log(response);
-            result.innerHTML = json.message;
-        }
-    })
-    .catch(error => {
-        console.log(error);
-        result.innerHTML = "Something went wrong!";
-    })
-    .then(function() {
-        form.reset();
-        setTimeout(() => {
-            result.style.display = "none";
-        }, 3000);
+//     // Submit the form data
+//     fetch('https://api.web3forms.com/submit', {
+//         method: 'POST',
+//         headers: {
+//             'Content-Type': 'application/json',
+//             'Accept': 'application/json'
+//         },
+//         body: json
+//     })
+//     .then(async (response) => {
+//         let json = await response.json();
+//         if (response.status == 200) {
+//             result.innerHTML = "Thank you for your order request! We will get back to you via email as soon as possible!";
+//         } else {
+//             console.log(response);
+//             result.innerHTML = json.message;
+//         }
+//     })
+//     .catch(error => {
+//         console.log(error);
+//         result.innerHTML = "Something went wrong!";
+//     })
+//     .then(function() {
+//         form.reset();
+//         setTimeout(() => {
+//             result.style.display = "none";
+//         }, 3000);
 
-        // Clear cart section on checkout page
-        clearCartSection();
+//         // Clear cart section on checkout page
+//         clearCartSection();
 
-        // Clear cart from local storage
-        localStorage.removeItem('cart');
+//         // Clear cart from local storage
+//         localStorage.removeItem('cart');
 
-        browseCatalog();
-
-
-        disableform();
-    });
-});
+//         browseCatalog();
 
 
-function disableform(){
-  const disableform=document.getElementById('form');
-  // Get all form input fields
-const inputFields = disableform.querySelectorAll('input, email, textarea');
+//         disableform();
+//     });
+// });
 
-// Disable all input fields
-inputFields.forEach(input => {
-    input.disabled = true;
-});
 
-const submitbtn=document.getElementById('submit-form');
-submitbtn.disabled=true;
-}
+// function disableform(){
+//   const disableform=document.getElementById('form');
+//   // Get all form input fields
+// const inputFields = disableform.querySelectorAll('input, email, textarea');
 
- // Function to go back to cart
-function browseCatalog() {
-    const browseCatalog = document.getElementById('btn-cart');
-    browseCatalog.innerHTML = `<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-bar-left" viewBox="0 0 16 16">
-                        <path fill-rule="evenodd" d="M12.5 15a.5.5 0 0 1-.5-.5v-13a.5.5 0 0 1 1 0v13a.5.5 0 0 1-.5.5M10 8a.5.5 0 0 1-.5.5H3.707l2.147 2.146a.5.5 0 0 1-.708.708l-3-3a.5.5 0 0 1 0-.708l3-3a.5.5 0 1 1 .708.708L3.707 7.5H9.5a.5.5 0 0 1 .5.5"/>
-                      </svg>Browse Catalogue`;
-    browseCatalog.onclick = function() {
-        window.location.href = 'catalogue.html';
-    };
-}
-// Function to clear cart section on checkout page
-function clearCartSection() {
-    const cartItemsContainer = document.getElementById('cartItems');
-    cartItemsContainer.innerHTML = `<div id="cartHeader">Your Cart <span class="badge bg-warning rounded-pill">0</span></div>`
-}
+// // Disable all input fields
+// inputFields.forEach(input => {
+//     input.disabled = true;
+// });
+
+// const submitbtn=document.getElementById('submit-form');
+// submitbtn.disabled=true;
+// }
+
+//  // Function to go back to cart
+// function browseCatalog() {
+//     const browseCatalog = document.getElementById('btn-cart');
+//     browseCatalog.innerHTML = `<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-bar-left" viewBox="0 0 16 16">
+//                         <path fill-rule="evenodd" d="M12.5 15a.5.5 0 0 1-.5-.5v-13a.5.5 0 0 1 1 0v13a.5.5 0 0 1-.5.5M10 8a.5.5 0 0 1-.5.5H3.707l2.147 2.146a.5.5 0 0 1-.708.708l-3-3a.5.5 0 0 1 0-.708l3-3a.5.5 0 1 1 .708.708L3.707 7.5H9.5a.5.5 0 0 1 .5.5"/>
+//                       </svg>Browse Catalogue`;
+//     browseCatalog.onclick = function() {
+//         window.location.href = 'catalogue.html';
+//     };
+// }
+// // Function to clear cart section on checkout page
+// function clearCartSection() {
+//     const cartItemsContainer = document.getElementById('cartItems');
+//     cartItemsContainer.innerHTML = `<div id="cartHeader">Your Cart <span class="badge bg-warning rounded-pill">0</span></div>`
+// }
+// document.querySelector('form').addEventListener('submit', function(event) {
+//   // Remove any preventDefault logic unless needed
+//   event.preventDefault(); 
+// });
 
     </script>
         <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script> <!-- Keep only if necessary -->
