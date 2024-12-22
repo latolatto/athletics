@@ -36,7 +36,11 @@ top:40%; */
 }
 #cartItems{
   color:rgb(227, 227, 227) !important;
+  position: relative;
   font-size:0.8rem;
+  max-height:70vh;
+  overflow-y: auto;
+  margin-bottom:2rem;
 }
 .cart-items {
   display: flex;
@@ -66,9 +70,10 @@ top:40%; */
 form {
   background-color: #fff;
   padding: 2rem;
-  border-radius: 8px;
+  border-radius: 15px;
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
   width:80%;
+  height:max-content
 }
 
 .row {
@@ -139,19 +144,21 @@ form {
 }
 
 .submit-btn {
-  width: 100%;
-  padding: 1rem;
+  padding: 1rem 3rem !important;
   font-size: 1.2rem;
-  background-color: #007bff;
   color: white;
   border: none;
-  border-radius: 5px;
+  border-radius: 30px !important;
   cursor: pointer;
   margin-top: 1.5rem;
+  text-align: center !important;
+font-weight: 500 !important;
 }
 
-.submit-btn:hover {
-  background-color: #0056b3;
+.submit-btn-div {
+  display: flex;
+  width: 100%;
+  justify-content: center;
 }
 
 
@@ -181,7 +188,9 @@ form {
   padding: 3%;
   padding-top:3%;
   border-radius: 15px;
-  
+  min-height:inherit;
+  /* max-height: 100vh;
+  overflow-y: auto; */
 }
 
 .cart-capsule h4{
@@ -203,6 +212,7 @@ form {
   font-size: 0.9rem !important;
 
 } */
+ 
 .other-info{
   display:flex;
   flex-direction: column;
@@ -231,7 +241,7 @@ form {
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   display: flex;
   gap:1rem;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
 }
 
@@ -249,7 +259,7 @@ form {
 }
 
 .delivery-title{
-  font-weight: 500;
+  font-weight: 550;
   color:#333;
 }
 
@@ -257,12 +267,31 @@ form {
 font-size: 0.8rem;
 margin-bottom: 0 !important;
 }
+
+.bottom-fixed-div{
+  border-top: 2px solid black;
+  padding-top:3rem;
+}
+
+
+.viewcart-div{
+  margin-bottom:10%;
+  display: flex;
+  width: 100%;
+  justify-content: flex-start;
+}
+
+#btn-cart{
+  border:0.5px solid #fff;
+}
 /* Responsive styles */
 @media (max-width: 768px) {
   .form-label {
     font-size: 1rem;
   }
-
+  .viewcart-div{
+    margin-bottom:5rem;
+}
   .form-input {
     padding: 0.5rem;
     font-size: 0.9rem;

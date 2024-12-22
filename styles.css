@@ -570,7 +570,14 @@ font-weight: 400;;
   width: 70%;
   opacity: 0.1;
 }
-
+.browse{
+  margin-bottom:10%;
+  display: flex;
+  width: 100%;
+  justify-content: flex-start;
+  /* margin-bottom: 5%; */
+  
+}
 .floating-div{
   /* background-color: yellowgreen; */
   /* height: 100%; */
@@ -1322,6 +1329,9 @@ a{
     .cart-total p {
         font-size: 1rem;
     }
+    .browse{
+      margin-bottom:5rem;
+  }
 }
 
 /* Smaller screen adjustments */

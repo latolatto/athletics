@@ -74,6 +74,11 @@
           <h3 class="contact-h3">CHECKOUT</h3>
         </div> 
         <div class=" container">
+          <div class="viewcart-div">
+            <button id="btn-cart" type="submit" class="btn btn-dark " onclick="window.location.href='./cart.html'"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-bar-left" viewBox="0 0 16 16">
+                <path fill-rule="evenodd" d="M12.5 15a.5.5 0 0 1-.5-.5v-13a.5.5 0 0 1 1 0v13a.5.5 0 0 1-.5.5M10 8a.5.5 0 0 1-.5.5H3.707l2.147 2.146a.5.5 0 0 1-.708.708l-3-3a.5.5 0 0 1 0-.708l3-3a.5.5 0 1 1 .708.708L3.707 7.5H9.5a.5.5 0 0 1 .5.5"/>
+              </svg> Go back to cart</button>
+        </div>
           <div class="checkout-section">
             <div class="cart-capsule">
               <h4 class="d-flex justify-content-between align-items-center mb-3">
@@ -81,12 +86,14 @@
                 <span id="cartBadge" class="badge rounded-pill"></span>
               </h4>
               <div id="cartItems"></div>
-              <div class="delivery-option">
-                <input type="radio" name="delivery" value="standard" checked>
-                <label for="delivery" class="delivery-flex">
-                  <div class="delivery-title" >Standard Delivery</div>
-                  <p>Delivery in 3-5 business days</p>
-                </label>
+              <div class="bottom-fixed-div">
+                <div class="delivery-option">
+                  <input type="radio" name="delivery" value="standard" checked>
+                    <label for="delivery" class="delivery-flex">
+                    <div class="delivery-title" >Standard Delivery</div>
+                    <p>Delivery in 3-5 business days</p>
+                  </label>
+                </div>
               </div>
               <div class="other-info">
                 <p id="subtotal"></p>
@@ -217,8 +224,12 @@
                   </div>
                 </div>
         
-                <button class="submit-btn" type="submit">Continue to checkout</button>
-                <div id="result" style="font-size:0.8rem;font-weight: 700;color:#FF9843;"></div>
+                <div class="submit-btn-div">
+                  <button class="btn btn-dark submit-btn" type="submit">Place Order <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-lock-fill" viewBox="0 0 16 16">
+                    <path d="M8 1a2 2 0 0 1 2 2v4H6V3a2 2 0 0 1 2-2m3 6V3a3 3 0 0 0-6 0v4a2 2 0 0 0-2 2v5a2 2 0 0 0 2 2h6a2 2 0 0 0 2-2V9a2 2 0 0 0-2-2"/>
+                  </svg></button>
+                </div>
+                <div id="result" style="font-size:0.8rem;font-weight: 700;color:hsla(348, 46%, 48%, 0.781);"></div>
               </form>
 
             </div>
