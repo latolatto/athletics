@@ -87,7 +87,7 @@
               </h4>
               <div id="cartItems"></div>
               <div class="bottom-fixed-div">
-                <div class="delivery-option">
+                <div class="delivery-option" id="delivery-option">
                   <input type="radio" name="delivery" value="standard" checked>
                     <label for="delivery" class="delivery-flex">
                     <div class="delivery-title" >Standard Delivery</div>
@@ -101,7 +101,13 @@
                 <p id="grand-total"></p>
               </div>
             </div>
-            <form action="" method="POST" id="form" class="column">
+            <form action="https://api.web3forms.com/submit" method="POST" id="form" class="column">
+              <input type="hidden" name="access_key" value="5fe3971a-27ba-4a53-8c5e-61956ce3a12f">
+              <input type="hidden" name="subject" value="New Order Notification">
+              <input type="hidden" name="from_name" value="Shop Athletics">
+              <input type="hidden" name="replyto" value=''>
+              <input type="checkbox" name="botcheck" class="hidden" style="display: none;">
+
               <div class="row">
                 <div class="col-lg-5 ">
                   <label for="firstName" class="form-label">First name <span class="required">*</span></label>
@@ -128,7 +134,7 @@
                 </div>
                 <div class="col-lg-5">
                   <label for="city" class="form-label">City <span class="required">*</span></label>
-                  <select id="city" class="form-input" required disabled>
+                  <select id="city" name="City" class="form-input" required disabled>
                     <option value="">Choose...</option>
                     <option value="Belsh">Belsh</option>
                     <option value="Berat">Berat</option>
@@ -186,7 +192,7 @@
                     <option value="Shkodër">Shkodër</option>
                     <option value="Skrapar">Skrapar</option>
                     <option value="Tepelenë">Tepelenë</option>
-                    <option value="Tiranë">Tiranë</option>
+                    <option >Tiranë</option>
                     <option value="Tropojë">Tropojë</option>
                     <option value="Vau i Dejës">Vau i Dejës</option>
                     <option value="Vlorë">Vlorë</option>
@@ -203,7 +209,7 @@
                 </div> -->
                 <div class="col-lg-4">
                   <label for="zip" class="form-label">Postal Code <span class="required">*</span></label>
-                  <input type="text" name="Postal Code" id="zip" class="form-input" required pattern="([0-9]{7})">
+                  <input type="text" name="Postal Code" id="zip" class="form-input" required >
                 </div>
               </div>
               
@@ -211,25 +217,26 @@
                 
                 <div class="payment-methods">
                   <div class="payment-option">
-                    <input id="cod" name="paymentMethod" type="radio" class="payment-radio" checked required>
+                    <input id="cod" name="Payment Method" value="COD (Cash on Delivery)" type="radio" class="payment-radio" checked required>
                     <label for="cod" class="payment-label checked">COD (Cash on Delivery)</label>
                   </div>
                   <div class="payment-option">
-                    <input id="credit" name="paymentMethod" type="radio" class="payment-radio" disabled>
+                    <input id="credit" name="Payment Method"  value="Card" type="radio" class="payment-radio" disabled>
                     <label for="credit" class="payment-label">Card</label>
                   </div>
                   <div class="payment-option">
-                    <input id="paypal" name="paymentMethod" type="radio" class="payment-radio" disabled>
+                    <input id="paypal" name="Payment Method" value="PayPal" type="radio" class="payment-radio" disabled>
                     <label for="paypal" class="payment-label">PayPal</label>
                   </div>
                 </div>
-        
+                <input type="hidden" name="Cart Details" id="cartDetails">
+
                 <div class="submit-btn-div">
-                  <button class="btn btn-dark submit-btn" type="submit">Place Order <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-lock-fill" viewBox="0 0 16 16">
+                  <button class="btn btn-dark submit-btn" type="submit" onclick="populateCartDetails()" >Place Order <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-lock-fill" viewBox="0 0 16 16">
                     <path d="M8 1a2 2 0 0 1 2 2v4H6V3a2 2 0 0 1 2-2m3 6V3a3 3 0 0 0-6 0v4a2 2 0 0 0-2 2v5a2 2 0 0 0 2 2h6a2 2 0 0 0 2-2V9a2 2 0 0 0-2-2"/>
                   </svg></button>
                 </div>
-                <div id="result" style="font-size:0.8rem;font-weight: 700;color:hsla(348, 46%, 48%, 0.781);"></div>
+                <div id="result" style="margin-top:2rem;font-size:0.8rem;font-weight: 700;color:hsla(348, 46%, 48%, 0.781);"></div>
               </form>
 
             </div>
@@ -367,7 +374,10 @@
             </button>
         </footer>
   </div>
-<script>  document.addEventListener('DOMContentLoaded', () => {
+<script> 
+
+document.addEventListener('DOMContentLoaded', () => {
+
   const cartItemsDiv = document.getElementById('cartItems');
   const subtotalDiv = document.getElementById('subtotal');
   const shippingDiv = document.getElementById('shipping-cost');
@@ -377,9 +387,13 @@
   const cart = JSON.parse(localStorage.getItem('cart')) || [];
 
   if (cart.length === 0) {
-    cartItemsDiv.innerHTML = '<p>Your cart is empty!</p>';
     cartBadge.textContent = '0';
-
+    const cartItemsContainer = document.getElementById('cartItems');
+    cartItemsContainer.innerHTML = "";
+    // const bottomFixedDiv = document.querySelector('bottom-fixed-div');
+    // bottomFixedDiv.style.opacity = "0";
+    const otherInfo = document.querySelector('other-info');
+    otherInfo.innerHTML = "";
     return;
   }
 
@@ -397,15 +411,15 @@
     itemDiv.className = 'cart-items';
 
     itemDiv.innerHTML = `
-      <img src="${item.image}" alt="${item.name}">
+      <img class="item-image" src="${item.image}" alt="${item.name}">
       <div class="cart-items-details">
         <div class="item-title">
           <p>${item.title}</p>
         </div>
-        <div>
+        <div class="item-quantity">
           <p>Quantity: ${item.quantity}</p>
         </div>
-        <div>
+        <div class="item-price">
           <p>${totalPrice.toFixed(2)} ALL</p>
         </div>
       </div>
@@ -423,117 +437,206 @@
 
 });
 </script>
-          <!-- HoverSignal -->
-<script type="text/javascript" >
-    (function (d, w) {
-    var n = d.getElementsByTagName("script")[0],
-    s = d.createElement("script"),
-    f = function () { n.parentNode.insertBefore(s, n); };
-    s.type = "text/javascript";
-    s.async = true;
-    s.src = "https://app.hoversignal.com/Api/Script/57205124-1cee-4694-992c-f3dc6cd7c81b";
-    if (w.opera == "[object Opera]") {
-    d.addEventListener("DOMContentLoaded", f, false);
-    } else { f(); }
-    })(document, window);
-    </script>
-    <!-- /Hoversignal -->
-    <script>
-        // Function to handle form submission
 
-// const result = document.getElementById('result');
-// form.addEventListener('submit', function(e) {
-//     e.preventDefault();
-//     const formData = new FormData(form);
+     <script>
+// Function to handle form submission
+const form = document.getElementById('form');
+const result = document.getElementById('result');
 
-//     // Get the user's email from the form data
-//     const userEmail = formData.get('Email');
-    
-//     // Add cart details to the form data
-//     // const cartItems = getCartItems();
-//     // formData.append('Cart Items', cartItems);
-    
-//     // Convert the form data to JSON
-//     const object = Object.fromEntries(formData);
-//     const json = JSON.stringify(object);
-    
-//     result.innerHTML = "Please wait...";
+form.addEventListener('submit', function (e) {
+    e.preventDefault();
 
-//     // Submit the form data
-//     fetch('https://api.web3forms.com/submit', {
-//         method: 'POST',
-//         headers: {
-//             'Content-Type': 'application/json',
-//             'Accept': 'application/json'
-//         },
-//         body: json
-//     })
-//     .then(async (response) => {
-//         let json = await response.json();
-//         if (response.status == 200) {
-//             result.innerHTML = "Thank you for your order request! We will get back to you via email as soon as possible!";
-//         } else {
-//             console.log(response);
-//             result.innerHTML = json.message;
-//         }
-//     })
-//     .catch(error => {
-//         console.log(error);
-//         result.innerHTML = "Something went wrong!";
-//     })
-//     .then(function() {
-//         form.reset();
-//         setTimeout(() => {
-//             result.style.display = "none";
-//         }, 3000);
+    const formData = new FormData(form);
 
-//         // Clear cart section on checkout page
-//         clearCartSection();
+    // Get all form data as an object
+    const object = Object.fromEntries(formData);
 
-//         // Clear cart from local storage
-//         localStorage.removeItem('cart');
+    // Set the reply-to email from the form
+    const replyToInput = document.querySelector('input[name="replyto"]');
+    replyToInput.value = formData.get('email');
 
-//         browseCatalog();
+    // Convert form data to JSON for submission
+    const json = JSON.stringify(object);
+
+    result.innerHTML = "Please wait...";
+    result.style.opacity = "1";
+
+    fetch('https://api.web3forms.com/submit', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json',
+            'Accept': 'application/json',
+        },
+        body: json,
+    })
+        .then(async (response) => {
+            let json = await response.json();
+            result.style.opacity = "1"; // Make the result message visible
+            if (response.status === 200) {
+                result.innerHTML =
+                    "Thank you for your order! We will deliver it to you in 3-5 business days.";
+                disableForm(); // Disable the form after successful submission
+            } else {
+                console.log(response);
+                result.innerHTML = json.message;
+            }
+        })
+        .catch((error) => {
+            console.log(error);
+            result.innerHTML = "Something went wrong!";
+            result.style.opacity = "1"; // Ensure message shows even on error
+        })
+        .finally(() => {
+            form.reset(); // Reset the form fields
+            setTimeout(() => {
+                result.style.opacity = "0"; // Fade out the message
+            }, 3000); // Adjust delay as needed
+        });
+});
 
 
-//         disableform();
-//     });
-// });
 
 
-// function disableform(){
-//   const disableform=document.getElementById('form');
-//   // Get all form input fields
-// const inputFields = disableform.querySelectorAll('input, email, textarea');
+// // Add an event listener to the email input field to update the reply-to value
+// const emailInput = document.getElementById('email');
+// emailInput.addEventListener('input', setReplyToValue);
 
-// // Disable all input fields
-// inputFields.forEach(input => {
-//     input.disabled = true;
-// });
-
-// const submitbtn=document.getElementById('submit-form');
-// submitbtn.disabled=true;
+// // Function to set the value of the hidden input field "replyto" to the user's email
+// function setReplyToValue() {
+//     const emailInput = document.getElementById('email');
+//     const replyToInput = document.querySelector('input[name="replyto"]');
+//     replyToInput.value = emailInput.value;
 // }
+function disableForm() {
+    // Get the form element by ID
+    const form = document.getElementById('form');
 
-//  // Function to go back to cart
-// function browseCatalog() {
-//     const browseCatalog = document.getElementById('btn-cart');
-//     browseCatalog.innerHTML = `<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-bar-left" viewBox="0 0 16 16">
-//                         <path fill-rule="evenodd" d="M12.5 15a.5.5 0 0 1-.5-.5v-13a.5.5 0 0 1 1 0v13a.5.5 0 0 1-.5.5M10 8a.5.5 0 0 1-.5.5H3.707l2.147 2.146a.5.5 0 0 1-.708.708l-3-3a.5.5 0 0 1 0-.708l3-3a.5.5 0 1 1 .708.708L3.707 7.5H9.5a.5.5 0 0 1 .5.5"/>
-//                       </svg>Browse Catalogue`;
-//     browseCatalog.onclick = function() {
-//         window.location.href = 'catalogue.html';
-//     };
-// }
-// // Function to clear cart section on checkout page
-// function clearCartSection() {
-//     const cartItemsContainer = document.getElementById('cartItems');
-//     cartItemsContainer.innerHTML = `<div id="cartHeader">Your Cart <span class="badge bg-warning rounded-pill">0</span></div>`
-// }
-// document.querySelector('form').addEventListener('submit', function(event) {
-//   // Remove any preventDefault logic unless needed
-//   event.preventDefault(); 
-// });
+    if (!form) {
+        console.error('Form not found!');
+        return;
+    }
+
+    // Select all input fields, textareas, and select elements within the form
+    const inputFields = form.querySelectorAll('input, textarea, select, button');
+
+    // Disable all form fields
+    inputFields.forEach((input) => {
+        input.disabled = true;
+    });
+
+    // Hide cart details except for "Your cart" and set badge to "0"
+    const cartCapsule = document.querySelector('.cart-capsule');
+    if (cartCapsule) {
+        // Hide all children except for the "Your cart" span
+        const cartChildren = cartCapsule.children;
+        for (const child of cartChildren) {
+            if (!child.querySelector('span')) {
+                child.style.display = 'none';
+            }
+        }
+
+        // Set the badge to "0"
+        const cartBadge = document.getElementById('cartBadge');
+        if (cartBadge) {
+            cartBadge.textContent = '0';
+        }
+    }
+
+    // Update the "Go back to cart" button
+    const cartButton = document.getElementById('btn-cart');
+    if (cartButton) {
+        cartButton.innerHTML = `<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-bar-left" viewBox="0 0 16 16">
+                <path fill-rule="evenodd" d="M12.5 15a.5.5 0 0 1-.5-.5v-13a.5.5 0 0 1 1 0v13a.5.5 0 0 1-.5.5M10 8a.5.5 0 0 1-.5.5H3.707l2.147 2.146a.5.5 0 0 1-.708.708l-3-3a.5.5 0 0 1 0-.708l3-3a.5.5 0 1 1 .708.708L3.707 7.5H9.5a.5.5 0 0 1 .5.5"/>
+              </svg> Go back to browsing`;
+        cartButton.setAttribute('onclick', "window.location.href='./shop.html'");
+    }
+
+    // Clear the cart from storage
+    localStorage.removeItem('cart'); // Clear cart from localStorage
+    sessionStorage.removeItem('cart'); // Clear cart from sessionStorage
+
+    // Optionally clear the cart display on the page
+    const cartItemsDiv = document.getElementById('cartItems');
+    if (cartItemsDiv) {
+        cartItemsDiv.innerHTML = ''; // Clear cart items display
+    }
+
+    console.log('Form has been disabled, cart cleared, and cart updated.');
+}
+
+
+
+
+
+function populateCartDetails() {
+    const cartItemsDiv = document.querySelector("#cartItems"); // Your cart items container
+    const cartDetailsField = document.getElementById("cartDetails");
+
+    // Build cart details in a structured format
+    const cartDetails = [];
+    const items = cartItemsDiv.querySelectorAll(".cart-items"); // Adjust to match your cart item structure
+
+    items.forEach(item => {
+      const title = item.querySelector(".item-title")?.innerText || "N/A";
+      const quantity = item.querySelector(".item-quantity")?.innerText || "N/A";
+      const price = item.querySelector(".item-price")?.innerText || "N/A";
+      cartDetails.push(`-${title} ( ${quantity}, Total: ${price}),\n`);
+
+    });
+
+    // Add shipping, subtotal, and grand total (adjust selectors as needed)
+    const subtotal = document.querySelector("#subtotal")?.innerText || "N/A";
+    const shipping = document.querySelector("#shipping-cost")?.innerText || "N/A";
+    shipping.innerHTML=300;
+    const grandTotal = document.querySelector("#grand-total")?.innerText || "N/A";
+    cartDetails.push(`Value of order:\n ${subtotal}`, `${shipping}`, ` ${grandTotal}`);
+
+    // Populate hidden field
+    cartDetailsField.value = cartDetails.join("\n");
+  }
+// Script to check if the cart is empty on the checkout page
+document.addEventListener('DOMContentLoaded', () => {
+    // Check if the cart is empty
+    const cart = JSON.parse(localStorage.getItem('cart')) || JSON.parse(sessionStorage.getItem('cart'));
+
+    if (!cart || cart.length === 0) {
+        // Hide cart details except for "Your cart" and set badge to "0"
+        const cartCapsule = document.querySelector('.cart-capsule');
+        if (cartCapsule) {
+            // Hide all children except for the "Your cart" span
+            const cartChildren = cartCapsule.children;
+            for (const child of cartChildren) {
+                if (!child.querySelector('span')) {
+                    child.style.display = 'none';
+                }
+            }
+
+            // Set the badge to "0"
+            const cartBadge = document.getElementById('cartBadge');
+            if (cartBadge) {
+                cartBadge.textContent = '0';
+            }
+        }
+
+        // Disable the form
+        const form = document.getElementById('form');
+        if (form) {
+            const inputFields = form.querySelectorAll('input, textarea, select, button');
+            inputFields.forEach((input) => {
+                input.disabled = true;
+            });
+        }
+    // Update the "Go back to cart" button
+    const cartButton = document.getElementById('btn-cart');
+    if (cartButton) {
+        cartButton.innerHTML = `<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-bar-left" viewBox="0 0 16 16">
+                <path fill-rule="evenodd" d="M12.5 15a.5.5 0 0 1-.5-.5v-13a.5.5 0 0 1 1 0v13a.5.5 0 0 1-.5.5M10 8a.5.5 0 0 1-.5.5H3.707l2.147 2.146a.5.5 0 0 1-.708.708l-3-3a.5.5 0 0 1 0-.708l3-3a.5.5 0 1 1 .708.708L3.707 7.5H9.5a.5.5 0 0 1 .5.5"/>
+              </svg> Go back to browsing`;
+        cartButton.setAttribute('onclick', "window.location.href='./shop.html'");
+    }
+        console.log('Cart is empty. Cart capsule updated, and form is disabled.');
+    }
+});
 
     </script>
         <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script> <!-- Keep only if necessary -->
