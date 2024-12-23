@@ -230,8 +230,13 @@
 </div>
 
 
-        <!-- HoverSignal -->
-         
+    <script>
+    document.addEventListener("DOMContentLoaded", function() {
+      updateCartPage(); // Initialize cart display on page load
+      updateCartTotals();
+    });
+    </script>
+    <!-- HoverSignal -->
 <script type="text/javascript" >
     (function (d, w) {
     var n = d.getElementsByTagName("script")[0],
@@ -246,12 +251,6 @@
     })(document, window);
     </script>
     <!-- /Hoversignal -->
-    <script>
-    document.addEventListener("DOMContentLoaded", function() {
-      updateCartPage(); // Initialize cart display on page load
-      updateCartTotals();
-    });
-    </script>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script> <!-- Keep only if necessary -->
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>

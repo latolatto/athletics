@@ -358,7 +358,18 @@ const result = document.getElementById('result');
 setupNavbarScrollEffect();
 
     </script>
-        <!-- HoverSignal -->
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+          // Call updateCartDisplay on each page load to update cart data
+          updateCartDisplay();
+          removeFromCart();
+
+      });
+
+
+  </script>
+  <!-- HoverSignal -->
 <script type="text/javascript" >
   (function (d, w) {
   var n = d.getElementsByTagName("script")[0],
@@ -373,16 +384,6 @@ setupNavbarScrollEffect();
   })(document, window);
   </script>
   <!-- /Hoversignal -->
-    <script>
-      document.addEventListener("DOMContentLoaded", function () {
-          // Call updateCartDisplay on each page load to update cart data
-          updateCartDisplay();
-          removeFromCart();
-
-      });
-
-
-  </script>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script> <!-- Keep only if necessary -->
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
