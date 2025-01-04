@@ -48,7 +48,7 @@ a{
   display: inline-block;
   color:rgb(227, 227, 227);
   white-space: nowrap; 
-  animation: slide 10s linear infinite;
+  animation: slide 15s linear infinite;
   animation-delay: 0s; 
   /* transform: translateX(110%); */
   width:100%;
