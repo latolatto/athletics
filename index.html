@@ -728,25 +728,52 @@ function openModal(item) {
 }
 document.getElementById('added-to-cart').style.opacity = 0;
 
+
+/**
+ * Play a short confirm "ping" sound.
+ * Safe to call multiple times quickly.
+ */
+const cartSound = new Audio("https://assets.mixkit.co/active_storage/sfx/2574/2574-preview.mp3");
+cartSound.volume = 0.5;
+
+const playCartSound = () => {
+  cartSound.currentTime = 0; 
+  cartSound.play();
+
+  setTimeout(() => {
+    cartSound.pause();
+    cartSound.currentTime = 0;
+  }, 1000);
+};
+
+
+
   // Add item to cart with specified quantity from modal
-  document.querySelector('.add-to-cart-btn').onclick = () => {
-      const quantity = parseInt(quantityInput.value);
-      addToCart(item.id, quantity);
-      
-      // Display confirmation message and reset quantity input to 1
-      document.getElementById('added-to-cart').style.opacity = 1;
-      // document.getElementById('added-to-cart').textContent = 'Added to Cart!';
-      quantityInput.value = 1;  // Reset quantity after adding to cart
+document.querySelector('.add-to-cart-btn').onclick = () => {
+  const quantity = parseInt(quantityInput.value, 10) || 1;
+  addToCart(item.id, quantity);
 
-      // Clear confirmation message after 1.5 seconds
-      setTimeout(() => document.getElementById('added-to-cart').style.opacity = 0, 1500);
-  };
+  // Play sound when added (user gesture -> allowed)
+  try { playCartSound(); } catch (e) { console.warn('Sound failed', e); }
+
+  // Display confirmation message and reset quantity input to 1
+  const notice = document.getElementById('added-to-cart');
+  if (notice) {
+    notice.style.opacity = 1;
+    // optional: animate or add class
+    // notice.classList.add('show');
+  }
+
+  quantityInput.value = 1;  // Reset quantity after adding to cart
+
+  // Clear confirmation message after 1.5 seconds
+  setTimeout(() => {
+    if (notice) notice.style.opacity = 0;
+  }, 1500);
+};
 
 
-// Example usage: bind to product click events
-document.querySelectorAll('.pop').forEach((element, index) => {
-  element.addEventListener('click', () => showModal(index));
-});
+
 }
 
 
